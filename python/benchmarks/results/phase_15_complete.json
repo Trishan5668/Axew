@@ -1,0 +1,35 @@
+{
+  "tag": "phase_15_complete",
+  "mode": "semantic",
+  "timestamp": "2026-05-24T17:41:35.306633+00:00",
+  "total_cases": 23,
+  "metrics": {
+    "timestamp_mae": 178272.86568853675,
+    "timestamp_within_2s": 0.043478260869565216,
+    "entity_recall": 0.6304347826086957,
+    "action_recall": 0.782608695652174,
+    "monetary_precision": 0.5714285714285714,
+    "mrr": 0.26956521739130435,
+    "ndcg_at_5": 0.39039321178057124,
+    "speaker_accuracy": 0.9130434782608695,
+    "mean_temporal_iou": 0.15705644602809074,
+    "hit_rate_at_1": 0.2608695652173913
+  },
+  "deltas_vs_baseline": {
+    "timestamp_mae": -105857.5691,
+    "timestamp_within_2s": 0.0435,
+    "entity_recall": 0.4565,
+    "action_recall": 0.1304,
+    "monetary_precision": 0.5714,
+    "mrr": -0.2496,
+    "ndcg_at_5": -0.1869,
+    "speaker_accuracy": 0.1739,
+    "mean_temporal_iou": 0.1205,
+    "hit_rate_at_1": 0.1739
+  },
+  "regressions": [
+    "timestamp_mae",
+    "mrr",
+    "ndcg_at_5"
+  ]
+}

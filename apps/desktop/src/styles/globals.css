@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #0a0a0c;
+    color: #e8e8f0;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #22222a;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2e2e3a;
+  }
+}
+
+@layer utilities {
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #5b5bff, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .panel-bg {
+    background-color: #16161b;
+    border: 1px solid #22222a;
+  }
+
+  .resize-handle-x {
+    cursor: col-resize;
+    width: 4px;
+    background: transparent;
+    transition: background 0.15s;
+  }
+
+  .resize-handle-x:hover {
+    background: rgba(91, 91, 255, 0.27);
+  }
+
+  .resize-handle-y {
+    cursor: row-resize;
+    height: 4px;
+    background: transparent;
+    transition: background 0.15s;
+  }
+
+  .resize-handle-y:hover {
+    background: rgba(91, 91, 255, 0.27);
+  }
+
+  .clip-shadow {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .no-drag {
+    -webkit-app-region: no-drag;
+  }
+
+  .drag-region {
+    -webkit-app-region: drag;
+  }
+}

@@ -1,0 +1,4445 @@
+{
+  "video_id": "default",
+  "segments": [
+    {
+      "text": "Vijay Mahalya sir,",
+      "start_ms": 0,
+      "end_ms": 880,
+      "words": [
+        {
+          "word": "Vijay",
+          "start_ms": 0,
+          "end_ms": 880,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Mahalya",
+          "start_ms": 0,
+          "end_ms": 880,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "sir,",
+          "start_ms": 0,
+          "end_ms": 880,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "0"
+    },
+    {
+      "text": "Ape Ne initial days ke baaray mein baatayi",
+      "start_ms": 1280,
+      "end_ms": 2660,
+      "words": [
+        {
+          "word": "Ape",
+          "start_ms": 1280,
+          "end_ms": 2660,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Ne",
+          "start_ms": 1280,
+          "end_ms": 2660,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "initial",
+          "start_ms": 1280,
+          "end_ms": 2660,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "days",
+          "start_ms": 1280,
+          "end_ms": 2660,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 1280,
+          "end_ms": 2660,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "baaray",
+          "start_ms": 1280,
+          "end_ms": 2660,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "mein",
+          "start_ms": 1280,
+          "end_ms": 2660,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "baatayi",
+          "start_ms": 1280,
+          "end_ms": 2660,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "1"
+    },
+    {
+      "text": "O Kuldi Bir was a great time",
+      "start_ms": 2660,
+      "end_ms": 4400,
+      "words": [
+        {
+          "word": "O",
+          "start_ms": 2660,
+          "end_ms": 4400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Kuldi",
+          "start_ms": 2660,
+          "end_ms": 4400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Bir",
+          "start_ms": 2660,
+          "end_ms": 4400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "was",
+          "start_ms": 2660,
+          "end_ms": 4400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "a",
+          "start_ms": 2660,
+          "end_ms": 4400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "great",
+          "start_ms": 2660,
+          "end_ms": 4400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "time",
+          "start_ms": 2660,
+          "end_ms": 4400,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "2"
+    },
+    {
+      "text": "King Fischer aur Yubi Grupayet Taken",
+      "start_ms": 4400,
+      "end_ms": 6260,
+      "words": [
+        {
+          "word": "King",
+          "start_ms": 4400,
+          "end_ms": 6260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Fischer",
+          "start_ms": 4400,
+          "end_ms": 6260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aur",
+          "start_ms": 4400,
+          "end_ms": 6260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Yubi",
+          "start_ms": 4400,
+          "end_ms": 6260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Grupayet",
+          "start_ms": 4400,
+          "end_ms": 6260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Taken",
+          "start_ms": 4400,
+          "end_ms": 6260,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "3"
+    },
+    {
+      "text": "Daru ki Divan bhaat rai thi",
+      "start_ms": 6260,
+      "end_ms": 7700,
+      "words": [
+        {
+          "word": "Daru",
+          "start_ms": 6260,
+          "end_ms": 7700,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 6260,
+          "end_ms": 7700,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Divan",
+          "start_ms": 6260,
+          "end_ms": 7700,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bhaat",
+          "start_ms": 6260,
+          "end_ms": 7700,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "rai",
+          "start_ms": 6260,
+          "end_ms": 7700,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "thi",
+          "start_ms": 6260,
+          "end_ms": 7700,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "4"
+    },
+    {
+      "text": "King Fischer ka 52% share thaum loke ke paas",
+      "start_ms": 7700,
+      "end_ms": 10380,
+      "words": [
+        {
+          "word": "King",
+          "start_ms": 7700,
+          "end_ms": 10380,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Fischer",
+          "start_ms": 7700,
+          "end_ms": 10380,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ka",
+          "start_ms": 7700,
+          "end_ms": 10380,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "52%",
+          "start_ms": 7700,
+          "end_ms": 10380,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "share",
+          "start_ms": 7700,
+          "end_ms": 10380,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "thaum",
+          "start_ms": 7700,
+          "end_ms": 10380,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "loke",
+          "start_ms": 7700,
+          "end_ms": 10380,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 7700,
+          "end_ms": 10380,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "paas",
+          "start_ms": 7700,
+          "end_ms": 10380,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "5"
+    },
+    {
+      "text": "Veski ki NUMBER ONE Brandt hai am",
+      "start_ms": 10380,
+      "end_ms": 11920,
+      "words": [
+        {
+          "word": "Veski",
+          "start_ms": 10380,
+          "end_ms": 11920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 10380,
+          "end_ms": 11920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "NUMBER",
+          "start_ms": 10380,
+          "end_ms": 11920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ONE",
+          "start_ms": 10380,
+          "end_ms": 11920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Brandt",
+          "start_ms": 10380,
+          "end_ms": 11920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hai",
+          "start_ms": 10380,
+          "end_ms": 11920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "am",
+          "start_ms": 10380,
+          "end_ms": 11920,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "6"
+    },
+    {
+      "text": "Y'know,",
+      "start_ms": 11920,
+      "end_ms": 12380,
+      "words": [
+        {
+          "word": "Y'know,",
+          "start_ms": 11920,
+          "end_ms": 12380,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "7"
+    },
+    {
+      "text": "Haratarav sa PAS AAY PAS AAY",
+      "start_ms": 12800,
+      "end_ms": 14300,
+      "words": [
+        {
+          "word": "Haratarav",
+          "start_ms": 12800,
+          "end_ms": 14300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "sa",
+          "start_ms": 12800,
+          "end_ms": 14300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "PAS",
+          "start_ms": 12800,
+          "end_ms": 14300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "AAY",
+          "start_ms": 12800,
+          "end_ms": 14300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "PAS",
+          "start_ms": 12800,
+          "end_ms": 14300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "AAY",
+          "start_ms": 12800,
+          "end_ms": 14300,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "8"
+    },
+    {
+      "text": "SWEET",
+      "start_ms": 14300,
+      "end_ms": 14700,
+      "words": [
+        {
+          "word": "SWEET",
+          "start_ms": 14300,
+          "end_ms": 14700,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "9"
+    },
+    {
+      "text": "Aur suna Aur mumbe indian savi karina sajata",
+      "start_ms": 14700,
+      "end_ms": 16740,
+      "words": [
+        {
+          "word": "Aur",
+          "start_ms": 14700,
+          "end_ms": 16740,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "suna",
+          "start_ms": 14700,
+          "end_ms": 16740,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Aur",
+          "start_ms": 14700,
+          "end_ms": 16740,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "mumbe",
+          "start_ms": 14700,
+          "end_ms": 16740,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "indian",
+          "start_ms": 14700,
+          "end_ms": 16740,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "savi",
+          "start_ms": 14700,
+          "end_ms": 16740,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "karina",
+          "start_ms": 14700,
+          "end_ms": 16740,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "sajata",
+          "start_ms": 14700,
+          "end_ms": 16740,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "10"
+    },
+    {
+      "text": "Ame Ne hush time be bitt la gaya tha",
+      "start_ms": 16740,
+      "end_ms": 18160,
+      "words": [
+        {
+          "word": "Ame",
+          "start_ms": 16740,
+          "end_ms": 18160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Ne",
+          "start_ms": 16740,
+          "end_ms": 18160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hush",
+          "start_ms": 16740,
+          "end_ms": 18160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "time",
+          "start_ms": 16740,
+          "end_ms": 18160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "be",
+          "start_ms": 16740,
+          "end_ms": 18160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bitt",
+          "start_ms": 16740,
+          "end_ms": 18160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "la",
+          "start_ms": 16740,
+          "end_ms": 18160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "gaya",
+          "start_ms": 16740,
+          "end_ms": 18160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "tha",
+          "start_ms": 16740,
+          "end_ms": 18160,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "11"
+    },
+    {
+      "text": "And I lost by a very small margin",
+      "start_ms": 18160,
+      "end_ms": 20100,
+      "words": [
+        {
+          "word": "And",
+          "start_ms": 18160,
+          "end_ms": 20100,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "I",
+          "start_ms": 18160,
+          "end_ms": 20100,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "lost",
+          "start_ms": 18160,
+          "end_ms": 20100,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "by",
+          "start_ms": 18160,
+          "end_ms": 20100,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "a",
+          "start_ms": 18160,
+          "end_ms": 20100,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "very",
+          "start_ms": 18160,
+          "end_ms": 20100,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "small",
+          "start_ms": 18160,
+          "end_ms": 20100,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "margin",
+          "start_ms": 18160,
+          "end_ms": 20100,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "12"
+    },
+    {
+      "text": "And then Aur sam bani lega hai",
+      "start_ms": 20100,
+      "end_ms": 21920,
+      "words": [
+        {
+          "word": "And",
+          "start_ms": 20100,
+          "end_ms": 21920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "then",
+          "start_ms": 20100,
+          "end_ms": 21920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Aur",
+          "start_ms": 20100,
+          "end_ms": 21920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "sam",
+          "start_ms": 20100,
+          "end_ms": 21920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bani",
+          "start_ms": 20100,
+          "end_ms": 21920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "lega",
+          "start_ms": 20100,
+          "end_ms": 21920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hai",
+          "start_ms": 20100,
+          "end_ms": 21920,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "13"
+    },
+    {
+      "text": "Kair,",
+      "start_ms": 21920,
+      "end_ms": 22520,
+      "words": [
+        {
+          "word": "Kair,",
+          "start_ms": 21920,
+          "end_ms": 22520,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "14"
+    },
+    {
+      "text": "Oost time be on sa haane mein",
+      "start_ms": 23140,
+      "end_ms": 24140,
+      "words": [
+        {
+          "word": "Oost",
+          "start_ms": 23140,
+          "end_ms": 24140,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "time",
+          "start_ms": 23140,
+          "end_ms": 24140,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "be",
+          "start_ms": 23140,
+          "end_ms": 24140,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "on",
+          "start_ms": 23140,
+          "end_ms": 24140,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "sa",
+          "start_ms": 23140,
+          "end_ms": 24140,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "haane",
+          "start_ms": 23140,
+          "end_ms": 24140,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "mein",
+          "start_ms": 23140,
+          "end_ms": 24140,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "15"
+    },
+    {
+      "text": "Pala aayi thi",
+      "start_ms": 24140,
+      "end_ms": 25140,
+      "words": [
+        {
+          "word": "Pala",
+          "start_ms": 24140,
+          "end_ms": 25140,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aayi",
+          "start_ms": 24140,
+          "end_ms": 25140,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "thi",
+          "start_ms": 24140,
+          "end_ms": 25140,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "16"
+    },
+    {
+      "text": "If you know you know",
+      "start_ms": 25140,
+      "end_ms": 26380,
+      "words": [
+        {
+          "word": "If",
+          "start_ms": 25140,
+          "end_ms": 26380,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "you",
+          "start_ms": 25140,
+          "end_ms": 26380,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "know",
+          "start_ms": 25140,
+          "end_ms": 26380,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "you",
+          "start_ms": 25140,
+          "end_ms": 26380,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "know",
+          "start_ms": 25140,
+          "end_ms": 26380,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "17"
+    },
+    {
+      "text": "Bir RRCB ke sa li",
+      "start_ms": 26380,
+      "end_ms": 27360,
+      "words": [
+        {
+          "word": "Bir",
+          "start_ms": 26380,
+          "end_ms": 27360,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "RRCB",
+          "start_ms": 26380,
+          "end_ms": 27360,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 26380,
+          "end_ms": 27360,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "sa",
+          "start_ms": 26380,
+          "end_ms": 27360,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "li",
+          "start_ms": 26380,
+          "end_ms": 27360,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "18"
+    },
+    {
+      "text": "Utskava teen teams ke li aayi was the highest bitter",
+      "start_ms": 27360,
+      "end_ms": 29280,
+      "words": [
+        {
+          "word": "Utskava",
+          "start_ms": 27360,
+          "end_ms": 29280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "teen",
+          "start_ms": 27360,
+          "end_ms": 29280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "teams",
+          "start_ms": 27360,
+          "end_ms": 29280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 27360,
+          "end_ms": 29280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "li",
+          "start_ms": 27360,
+          "end_ms": 29280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aayi",
+          "start_ms": 27360,
+          "end_ms": 29280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "was",
+          "start_ms": 27360,
+          "end_ms": 29280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "the",
+          "start_ms": 27360,
+          "end_ms": 29280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "highest",
+          "start_ms": 27360,
+          "end_ms": 29280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bitter",
+          "start_ms": 27360,
+          "end_ms": 29280,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "19"
+    },
+    {
+      "text": "And then me na finally banglao choos ke ya",
+      "start_ms": 29280,
+      "end_ms": 31460,
+      "words": [
+        {
+          "word": "And",
+          "start_ms": 29280,
+          "end_ms": 31460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "then",
+          "start_ms": 29280,
+          "end_ms": 31460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "me",
+          "start_ms": 29280,
+          "end_ms": 31460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "na",
+          "start_ms": 29280,
+          "end_ms": 31460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "finally",
+          "start_ms": 29280,
+          "end_ms": 31460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "banglao",
+          "start_ms": 29280,
+          "end_ms": 31460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "choos",
+          "start_ms": 29280,
+          "end_ms": 31460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 29280,
+          "end_ms": 31460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ya",
+          "start_ms": 29280,
+          "end_ms": 31460,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "20"
+    },
+    {
+      "text": "Ne specific reason",
+      "start_ms": 31460,
+      "end_ms": 32320,
+      "words": [
+        {
+          "word": "Ne",
+          "start_ms": 31460,
+          "end_ms": 32320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "specific",
+          "start_ms": 31460,
+          "end_ms": 32320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "reason",
+          "start_ms": 31460,
+          "end_ms": 32320,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "21"
+    },
+    {
+      "text": "Banglao reekyom",
+      "start_ms": 32320,
+      "end_ms": 33300,
+      "words": [
+        {
+          "word": "Banglao",
+          "start_ms": 32320,
+          "end_ms": 33300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "reekyom",
+          "start_ms": 32320,
+          "end_ms": 33300,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "22"
+    },
+    {
+      "text": "Hero Royal Challenge me re viski thi",
+      "start_ms": 33300,
+      "end_ms": 34820,
+      "words": [
+        {
+          "word": "Hero",
+          "start_ms": 33300,
+          "end_ms": 34820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Royal",
+          "start_ms": 33300,
+          "end_ms": 34820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Challenge",
+          "start_ms": 33300,
+          "end_ms": 34820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "me",
+          "start_ms": 33300,
+          "end_ms": 34820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "re",
+          "start_ms": 33300,
+          "end_ms": 34820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "viski",
+          "start_ms": 33300,
+          "end_ms": 34820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "thi",
+          "start_ms": 33300,
+          "end_ms": 34820,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "23"
+    },
+    {
+      "text": "And Banglao ar uskasad perfectly suit kar rata",
+      "start_ms": 34820,
+      "end_ms": 37060,
+      "words": [
+        {
+          "word": "And",
+          "start_ms": 34820,
+          "end_ms": 37060,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Banglao",
+          "start_ms": 34820,
+          "end_ms": 37060,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ar",
+          "start_ms": 34820,
+          "end_ms": 37060,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "uskasad",
+          "start_ms": 34820,
+          "end_ms": 37060,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "perfectly",
+          "start_ms": 34820,
+          "end_ms": 37060,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "suit",
+          "start_ms": 34820,
+          "end_ms": 37060,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kar",
+          "start_ms": 34820,
+          "end_ms": 37060,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "rata",
+          "start_ms": 34820,
+          "end_ms": 37060,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "24"
+    },
+    {
+      "text": "So Royal Challenger Banglao",
+      "start_ms": 37060,
+      "end_ms": 38940,
+      "words": [
+        {
+          "word": "So",
+          "start_ms": 37060,
+          "end_ms": 38940,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Royal",
+          "start_ms": 37060,
+          "end_ms": 38940,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Challenger",
+          "start_ms": 37060,
+          "end_ms": 38940,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Banglao",
+          "start_ms": 37060,
+          "end_ms": 38940,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "25"
+    },
+    {
+      "text": "Lege ni IPL team bhai kane ke peechhe kui specific reason",
+      "start_ms": 38940,
+      "end_ms": 41820,
+      "words": [
+        {
+          "word": "Lege",
+          "start_ms": 38940,
+          "end_ms": 41820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ni",
+          "start_ms": 38940,
+          "end_ms": 41820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "IPL",
+          "start_ms": 38940,
+          "end_ms": 41820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "team",
+          "start_ms": 38940,
+          "end_ms": 41820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bhai",
+          "start_ms": 38940,
+          "end_ms": 41820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kane",
+          "start_ms": 38940,
+          "end_ms": 41820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 38940,
+          "end_ms": 41820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "peechhe",
+          "start_ms": 38940,
+          "end_ms": 41820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kui",
+          "start_ms": 38940,
+          "end_ms": 41820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "specific",
+          "start_ms": 38940,
+          "end_ms": 41820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "reason",
+          "start_ms": 38940,
+          "end_ms": 41820,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "26"
+    },
+    {
+      "text": "Tune ye 10 like ki omega ki humbhai karee",
+      "start_ms": 41820,
+      "end_ms": 43540,
+      "words": [
+        {
+          "word": "Tune",
+          "start_ms": 41820,
+          "end_ms": 43540,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ye",
+          "start_ms": 41820,
+          "end_ms": 43540,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "10",
+          "start_ms": 41820,
+          "end_ms": 43540,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "like",
+          "start_ms": 41820,
+          "end_ms": 43540,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 41820,
+          "end_ms": 43540,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "omega",
+          "start_ms": 41820,
+          "end_ms": 43540,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 41820,
+          "end_ms": 43540,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "humbhai",
+          "start_ms": 41820,
+          "end_ms": 43540,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "karee",
+          "start_ms": 41820,
+          "end_ms": 43540,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "27"
+    },
+    {
+      "text": "Shoghe",
+      "start_ms": 44660,
+      "end_ms": 45100,
+      "words": [
+        {
+          "word": "Shoghe",
+          "start_ms": 44660,
+          "end_ms": 45100,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "28"
+    },
+    {
+      "text": "Exact ki maa boi mogei bi shoghe",
+      "start_ms": 45100,
+      "end_ms": 46760,
+      "words": [
+        {
+          "word": "Exact",
+          "start_ms": 45100,
+          "end_ms": 46760,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 45100,
+          "end_ms": 46760,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "maa",
+          "start_ms": 45100,
+          "end_ms": 46760,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "boi",
+          "start_ms": 45100,
+          "end_ms": 46760,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "mogei",
+          "start_ms": 45100,
+          "end_ms": 46760,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bi",
+          "start_ms": 45100,
+          "end_ms": 46760,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "shoghe",
+          "start_ms": 45100,
+          "end_ms": 46760,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "29"
+    },
+    {
+      "text": "Youth ko IPL team ke thru apne brand keethe ra fatrak kaan naa tha",
+      "start_ms": 46760,
+      "end_ms": 49640,
+      "words": [
+        {
+          "word": "Youth",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ko",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "IPL",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "team",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "thru",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "apne",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "brand",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "keethe",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ra",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "fatrak",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kaan",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "naa",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "tha",
+          "start_ms": 46760,
+          "end_ms": 49640,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "30"
+    },
+    {
+      "text": "2008 ta King Fischer India ki NUMBER ONE AAYLINE thi right",
+      "start_ms": 49640,
+      "end_ms": 52420,
+      "words": [
+        {
+          "word": "2008",
+          "start_ms": 49640,
+          "end_ms": 52420,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ta",
+          "start_ms": 49640,
+          "end_ms": 52420,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "King",
+          "start_ms": 49640,
+          "end_ms": 52420,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Fischer",
+          "start_ms": 49640,
+          "end_ms": 52420,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "India",
+          "start_ms": 49640,
+          "end_ms": 52420,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 49640,
+          "end_ms": 52420,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "NUMBER",
+          "start_ms": 49640,
+          "end_ms": 52420,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ONE",
+          "start_ms": 49640,
+          "end_ms": 52420,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "AAYLINE",
+          "start_ms": 49640,
+          "end_ms": 52420,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "thi",
+          "start_ms": 49640,
+          "end_ms": 52420,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "right",
+          "start_ms": 49640,
+          "end_ms": 52420,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "31"
+    },
+    {
+      "text": "Vira Chanik sa keya aayata",
+      "start_ms": 52420,
+      "end_ms": 53880,
+      "words": [
+        {
+          "word": "Vira",
+          "start_ms": 52420,
+          "end_ms": 53880,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Chanik",
+          "start_ms": 52420,
+          "end_ms": 53880,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "sa",
+          "start_ms": 52420,
+          "end_ms": 53880,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "keya",
+          "start_ms": 52420,
+          "end_ms": 53880,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aayata",
+          "start_ms": 52420,
+          "end_ms": 53880,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "32"
+    },
+    {
+      "text": "Dos aar at mein global crisis aayata",
+      "start_ms": 53880,
+      "end_ms": 55500,
+      "words": [
+        {
+          "word": "Dos",
+          "start_ms": 53880,
+          "end_ms": 55500,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aar",
+          "start_ms": 53880,
+          "end_ms": 55500,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "at",
+          "start_ms": 53880,
+          "end_ms": 55500,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "mein",
+          "start_ms": 53880,
+          "end_ms": 55500,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "global",
+          "start_ms": 53880,
+          "end_ms": 55500,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "crisis",
+          "start_ms": 53880,
+          "end_ms": 55500,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aayata",
+          "start_ms": 53880,
+          "end_ms": 55500,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "33"
+    },
+    {
+      "text": "Crude Oil ke dam baadne li legei thi",
+      "start_ms": 55500,
+      "end_ms": 57260,
+      "words": [
+        {
+          "word": "Crude",
+          "start_ms": 55500,
+          "end_ms": 57260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Oil",
+          "start_ms": 55500,
+          "end_ms": 57260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 55500,
+          "end_ms": 57260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "dam",
+          "start_ms": 55500,
+          "end_ms": 57260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "baadne",
+          "start_ms": 55500,
+          "end_ms": 57260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "li",
+          "start_ms": 55500,
+          "end_ms": 57260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "legei",
+          "start_ms": 55500,
+          "end_ms": 57260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "thi",
+          "start_ms": 55500,
+          "end_ms": 57260,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "34"
+    },
+    {
+      "text": "Amlope ke losses aadne baadne ligei thi",
+      "start_ms": 57720,
+      "end_ms": 60020,
+      "words": [
+        {
+          "word": "Amlope",
+          "start_ms": 57720,
+          "end_ms": 60020,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 57720,
+          "end_ms": 60020,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "losses",
+          "start_ms": 57720,
+          "end_ms": 60020,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aadne",
+          "start_ms": 57720,
+          "end_ms": 60020,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "baadne",
+          "start_ms": 57720,
+          "end_ms": 60020,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ligei",
+          "start_ms": 57720,
+          "end_ms": 60020,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "thi",
+          "start_ms": 57720,
+          "end_ms": 60020,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "35"
+    },
+    {
+      "text": "Pustan impye me ne dekin kui aqwaar paad li aayata",
+      "start_ms": 60020,
+      "end_ms": 62240,
+      "words": [
+        {
+          "word": "Pustan",
+          "start_ms": 60020,
+          "end_ms": 62240,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "impye",
+          "start_ms": 60020,
+          "end_ms": 62240,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "me",
+          "start_ms": 60020,
+          "end_ms": 62240,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ne",
+          "start_ms": 60020,
+          "end_ms": 62240,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "dekin",
+          "start_ms": 60020,
+          "end_ms": 62240,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kui",
+          "start_ms": 60020,
+          "end_ms": 62240,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aqwaar",
+          "start_ms": 60020,
+          "end_ms": 62240,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "paad",
+          "start_ms": 60020,
+          "end_ms": 62240,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "li",
+          "start_ms": 60020,
+          "end_ms": 62240,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aayata",
+          "start_ms": 60020,
+          "end_ms": 62240,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "36"
+    },
+    {
+      "text": "Loses aar baadne li se legei",
+      "start_ms": 62820,
+      "end_ms": 64099,
+      "words": [
+        {
+          "word": "Loses",
+          "start_ms": 62820,
+          "end_ms": 64099,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aar",
+          "start_ms": 62820,
+          "end_ms": 64099,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "baadne",
+          "start_ms": 62820,
+          "end_ms": 64099,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "li",
+          "start_ms": 62820,
+          "end_ms": 64099,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "se",
+          "start_ms": 62820,
+          "end_ms": 64099,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "legei",
+          "start_ms": 62820,
+          "end_ms": 64099,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "37"
+    },
+    {
+      "text": "Amlope kui ni government se bola bi ki ame downsizing kane ye",
+      "start_ms": 64099,
+      "end_ms": 66800,
+      "words": [
+        {
+          "word": "Amlope",
+          "start_ms": 64099,
+          "end_ms": 66800,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kui",
+          "start_ms": 64099,
+          "end_ms": 66800,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ni",
+          "start_ms": 64099,
+          "end_ms": 66800,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "government",
+          "start_ms": 64099,
+          "end_ms": 66800,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "se",
+          "start_ms": 64099,
+          "end_ms": 66800,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bola",
+          "start_ms": 64099,
+          "end_ms": 66800,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bi",
+          "start_ms": 64099,
+          "end_ms": 66800,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 64099,
+          "end_ms": 66800,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ame",
+          "start_ms": 64099,
+          "end_ms": 66800,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "downsizing",
+          "start_ms": 64099,
+          "end_ms": 66800,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kane",
+          "start_ms": 64099,
+          "end_ms": 66800,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ye",
+          "start_ms": 64099,
+          "end_ms": 66800,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "38"
+    },
+    {
+      "text": "Aayi government ne kaa",
+      "start_ms": 66800,
+      "end_ms": 68300,
+      "words": [
+        {
+          "word": "Aayi",
+          "start_ms": 66800,
+          "end_ms": 68300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "government",
+          "start_ms": 66800,
+          "end_ms": 68300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ne",
+          "start_ms": 66800,
+          "end_ms": 68300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kaa",
+          "start_ms": 66800,
+          "end_ms": 68300,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "39"
+    },
+    {
+      "text": "Abtenture me ki li jaapkantinu ka reaya",
+      "start_ms": 68300,
+      "end_ms": 70000,
+      "words": [
+        {
+          "word": "Abtenture",
+          "start_ms": 68300,
+          "end_ms": 70000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "me",
+          "start_ms": 68300,
+          "end_ms": 70000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 68300,
+          "end_ms": 70000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "li",
+          "start_ms": 68300,
+          "end_ms": 70000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "jaapkantinu",
+          "start_ms": 68300,
+          "end_ms": 70000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ka",
+          "start_ms": 68300,
+          "end_ms": 70000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "reaya",
+          "start_ms": 68300,
+          "end_ms": 70000,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "40"
+    },
+    {
+      "text": "Amap ke saat hai",
+      "start_ms": 70440,
+      "end_ms": 71360,
+      "words": [
+        {
+          "word": "Amap",
+          "start_ms": 70440,
+          "end_ms": 71360,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 70440,
+          "end_ms": 71360,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "saat",
+          "start_ms": 70440,
+          "end_ms": 71360,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hai",
+          "start_ms": 70440,
+          "end_ms": 71360,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "41"
+    },
+    {
+      "text": "India me loke thi hai ki you aayi hain na loon repayne ki yaa apik chor",
+      "start_ms": 71360,
+      "end_ms": 73840,
+      "words": [
+        {
+          "word": "India",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "me",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "loke",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "thi",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hai",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "you",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aayi",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hain",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "na",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "loon",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "repayne",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "yaa",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "apik",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "chor",
+          "start_ms": 71360,
+          "end_ms": 73840,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "42"
+    },
+    {
+      "text": "Kya ye saat hai",
+      "start_ms": 74259,
+      "end_ms": 75080,
+      "words": [
+        {
+          "word": "Kya",
+          "start_ms": 74259,
+          "end_ms": 75080,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ye",
+          "start_ms": 74259,
+          "end_ms": 75080,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "saat",
+          "start_ms": 74259,
+          "end_ms": 75080,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hai",
+          "start_ms": 74259,
+          "end_ms": 75080,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "43"
+    },
+    {
+      "text": "6303 ka rode ka loon li aayata",
+      "start_ms": 76160,
+      "end_ms": 77460,
+      "words": [
+        {
+          "word": "6303",
+          "start_ms": 76160,
+          "end_ms": 77460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ka",
+          "start_ms": 76160,
+          "end_ms": 77460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "rode",
+          "start_ms": 76160,
+          "end_ms": 77460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ka",
+          "start_ms": 76160,
+          "end_ms": 77460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "loon",
+          "start_ms": 76160,
+          "end_ms": 77460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "li",
+          "start_ms": 76160,
+          "end_ms": 77460,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aayata",
+          "start_ms": 76160,
+          "end_ms": 77460,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "44"
+    },
+    {
+      "text": "Aayi taak ki date me 4000 ka rode vaapis kaar chokhao",
+      "start_ms": 77460,
+      "end_ms": 85480,
+      "words": [
+        {
+          "word": "Aayi",
+          "start_ms": 77460,
+          "end_ms": 85480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "taak",
+          "start_ms": 77460,
+          "end_ms": 85480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 77460,
+          "end_ms": 85480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "date",
+          "start_ms": 77460,
+          "end_ms": 85480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "me",
+          "start_ms": 77460,
+          "end_ms": 85480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "4000",
+          "start_ms": 77460,
+          "end_ms": 85480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ka",
+          "start_ms": 77460,
+          "end_ms": 85480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "rode",
+          "start_ms": 77460,
+          "end_ms": 85480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "vaapis",
+          "start_ms": 77460,
+          "end_ms": 85480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kaar",
+          "start_ms": 77460,
+          "end_ms": 85480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "chokhao",
+          "start_ms": 77460,
+          "end_ms": 85480,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "45"
+    },
+    {
+      "text": "Abhidh desh ko vaapis chokhaan aachhi aapk",
+      "start_ms": 85480,
+      "end_ms": 87400,
+      "words": [
+        {
+          "word": "Abhidh",
+          "start_ms": 85480,
+          "end_ms": 87400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "desh",
+          "start_ms": 85480,
+          "end_ms": 87400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ko",
+          "start_ms": 85480,
+          "end_ms": 87400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "vaapis",
+          "start_ms": 85480,
+          "end_ms": 87400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "chokhaan",
+          "start_ms": 85480,
+          "end_ms": 87400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aachhi",
+          "start_ms": 85480,
+          "end_ms": 87400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aapk",
+          "start_ms": 85480,
+          "end_ms": 87400,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "46"
+    },
+    {
+      "text": "Lekin ik baad baad baadte aayi",
+      "start_ms": 88100,
+      "end_ms": 89180,
+      "words": [
+        {
+          "word": "Lekin",
+          "start_ms": 88100,
+          "end_ms": 89180,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ik",
+          "start_ms": 88100,
+          "end_ms": 89180,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "baad",
+          "start_ms": 88100,
+          "end_ms": 89180,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "baad",
+          "start_ms": 88100,
+          "end_ms": 89180,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "baadte",
+          "start_ms": 88100,
+          "end_ms": 89180,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aayi",
+          "start_ms": 88100,
+          "end_ms": 89180,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "47"
+    },
+    {
+      "text": "Imploiis ki saleri ki yon li dehi taak",
+      "start_ms": 89759,
+      "end_ms": 91120,
+      "words": [
+        {
+          "word": "Imploiis",
+          "start_ms": 89759,
+          "end_ms": 91120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 89759,
+          "end_ms": 91120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "saleri",
+          "start_ms": 89759,
+          "end_ms": 91120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 89759,
+          "end_ms": 91120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "yon",
+          "start_ms": 89759,
+          "end_ms": 91120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "li",
+          "start_ms": 89759,
+          "end_ms": 91120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "dehi",
+          "start_ms": 89759,
+          "end_ms": 91120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "taak",
+          "start_ms": 89759,
+          "end_ms": 91120,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "48"
+    },
+    {
+      "text": "Deena chaata tha",
+      "start_ms": 91120,
+      "end_ms": 92260,
+      "words": [
+        {
+          "word": "Deena",
+          "start_ms": 91120,
+          "end_ms": 92260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "chaata",
+          "start_ms": 91120,
+          "end_ms": 92260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "tha",
+          "start_ms": 91120,
+          "end_ms": 92260,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "49"
+    },
+    {
+      "text": "Lekin courts ne bank ek enepis tei lagatia",
+      "start_ms": 92260,
+      "end_ms": 94260,
+      "words": [
+        {
+          "word": "Lekin",
+          "start_ms": 92260,
+          "end_ms": 94260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "courts",
+          "start_ms": 92260,
+          "end_ms": 94260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ne",
+          "start_ms": 92260,
+          "end_ms": 94260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bank",
+          "start_ms": 92260,
+          "end_ms": 94260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ek",
+          "start_ms": 92260,
+          "end_ms": 94260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "enepis",
+          "start_ms": 92260,
+          "end_ms": 94260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "tei",
+          "start_ms": 92260,
+          "end_ms": 94260,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "lagatia",
+          "start_ms": 92260,
+          "end_ms": 94260,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "50"
+    },
+    {
+      "text": "Nehre saar i transaction rogk hai",
+      "start_ms": 94260,
+      "end_ms": 95740,
+      "words": [
+        {
+          "word": "Nehre",
+          "start_ms": 94260,
+          "end_ms": 95740,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "saar",
+          "start_ms": 94260,
+          "end_ms": 95740,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "i",
+          "start_ms": 94260,
+          "end_ms": 95740,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "transaction",
+          "start_ms": 94260,
+          "end_ms": 95740,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "rogk",
+          "start_ms": 94260,
+          "end_ms": 95740,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hai",
+          "start_ms": 94260,
+          "end_ms": 95740,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "51"
+    },
+    {
+      "text": "Aar aj bhi mjhe saat tha",
+      "start_ms": 95740,
+      "end_ms": 97280,
+      "words": [
+        {
+          "word": "Aar",
+          "start_ms": 95740,
+          "end_ms": 97280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aj",
+          "start_ms": 95740,
+          "end_ms": 97280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bhi",
+          "start_ms": 95740,
+          "end_ms": 97280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "mjhe",
+          "start_ms": 95740,
+          "end_ms": 97280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "saat",
+          "start_ms": 95740,
+          "end_ms": 97280,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "tha",
+          "start_ms": 95740,
+          "end_ms": 97280,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "52"
+    },
+    {
+      "text": "Bhaad duq hai",
+      "start_ms": 97280,
+      "end_ms": 98400,
+      "words": [
+        {
+          "word": "Bhaad",
+          "start_ms": 97280,
+          "end_ms": 98400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "duq",
+          "start_ms": 97280,
+          "end_ms": 98400,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hai",
+          "start_ms": 97280,
+          "end_ms": 98400,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "53"
+    },
+    {
+      "text": "Aakri saat",
+      "start_ms": 98400,
+      "end_ms": 99160,
+      "words": [
+        {
+          "word": "Aakri",
+          "start_ms": 98400,
+          "end_ms": 99160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "saat",
+          "start_ms": 98400,
+          "end_ms": 99160,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "54"
+    },
+    {
+      "text": "Dos aar sola mein amlandan ke maagk hai",
+      "start_ms": 99160,
+      "end_ms": 101080,
+      "words": [
+        {
+          "word": "Dos",
+          "start_ms": 99160,
+          "end_ms": 101080,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aar",
+          "start_ms": 99160,
+          "end_ms": 101080,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "sola",
+          "start_ms": 99160,
+          "end_ms": 101080,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "mein",
+          "start_ms": 99160,
+          "end_ms": 101080,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "amlandan",
+          "start_ms": 99160,
+          "end_ms": 101080,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 99160,
+          "end_ms": 101080,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "maagk",
+          "start_ms": 99160,
+          "end_ms": 101080,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hai",
+          "start_ms": 99160,
+          "end_ms": 101080,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "55"
+    },
+    {
+      "text": "Bhaag anayita",
+      "start_ms": 101080,
+      "end_ms": 101820,
+      "words": [
+        {
+          "word": "Bhaag",
+          "start_ms": 101080,
+          "end_ms": 101820,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "anayita",
+          "start_ms": 101080,
+          "end_ms": 101820,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "56"
+    },
+    {
+      "text": "Finance Minister se baatchit kar ke dahi chi ni kha ke aaram se kaya tha",
+      "start_ms": 101820,
+      "end_ms": 105000,
+      "words": [
+        {
+          "word": "Finance",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "Minister",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "se",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "baatchit",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kar",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "dahi",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "chi",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ni",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kha",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aaram",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "se",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kaya",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "tha",
+          "start_ms": 101820,
+          "end_ms": 105000,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "57"
+    },
+    {
+      "text": "Lekin landan jaati, uloge na mera paspoti siis kalya",
+      "start_ms": 105000,
+      "end_ms": 107620,
+      "words": [
+        {
+          "word": "Lekin",
+          "start_ms": 105000,
+          "end_ms": 107620,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "landan",
+          "start_ms": 105000,
+          "end_ms": 107620,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "jaati,",
+          "start_ms": 105000,
+          "end_ms": 107620,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "uloge",
+          "start_ms": 105000,
+          "end_ms": 107620,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "na",
+          "start_ms": 105000,
+          "end_ms": 107620,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "mera",
+          "start_ms": 105000,
+          "end_ms": 107620,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "paspoti",
+          "start_ms": 105000,
+          "end_ms": 107620,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "siis",
+          "start_ms": 105000,
+          "end_ms": 107620,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kalya",
+          "start_ms": 105000,
+          "end_ms": 107620,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "58"
+    },
+    {
+      "text": "Mme ne bhaad baar indiaanagi i ko siis karyi",
+      "start_ms": 107620,
+      "end_ms": 109480,
+      "words": [
+        {
+          "word": "Mme",
+          "start_ms": 107620,
+          "end_ms": 109480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ne",
+          "start_ms": 107620,
+          "end_ms": 109480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bhaad",
+          "start_ms": 107620,
+          "end_ms": 109480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "baar",
+          "start_ms": 107620,
+          "end_ms": 109480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "indiaanagi",
+          "start_ms": 107620,
+          "end_ms": 109480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "i",
+          "start_ms": 107620,
+          "end_ms": 109480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ko",
+          "start_ms": 107620,
+          "end_ms": 109480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "siis",
+          "start_ms": 107620,
+          "end_ms": 109480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "karyi",
+          "start_ms": 107620,
+          "end_ms": 109480,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "59"
+    },
+    {
+      "text": "Lekin aata moja indiaanidia gaon nahi",
+      "start_ms": 110380,
+      "end_ms": 112560,
+      "words": [
+        {
+          "word": "Lekin",
+          "start_ms": 110380,
+          "end_ms": 112560,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aata",
+          "start_ms": 110380,
+          "end_ms": 112560,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "moja",
+          "start_ms": 110380,
+          "end_ms": 112560,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "indiaanidia",
+          "start_ms": 110380,
+          "end_ms": 112560,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "gaon",
+          "start_ms": 110380,
+          "end_ms": 112560,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "nahi",
+          "start_ms": 110380,
+          "end_ms": 112560,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "60"
+    },
+    {
+      "text": "Settlement karnidia gaon nahi",
+      "start_ms": 112560,
+      "end_ms": 114040,
+      "words": [
+        {
+          "word": "Settlement",
+          "start_ms": 112560,
+          "end_ms": 114040,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "karnidia",
+          "start_ms": 112560,
+          "end_ms": 114040,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "gaon",
+          "start_ms": 112560,
+          "end_ms": 114040,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "nahi",
+          "start_ms": 112560,
+          "end_ms": 114040,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "61"
+    },
+    {
+      "text": "Mme ne bank wala se kaa to bang wala na kaa ki",
+      "start_ms": 114040,
+      "end_ms": 115640,
+      "words": [
+        {
+          "word": "Mme",
+          "start_ms": 114040,
+          "end_ms": 115640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ne",
+          "start_ms": 114040,
+          "end_ms": 115640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bank",
+          "start_ms": 114040,
+          "end_ms": 115640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "wala",
+          "start_ms": 114040,
+          "end_ms": 115640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "se",
+          "start_ms": 114040,
+          "end_ms": 115640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kaa",
+          "start_ms": 114040,
+          "end_ms": 115640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "to",
+          "start_ms": 114040,
+          "end_ms": 115640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bang",
+          "start_ms": 114040,
+          "end_ms": 115640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "wala",
+          "start_ms": 114040,
+          "end_ms": 115640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "na",
+          "start_ms": 114040,
+          "end_ms": 115640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kaa",
+          "start_ms": 114040,
+          "end_ms": 115640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 114040,
+          "end_ms": 115640,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "62"
+    },
+    {
+      "text": "Aakri aapkha settlement hain na karkar tiya",
+      "start_ms": 115640,
+      "end_ms": 117040,
+      "words": [
+        {
+          "word": "Aakri",
+          "start_ms": 115640,
+          "end_ms": 117040,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aapkha",
+          "start_ms": 115640,
+          "end_ms": 117040,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "settlement",
+          "start_ms": 115640,
+          "end_ms": 117040,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hain",
+          "start_ms": 115640,
+          "end_ms": 117040,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "na",
+          "start_ms": 115640,
+          "end_ms": 117040,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "karkar",
+          "start_ms": 115640,
+          "end_ms": 117040,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "tiya",
+          "start_ms": 115640,
+          "end_ms": 117040,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "63"
+    },
+    {
+      "text": "To ii government wale hain na pise paad chayin ge",
+      "start_ms": 117040,
+      "end_ms": 119160,
+      "words": [
+        {
+          "word": "To",
+          "start_ms": 117040,
+          "end_ms": 119160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ii",
+          "start_ms": 117040,
+          "end_ms": 119160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "government",
+          "start_ms": 117040,
+          "end_ms": 119160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "wale",
+          "start_ms": 117040,
+          "end_ms": 119160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hain",
+          "start_ms": 117040,
+          "end_ms": 119160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "na",
+          "start_ms": 117040,
+          "end_ms": 119160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "pise",
+          "start_ms": 117040,
+          "end_ms": 119160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "paad",
+          "start_ms": 117040,
+          "end_ms": 119160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "chayin",
+          "start_ms": 117040,
+          "end_ms": 119160,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ge",
+          "start_ms": 117040,
+          "end_ms": 119160,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "64"
+    },
+    {
+      "text": "Yohi hai asliyat",
+      "start_ms": 119620,
+      "end_ms": 120700,
+      "words": [
+        {
+          "word": "Yohi",
+          "start_ms": 119620,
+          "end_ms": 120700,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hai",
+          "start_ms": 119620,
+          "end_ms": 120700,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "asliyat",
+          "start_ms": 119620,
+          "end_ms": 120700,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "65"
+    },
+    {
+      "text": "Pige maal aj aaj aapne fhe reikbaris desh ki chanda ko ye",
+      "start_ms": 120700,
+      "end_ms": 123320,
+      "words": [
+        {
+          "word": "Pige",
+          "start_ms": 120700,
+          "end_ms": 123320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "maal",
+          "start_ms": 120700,
+          "end_ms": 123320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aj",
+          "start_ms": 120700,
+          "end_ms": 123320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aaj",
+          "start_ms": 120700,
+          "end_ms": 123320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aapne",
+          "start_ms": 120700,
+          "end_ms": 123320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "fhe",
+          "start_ms": 120700,
+          "end_ms": 123320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "reikbaris",
+          "start_ms": 120700,
+          "end_ms": 123320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "desh",
+          "start_ms": 120700,
+          "end_ms": 123320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 120700,
+          "end_ms": 123320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "chanda",
+          "start_ms": 120700,
+          "end_ms": 123320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ko",
+          "start_ms": 120700,
+          "end_ms": 123320,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ye",
+          "start_ms": 120700,
+          "end_ms": 123320,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "66"
+    },
+    {
+      "text": "Yakin dhilaadia ki kise bi sikke ke amisha",
+      "start_ms": 123320,
+      "end_ms": 125120,
+      "words": [
+        {
+          "word": "Yakin",
+          "start_ms": 123320,
+          "end_ms": 125120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "dhilaadia",
+          "start_ms": 123320,
+          "end_ms": 125120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ki",
+          "start_ms": 123320,
+          "end_ms": 125120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kise",
+          "start_ms": 123320,
+          "end_ms": 125120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bi",
+          "start_ms": 123320,
+          "end_ms": 125120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "sikke",
+          "start_ms": 123320,
+          "end_ms": 125120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 123320,
+          "end_ms": 125120,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "amisha",
+          "start_ms": 123320,
+          "end_ms": 125120,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "67"
+    },
+    {
+      "text": "Dos pailu hain",
+      "start_ms": 125120,
+      "end_ms": 126480,
+      "words": [
+        {
+          "word": "Dos",
+          "start_ms": 125120,
+          "end_ms": 126480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "pailu",
+          "start_ms": 125120,
+          "end_ms": 126480,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hain",
+          "start_ms": 125120,
+          "end_ms": 126480,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "68"
+    },
+    {
+      "text": "To ambina doonu pailu sune bagar",
+      "start_ms": 126480,
+      "end_ms": 128560,
+      "words": [
+        {
+          "word": "To",
+          "start_ms": 126480,
+          "end_ms": 128560,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ambina",
+          "start_ms": 126480,
+          "end_ms": 128560,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "doonu",
+          "start_ms": 126480,
+          "end_ms": 128560,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "pailu",
+          "start_ms": 126480,
+          "end_ms": 128560,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "sune",
+          "start_ms": 126480,
+          "end_ms": 128560,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bagar",
+          "start_ms": 126480,
+          "end_ms": 128560,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "69"
+    },
+    {
+      "text": "Kabhi bi ek insan ko",
+      "start_ms": 129060,
+      "end_ms": 130259,
+      "words": [
+        {
+          "word": "Kabhi",
+          "start_ms": 129060,
+          "end_ms": 130259,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "bi",
+          "start_ms": 129060,
+          "end_ms": 130259,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ek",
+          "start_ms": 129060,
+          "end_ms": 130259,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "insan",
+          "start_ms": 129060,
+          "end_ms": 130259,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ko",
+          "start_ms": 129060,
+          "end_ms": 130259,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "70"
+    },
+    {
+      "text": "Koi kaupinion nahi baadanayi chiya",
+      "start_ms": 130259,
+      "end_ms": 132300,
+      "words": [
+        {
+          "word": "Koi",
+          "start_ms": 130259,
+          "end_ms": 132300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kaupinion",
+          "start_ms": 130259,
+          "end_ms": 132300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "nahi",
+          "start_ms": 130259,
+          "end_ms": 132300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "baadanayi",
+          "start_ms": 130259,
+          "end_ms": 132300,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "chiya",
+          "start_ms": 130259,
+          "end_ms": 132300,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "71"
+    },
+    {
+      "text": "Yohi yohi kain ke kaa jaar aar hai",
+      "start_ms": 134140,
+      "end_ms": 135920,
+      "words": [
+        {
+          "word": "Yohi",
+          "start_ms": 134140,
+          "end_ms": 135920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "yohi",
+          "start_ms": 134140,
+          "end_ms": 135920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kain",
+          "start_ms": 134140,
+          "end_ms": 135920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "ke",
+          "start_ms": 134140,
+          "end_ms": 135920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "kaa",
+          "start_ms": 134140,
+          "end_ms": 135920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "jaar",
+          "start_ms": 134140,
+          "end_ms": 135920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "aar",
+          "start_ms": 134140,
+          "end_ms": 135920,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "hai",
+          "start_ms": 134140,
+          "end_ms": 135920,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "72"
+    },
+    {
+      "text": "Podkastu meraa yaa lagi yohi baanayi pakadayat",
+      "start_ms": 135920,
+      "end_ms": 138640,
+      "words": [
+        {
+          "word": "Podkastu",
+          "start_ms": 135920,
+          "end_ms": 138640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "meraa",
+          "start_ms": 135920,
+          "end_ms": 138640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "yaa",
+          "start_ms": 135920,
+          "end_ms": 138640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "lagi",
+          "start_ms": 135920,
+          "end_ms": 138640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "yohi",
+          "start_ms": 135920,
+          "end_ms": 138640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "baanayi",
+          "start_ms": 135920,
+          "end_ms": 138640,
+          "confidence": 0.8,
+          "speaker_id": null
+        },
+        {
+          "word": "pakadayat",
+          "start_ms": 135920,
+          "end_ms": 138640,
+          "confidence": 0.8,
+          "speaker_id": null
+        }
+      ],
+      "speaker_id": null,
+      "segment_id": "73"
+    }
+  ],
+  "entities": [
+    {
+      "text": "Vijay Mahalya",
+      "entity_type": "person_name",
+      "start_ms": 0,
+      "end_ms": 880,
+      "segment_id": "0",
+      "confidence": 0.6,
+      "normalized": "vijay mahalya"
+    },
+    {
+      "text": "Ape Ne",
+      "entity_type": "person_name",
+      "start_ms": 1280,
+      "end_ms": 2660,
+      "segment_id": "1",
+      "confidence": 0.6,
+      "normalized": "ape ne"
+    },
+    {
+      "text": "Kuldi Bir",
+      "entity_type": "person_name",
+      "start_ms": 2660,
+      "end_ms": 4400,
+      "segment_id": "2",
+      "confidence": 0.6,
+      "normalized": "kuldi bir"
+    },
+    {
+      "text": "King Fischer",
+      "entity_type": "person_name",
+      "start_ms": 4400,
+      "end_ms": 6260,
+      "segment_id": "3",
+      "confidence": 0.6,
+      "normalized": "king fischer"
+    },
+    {
+      "text": "Yubi Grupayet Taken",
+      "entity_type": "person_name",
+      "start_ms": 4400,
+      "end_ms": 6260,
+      "segment_id": "3",
+      "confidence": 0.6,
+      "normalized": "yubi grupayet taken"
+    },
+    {
+      "text": "King Fischer",
+      "entity_type": "person_name",
+      "start_ms": 7700,
+      "end_ms": 10380,
+      "segment_id": "5",
+      "confidence": 0.6,
+      "normalized": "king fischer"
+    },
+    {
+      "text": "Ame Ne",
+      "entity_type": "person_name",
+      "start_ms": 16740,
+      "end_ms": 18160,
+      "segment_id": "11",
+      "confidence": 0.6,
+      "normalized": "ame ne"
+    },
+    {
+      "text": "Hero Royal Challenge",
+      "entity_type": "person_name",
+      "start_ms": 33300,
+      "end_ms": 34820,
+      "segment_id": "23",
+      "confidence": 0.6,
+      "normalized": "hero royal challenge"
+    },
+    {
+      "text": "And Banglao",
+      "entity_type": "person_name",
+      "start_ms": 34820,
+      "end_ms": 37060,
+      "segment_id": "24",
+      "confidence": 0.6,
+      "normalized": "and banglao"
+    },
+    {
+      "text": "So Royal Challenger Banglao",
+      "entity_type": "person_name",
+      "start_ms": 37060,
+      "end_ms": 38940,
+      "segment_id": "25",
+      "confidence": 0.6,
+      "normalized": "so royal challenger banglao"
+    },
+    {
+      "text": "King Fischer India",
+      "entity_type": "person_name",
+      "start_ms": 49640,
+      "end_ms": 52420,
+      "segment_id": "31",
+      "confidence": 0.6,
+      "normalized": "king fischer india"
+    },
+    {
+      "text": "Vira Chanik",
+      "entity_type": "person_name",
+      "start_ms": 52420,
+      "end_ms": 53880,
+      "segment_id": "32",
+      "confidence": 0.6,
+      "normalized": "vira chanik"
+    },
+    {
+      "text": "Crude Oil",
+      "entity_type": "person_name",
+      "start_ms": 55500,
+      "end_ms": 57260,
+      "segment_id": "34",
+      "confidence": 0.6,
+      "normalized": "crude oil"
+    },
+    {
+      "text": "Finance Minister",
+      "entity_type": "person_name",
+      "start_ms": 101820,
+      "end_ms": 105000,
+      "segment_id": "57",
+      "confidence": 0.6,
+      "normalized": "finance minister"
+    }
+  ],
+  "events": [
+    {
+      "subject": "unknown",
+      "subject_entity_id": "",
+      "verb": "take",
+      "action_type": "RECEIVE",
+      "object_": "",
+      "object_entity_id": "",
+      "indirect_object": "",
+      "raw_text": "King Fischer aur Yubi Grupayet Taken",
+      "start_ms": 4400,
+      "end_ms": 6260,
+      "segment_id": "3",
+      "confidence": 0.55,
+      "monetary_ref": null
+    },
+    {
+      "subject": "unknown",
+      "subject_entity_id": "",
+      "verb": "challenge",
+      "action_type": "ARGUE",
+      "object_": "",
+      "object_entity_id": "",
+      "indirect_object": "",
+      "raw_text": "Hero Royal Challenge me re viski thi",
+      "start_ms": 33300,
+      "end_ms": 34820,
+      "segment_id": "23",
+      "confidence": 0.55,
+      "monetary_ref": null
+    },
+    {
+      "subject": "unknown",
+      "subject_entity_id": "",
+      "verb": "challenge",
+      "action_type": "ARGUE",
+      "object_": "",
+      "object_entity_id": "",
+      "indirect_object": "",
+      "raw_text": "So Royal Challenger Banglao",
+      "start_ms": 37060,
+      "end_ms": 38940,
+      "segment_id": "25",
+      "confidence": 0.55,
+      "monetary_ref": null
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "d23ed513",
+      "start_ms": 0,
+      "end_ms": 132300,
+      "segment_ids": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71"
+      ],
+      "dominant_speaker": null,
+      "entity_ids": [],
+      "event_ids": [],
+      "topic_keywords": [],
+      "monetary_mention_ids": [],
+      "boundary_confidence": 0.7
+    },
+    {
+      "scene_id": "1b11e7ac",
+      "start_ms": 134140,
+      "end_ms": 138640,
+      "segment_ids": [
+        "72",
+        "73"
+      ],
+      "dominant_speaker": null,
+      "entity_ids": [],
+      "event_ids": [],
+      "topic_keywords": [],
+      "monetary_mention_ids": [],
+      "boundary_confidence": 0.7
+    }
+  ],
+  "monetary_mentions": [],
+  "speaker_map": {
+    "UNKNOWN": "King Fischer"
+  }
+}

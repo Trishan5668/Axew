@@ -1,0 +1,41 @@
+{
+  "backend": "stub",
+  "identities": {
+    "vijay_mallya": {
+      "identity_id": "vijay_mallya",
+      "display_name": "Vijay Mallya",
+      "appearances": [
+        {
+          "start": 8.5,
+          "end": 18.2,
+          "source": "transcript"
+        }
+      ],
+      "aliases": [
+        "Vijay",
+        "Mallya",
+        "the businessman"
+      ],
+      "embedding_count": 0,
+      "backend": "stub"
+    },
+    "rajesh_kumar": {
+      "identity_id": "rajesh_kumar",
+      "display_name": "Rajesh Kumar",
+      "appearances": [
+        {
+          "start": 0.0,
+          "end": 8.5,
+          "source": "transcript"
+        }
+      ],
+      "aliases": [
+        "Rajesh",
+        "interviewer",
+        "host"
+      ],
+      "embedding_count": 0,
+      "backend": "stub"
+    }
+  }
+}

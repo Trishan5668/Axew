@@ -1,0 +1,87 @@
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.7.0
+pydantic-settings>=2.2.0
+httpx>=0.27.0
+python-multipart>=0.0.9
+aiofiles>=23.2.1
+
+# Transcription (local Whisper)
+openai-whisper>=20231117
+torch>=2.0.0
+numpy>=1.26.0
+
+# Bundled ffmpeg when system ffmpeg is not on PATH
+imageio-ffmpeg>=0.4.9
+soundfile>=0.12.1
+
+# Semantic search
+sentence-transformers>=2.7.0
+
+# Phase 1+ transcript processing (optional — graceful fallbacks if missing)
+spacy>=3.7.0
+httpx>=0.27.0
+
+# Optional: speaker diarization (requires HF_TOKEN)
+# pyannote.audio>=3.1.0
+# librosa>=0.10.0
+
+# Phase 2+ intelligence (optional — graceful fallbacks)
+# gliner>=0.2.0
+# coreferee>=1.4.0
+# keybert>=0.8.0
+transformers>=4.40.0
+
+# Phase 3+ hybrid retrieval
+chromadb>=0.5.0
+rank-bm25>=0.2.2
+rapidfuzz>=3.0.0
+thefuzz>=0.22.0
+python-Levenshtein>=0.25.0
+faiss-cpu>=1.8.0
+diskcache>=5.6.0
+word2number>=1.1
+scikit-learn>=1.3.0
+psutil>=5.9.0
+
+# Phase 6 multimodal (optional)
+# easyocr>=1.7.0
+# Pillow>=10.0.0
+
+# ===========================================================================
+# Phase 16 — Multimodal Semantic Video Intelligence
+# ===========================================================================
+#
+# REQUIRED — light deps used by the entity-grounded retriever, knowledge
+# layer (EventGraph) and the hierarchical index. These have no GPU /
+# native-compile requirements and install cleanly on Windows + macOS + Linux.
+#
+networkx>=3.0
+
+# REQUIRED — knowledge-layer vector store (only used when ChromaDB is
+# unavailable or the user opts into per-video persistent indexes).
+# Falls back gracefully to in-memory scoring if not installed.
+qdrant-client>=1.10.0
+
+# OPTIONAL — faster-whisper drop-in for openai-whisper.  Massively faster
+# CPU/GPU inference with the same word-timestamp API.  Code paths fall back
+# to openai-whisper when this isn't installed.
+# faster-whisper>=1.0.0
+
+# OPTIONAL — heavy GPU perception backends.  Required by the spec's Phases
+# 1–5 (scene labeling, face tracking, motion analysis, emotion detection,
+# ASR upgrade).  None of them are imported eagerly — code that needs them
+# probes via :func:`python.perception.face_identity.detect_backend_status`
+# and degrades to transcript-only signals when absent.
+#
+#   pyannote.audio>=3.1.0           # diarization 3.1
+#   whisperx>=3.1.0                 # forced-alignment + diarization wrapper
+#   insightface>=0.7.3              # RetinaFace + ArcFace identity
+#   deepface>=0.0.92                # facial emotion analysis
+#   mediapipe>=0.10.14              # gesture + pose
+#   speechbrain>=1.0.0              # vocal emotion (wav2vec2-IEMOCAP)
+#   torchvision>=0.18.0             # RAFT optical flow (already pulled by torch)
+#   librosa>=0.10.0                 # audio loading for vocal emotion / VAD
+#
+# Install per-platform; many require CUDA wheels and Windows-specific
+# build steps.  See docs/AXEW_INTELLIGENCE_ROADMAP.md for guidance.
