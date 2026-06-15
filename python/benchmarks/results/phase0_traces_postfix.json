@@ -1,0 +1,837 @@
+[
+  {
+    "prompt": "Find where he talks about debt.",
+    "intent": {
+      "entities": [],
+      "actions": [
+        "talk",
+        "talks",
+        "discuss",
+        "mention"
+      ],
+      "monetary_refs": [],
+      "semantic_concepts": [
+        "money/finance"
+      ],
+      "search_terms": [
+        "Find where he talks about debt",
+        "talk",
+        "talks",
+        "discuss",
+        "mention",
+        "money/finance",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find he talks about debt",
+        "the guest receives"
+      ],
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_016",
+        "anchor": [
+          185.0,
+          198.0
+        ],
+        "expanded": [
+          185.0,
+          215.5
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.441,
+        "score_cross_encoder": -8.491,
+        "match_quality": "strong_match",
+        "text": "Let's talk about the banks. The value of those loans. We're talking about nine thousand cr"
+      },
+      {
+        "chunk_id": "seg_007",
+        "anchor": [
+          68.3,
+          78.0
+        ],
+        "expanded": [
+          68.3,
+          92.5
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.358,
+        "score_cross_encoder": -7.99,
+        "match_quality": "strong_match",
+        "text": "Speaking of celebrations, there was a famous moment on this very show years ago. Do you re"
+      },
+      {
+        "chunk_id": "seg_036",
+        "anchor": [
+          475.0,
+          492.0
+        ],
+        "expanded": [
+          475.0,
+          492.0
+        ],
+        "score_calibrated": 0.652,
+        "score_fused": 0.349,
+        "score_cross_encoder": -11.033,
+        "match_quality": "moderate_match",
+        "text": "My father was a giant. He built United Breweries from a single brewery in Bangalore. He ta"
+      },
+      {
+        "chunk_id": "seg_035",
+        "anchor": [
+          460.0,
+          475.0
+        ],
+        "expanded": [
+          460.0,
+          475.0
+        ],
+        "score_calibrated": 0.605,
+        "score_fused": 0.537,
+        "score_cross_encoder": -10.745,
+        "match_quality": "moderate_match",
+        "text": "When the interviewer asked about your UB Group earlier, you mentioned your father. Tell us"
+      },
+      {
+        "chunk_id": "seg_065",
+        "anchor": [
+          850.0,
+          860.0
+        ],
+        "expanded": [
+          838.0,
+          860.0
+        ],
+        "score_calibrated": 0.515,
+        "score_fused": 0.301,
+        "score_cross_encoder": -9.858,
+        "match_quality": "moderate_match",
+        "text": "The audience gives a standing ovation. Some are cheering, a few are still booing from the "
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_016",
+      "anchor": [
+        185.0,
+        198.0
+      ],
+      "expanded": [
+        185.0,
+        215.5
+      ],
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match"
+    },
+    "resolved_timestamps": [
+      184.5,
+      199.5
+    ],
+    "extraction_path": "<ffmpeg -ss 184.50 -to 199.50>",
+    "stage_latencies": {
+      "decompose_ms": 15.999999988707714,
+      "segment_ms": 32547.000000005937,
+      "retrieval_ms": 4842.999999993481,
+      "expansion_ms": 0.0,
+      "rerank_ms": 10938.000000009197,
+      "total_ms": 48343.99999999732
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where the interviewer gives 101 rupees to Vijay Mallya.",
+    "intent": {
+      "entities": [
+        "Vijay Mallya",
+        "interviewer"
+      ],
+      "actions": [
+        "give",
+        "gives",
+        "gave",
+        "hand over"
+      ],
+      "monetary_refs": [
+        "101 rupees",
+        "give money",
+        "hand over",
+        "payment",
+        "transfer",
+        "here take",
+        "yeh lo"
+      ],
+      "semantic_concepts": [
+        "money/finance"
+      ],
+      "search_terms": [
+        "Find where the interviewer gives 101 rupees to Vijay Mallya",
+        "Vijay Mallya",
+        "interviewer",
+        "give",
+        "gives",
+        "gave",
+        "hand over",
+        "money/finance",
+        "101 rupees",
+        "give money"
+      ],
+      "entity_anchored": true
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_009",
+        "anchor": [
+          92.5,
+          108.0
+        ],
+        "expanded": [
+          92.5,
+          108.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.903,
+        "score_cross_encoder": 3.387,
+        "match_quality": "strong_match",
+        "text": "That's right. I wanted to make a point about starting small. Here, let me recreate it. Vij"
+      },
+      {
+        "chunk_id": "seg_063",
+        "anchor": [
+          825.0,
+          838.0
+        ],
+        "expanded": [
+          810.0,
+          850.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.892,
+        "score_cross_encoder": 2.118,
+        "match_quality": "strong_match",
+        "text": "Air Deccan acquisition. Noted. Ladies and gentlemen, please join me in thanking Vijay Mall"
+      },
+      {
+        "chunk_id": "seg_001",
+        "anchor": [
+          0.0,
+          8.5
+        ],
+        "expanded": [
+          0.0,
+          18.2
+        ],
+        "score_calibrated": 0.903,
+        "score_fused": 0.419,
+        "score_cross_encoder": 2.575,
+        "match_quality": "strong_match",
+        "text": "Welcome everyone to today's special interview. I'm your host Rajesh Kumar, and we have an "
+      },
+      {
+        "chunk_id": "seg_035",
+        "anchor": [
+          460.0,
+          475.0
+        ],
+        "expanded": [
+          460.0,
+          475.0
+        ],
+        "score_calibrated": 0.619,
+        "score_fused": 0.847,
+        "score_cross_encoder": -4.34,
+        "match_quality": "moderate_match",
+        "text": "When the interviewer asked about your UB Group earlier, you mentioned your father. Tell us"
+      },
+      {
+        "chunk_id": "seg_064",
+        "anchor": [
+          838.0,
+          850.0
+        ],
+        "expanded": [
+          825.0,
+          860.0
+        ],
+        "score_calibrated": 0.579,
+        "score_fused": 0.81,
+        "score_cross_encoder": -4.045,
+        "match_quality": "moderate_match",
+        "text": "Thank you, Rajesh. And thank you to everyone watching. Remember, every empire starts with "
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_009",
+      "anchor": [
+        92.5,
+        108.0
+      ],
+      "expanded": [
+        92.5,
+        108.0
+      ],
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match"
+    },
+    "resolved_timestamps": [
+      92.0,
+      109.5
+    ],
+    "extraction_path": "<ffmpeg -ss 92.00 -to 109.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 61.99999999080319,
+      "retrieval_ms": 14703.000000008615,
+      "expansion_ms": 16.00000000325963,
+      "rerank_ms": 1671.9999999913853,
+      "total_ms": 16452.999999994063
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Extract the funniest moment.",
+    "intent": {
+      "entities": [],
+      "actions": [
+        "funny",
+        "joke",
+        "laugh",
+        "humor"
+      ],
+      "monetary_refs": [],
+      "semantic_concepts": [
+        "joke/humor"
+      ],
+      "search_terms": [
+        "Extract the funniest moment",
+        "funny",
+        "joke",
+        "laugh",
+        "humor",
+        "joke/humor",
+        "the guest moment",
+        "where the guest talks about this",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_006",
+        "anchor": [
+          55.0,
+          68.3
+        ],
+        "expanded": [
+          45.5,
+          68.3
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.463,
+        "score_cross_encoder": -10.636,
+        "match_quality": "strong_match",
+        "text": "Yes, and I laugh when I think about our launch party. We had champagne flowing and the who"
+      },
+      {
+        "chunk_id": "seg_007",
+        "anchor": [
+          68.3,
+          78.0
+        ],
+        "expanded": [
+          68.3,
+          92.5
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.353,
+        "score_cross_encoder": -7.99,
+        "match_quality": "strong_match",
+        "text": "Speaking of celebrations, there was a famous moment on this very show years ago. Do you re"
+      },
+      {
+        "chunk_id": "seg_010",
+        "anchor": [
+          108.0,
+          118.5
+        ],
+        "expanded": [
+          108.0,
+          130.0
+        ],
+        "score_calibrated": 0.853,
+        "score_fused": 0.404,
+        "score_cross_encoder": -9.662,
+        "match_quality": "strong_match",
+        "text": "He accepts the notes with a smile and tucks them into his jacket pocket. The studio audien"
+      },
+      {
+        "chunk_id": "seg_024",
+        "anchor": [
+          302.0,
+          315.0
+        ],
+        "expanded": [
+          285.0,
+          328.0
+        ],
+        "score_calibrated": 0.67,
+        "score_fused": 0.394,
+        "score_cross_encoder": -10.09,
+        "match_quality": "moderate_match",
+        "text": "There was a moment outside the courthouse when protesters were shouting. You looked fright"
+      },
+      {
+        "chunk_id": "seg_022",
+        "anchor": [
+          272.0,
+          285.0
+        ],
+        "expanded": [
+          272.0,
+          302.0
+        ],
+        "score_calibrated": 0.67,
+        "score_fused": 0.394,
+        "score_cross_encoder": -10.973,
+        "match_quality": "moderate_match",
+        "text": "Tell us about your time in London. What was daily life like during the extradition hearing"
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_006",
+      "anchor": [
+        55.0,
+        68.3
+      ],
+      "expanded": [
+        45.5,
+        68.3
+      ],
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match"
+    },
+    "resolved_timestamps": [
+      54.5,
+      69.8
+    ],
+    "extraction_path": "<ffmpeg -ss 54.50 -to 69.80>",
+    "stage_latencies": {
+      "decompose_ms": 16.00000000325963,
+      "segment_ms": 108.99999999674037,
+      "retrieval_ms": 4906.000000002678,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1297.0000000059372,
+      "total_ms": 6328.000000008615
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where the audience laughs.",
+    "intent": {
+      "entities": [],
+      "actions": [
+        "funny",
+        "joke",
+        "laugh",
+        "humor"
+      ],
+      "monetary_refs": [],
+      "semantic_concepts": [
+        "joke/humor"
+      ],
+      "search_terms": [
+        "Find where the audience laughs",
+        "funny",
+        "joke",
+        "laugh",
+        "humor",
+        "joke/humor",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find the audience laughs",
+        "the guest receives"
+      ],
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_010",
+        "anchor": [
+          108.0,
+          118.5
+        ],
+        "expanded": [
+          108.0,
+          130.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.557,
+        "score_cross_encoder": -2.788,
+        "match_quality": "strong_match",
+        "text": "He accepts the notes with a smile and tucks them into his jacket pocket. The studio audien"
+      },
+      {
+        "chunk_id": "seg_033",
+        "anchor": [
+          432.0,
+          445.0
+        ],
+        "expanded": [
+          415.0,
+          445.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.514,
+        "score_cross_encoder": -3.537,
+        "match_quality": "strong_match",
+        "text": "Fifty crore for a birthday party! The audience is gasping. Some are laughing nervously."
+      },
+      {
+        "chunk_id": "seg_065",
+        "anchor": [
+          850.0,
+          860.0
+        ],
+        "expanded": [
+          838.0,
+          860.0
+        ],
+        "score_calibrated": 0.863,
+        "score_fused": 0.378,
+        "score_cross_encoder": -5.04,
+        "match_quality": "strong_match",
+        "text": "The audience gives a standing ovation. Some are cheering, a few are still booing from the "
+      },
+      {
+        "chunk_id": "seg_005",
+        "anchor": [
+          45.5,
+          55.0
+        ],
+        "expanded": [
+          45.5,
+          68.3
+        ],
+        "score_calibrated": 0.836,
+        "score_fused": 0.341,
+        "score_cross_encoder": -6.834,
+        "match_quality": "strong_match",
+        "text": "The audience is already applauding just hearing that. People remember those golden days fo"
+      },
+      {
+        "chunk_id": "seg_006",
+        "anchor": [
+          55.0,
+          68.3
+        ],
+        "expanded": [
+          45.5,
+          68.3
+        ],
+        "score_calibrated": 0.689,
+        "score_fused": 0.52,
+        "score_cross_encoder": -9.54,
+        "match_quality": "moderate_match",
+        "text": "Yes, and I laugh when I think about our launch party. We had champagne flowing and the who"
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_010",
+      "anchor": [
+        108.0,
+        118.5
+      ],
+      "expanded": [
+        108.0,
+        130.0
+      ],
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match"
+    },
+    "resolved_timestamps": [
+      107.5,
+      120.0
+    ],
+    "extraction_path": "<ffmpeg -ss 107.50 -to 120.00>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 46.999999991385266,
+      "retrieval_ms": 5922.000000005937,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1468.9999999973224,
+      "total_ms": 7437.999999994645
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where the guest reacts to the statement.",
+    "intent": {
+      "entities": [],
+      "actions": [],
+      "monetary_refs": [],
+      "semantic_concepts": [],
+      "search_terms": [
+        "Find where the guest reacts to the statement",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find the guest reacts to the statement",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_007",
+        "anchor": [
+          68.3,
+          78.0
+        ],
+        "expanded": [
+          68.3,
+          92.5
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.29,
+        "score_cross_encoder": -7.99,
+        "match_quality": "strong_match",
+        "text": "Speaking of celebrations, there was a famous moment on this very show years ago. Do you re"
+      },
+      {
+        "chunk_id": "seg_057",
+        "anchor": [
+          740.0,
+          755.0
+        ],
+        "expanded": [
+          740.0,
+          755.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.375,
+        "score_cross_encoder": -10.06,
+        "match_quality": "strong_match",
+        "text": "Before we wrap up, I want to ask about the viral clip from this show. The moment you stood"
+      },
+      {
+        "chunk_id": "seg_035",
+        "anchor": [
+          460.0,
+          475.0
+        ],
+        "expanded": [
+          460.0,
+          475.0
+        ],
+        "score_calibrated": 0.829,
+        "score_fused": 0.321,
+        "score_cross_encoder": -10.745,
+        "match_quality": "strong_match",
+        "text": "When the interviewer asked about your UB Group earlier, you mentioned your father. Tell us"
+      },
+      {
+        "chunk_id": "seg_010",
+        "anchor": [
+          108.0,
+          118.5
+        ],
+        "expanded": [
+          108.0,
+          130.0
+        ],
+        "score_calibrated": 0.602,
+        "score_fused": 0.266,
+        "score_cross_encoder": -9.662,
+        "match_quality": "moderate_match",
+        "text": "He accepts the notes with a smile and tucks them into his jacket pocket. The studio audien"
+      },
+      {
+        "chunk_id": "seg_015",
+        "anchor": [
+          168.0,
+          185.0
+        ],
+        "expanded": [
+          168.0,
+          185.0
+        ],
+        "score_calibrated": 0.564,
+        "score_fused": 0.296,
+        "score_cross_encoder": -11.265,
+        "match_quality": "moderate_match",
+        "text": "When the court announced the verdict, I was shocked. Completely shocked. I didn't expect t"
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_007",
+      "anchor": [
+        68.3,
+        78.0
+      ],
+      "expanded": [
+        68.3,
+        92.5
+      ],
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match"
+    },
+    "resolved_timestamps": [
+      67.8,
+      79.5
+    ],
+    "extraction_path": "<ffmpeg -ss 67.80 -to 79.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 62.000000005355105,
+      "retrieval_ms": 5468.999999997322,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1546.9999999913853,
+      "total_ms": 7077.999999994063
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where startup funding is discussed.",
+    "intent": {
+      "entities": [],
+      "actions": [
+        "talk",
+        "talks",
+        "discuss",
+        "mention"
+      ],
+      "monetary_refs": [],
+      "semantic_concepts": [
+        "money/finance",
+        "opening"
+      ],
+      "search_terms": [
+        "Find where startup funding is discussed",
+        "talk",
+        "talks",
+        "discuss",
+        "mention",
+        "money/finance",
+        "opening",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find startup funding is discussed"
+      ],
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_007",
+        "anchor": [
+          68.3,
+          78.0
+        ],
+        "expanded": [
+          68.3,
+          92.5
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.418,
+        "score_cross_encoder": -7.99,
+        "match_quality": "strong_match",
+        "text": "Speaking of celebrations, there was a famous moment on this very show years ago. Do you re"
+      },
+      {
+        "chunk_id": "seg_032",
+        "anchor": [
+          415.0,
+          432.0
+        ],
+        "expanded": [
+          415.0,
+          445.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.287,
+        "score_cross_encoder": -8.046,
+        "match_quality": "strong_match",
+        "text": "My 60th birthday on Goa beach. Five hundred guests, fireworks over the Arabian Sea, and a "
+      },
+      {
+        "chunk_id": "seg_016",
+        "anchor": [
+          185.0,
+          198.0
+        ],
+        "expanded": [
+          185.0,
+          215.5
+        ],
+        "score_calibrated": 0.975,
+        "score_fused": 0.455,
+        "score_cross_encoder": -10.582,
+        "match_quality": "strong_match",
+        "text": "Let's talk about the banks. The value of those loans. We're talking about nine thousand cr"
+      },
+      {
+        "chunk_id": "seg_024",
+        "anchor": [
+          302.0,
+          315.0
+        ],
+        "expanded": [
+          285.0,
+          328.0
+        ],
+        "score_calibrated": 0.621,
+        "score_fused": 0.341,
+        "score_cross_encoder": -10.09,
+        "match_quality": "moderate_match",
+        "text": "There was a moment outside the courthouse when protesters were shouting. You looked fright"
+      },
+      {
+        "chunk_id": "seg_022",
+        "anchor": [
+          272.0,
+          285.0
+        ],
+        "expanded": [
+          272.0,
+          302.0
+        ],
+        "score_calibrated": 0.621,
+        "score_fused": 0.341,
+        "score_cross_encoder": -10.973,
+        "match_quality": "moderate_match",
+        "text": "Tell us about your time in London. What was daily life like during the extradition hearing"
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_007",
+      "anchor": [
+        68.3,
+        78.0
+      ],
+      "expanded": [
+        68.3,
+        92.5
+      ],
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match"
+    },
+    "resolved_timestamps": [
+      67.8,
+      79.5
+    ],
+    "extraction_path": "<ffmpeg -ss 67.80 -to 79.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 47.00000000593718,
+      "retrieval_ms": 6717.999999993481,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1203.0000000086147,
+      "total_ms": 7968.000000008033
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  }
+]

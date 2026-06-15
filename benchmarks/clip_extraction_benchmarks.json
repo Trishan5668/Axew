@@ -1,0 +1,167 @@
+{
+  "_meta": {
+    "description": "Clip-extraction benchmark suite for the production RetrievalPipeline.",
+    "fixture": "python/evaluation/fixtures/interview_segments.json",
+    "pass_criterion": "start_drift <= tolerance_seconds AND resolved window overlaps expected window",
+    "note": "Ground-truth windows are taken from the authoritative fixture timeline (python/benchmarks/retrieval_benchmark.py). They are NOT derived from system output."
+  },
+  "benchmarks": [
+    {
+      "id": "bench_001",
+      "video_id": "interview_fixture",
+      "prompt": "Find where he talks about the bank loans and debt.",
+      "expected_start_ts": 185.0,
+      "expected_end_ts": 198.0,
+      "tolerance_seconds": 8.0,
+      "difficulty": "medium",
+      "failure_category": null,
+      "tags": ["topic"]
+    },
+    {
+      "id": "bench_002",
+      "video_id": "interview_fixture",
+      "prompt": "Find where he discusses building Kingfisher Airlines in the early days.",
+      "expected_start_ts": 28.0,
+      "expected_end_ts": 45.5,
+      "tolerance_seconds": 6.0,
+      "difficulty": "hard",
+      "failure_category": "ambiguous_multi_region",
+      "tags": ["topic"]
+    },
+    {
+      "id": "bench_003",
+      "video_id": "interview_fixture",
+      "prompt": "Find where SBI and PNB are mentioned as the largest creditors.",
+      "expected_start_ts": 635.0,
+      "expected_end_ts": 648.0,
+      "tolerance_seconds": 6.0,
+      "difficulty": "medium",
+      "failure_category": null,
+      "tags": ["named_entity"]
+    },
+    {
+      "id": "bench_004",
+      "video_id": "interview_fixture",
+      "prompt": "Find where he talks about his father Vittal Mallya and the UB Group legacy.",
+      "expected_start_ts": 460.0,
+      "expected_end_ts": 492.0,
+      "tolerance_seconds": 6.0,
+      "difficulty": "medium",
+      "failure_category": null,
+      "_gt_note": "Window spans the question->answer exchange (seg_035 prompt naming Vittal Mallya/UB Group through seg_036 answer); answer-only anchoring was too narrow for interview clip boundaries.",
+      "tags": ["named_entity"]
+    },
+    {
+      "id": "bench_005",
+      "video_id": "interview_fixture",
+      "prompt": "Find where the interviewer hands 101 rupees to Vijay Malia.",
+      "expected_start_ts": 92.5,
+      "expected_end_ts": 108.0,
+      "tolerance_seconds": 5.0,
+      "difficulty": "hard",
+      "failure_category": null,
+      "tags": ["named_entity", "action"]
+    },
+    {
+      "id": "bench_006",
+      "video_id": "interview_fixture",
+      "prompt": "Find where the interviewer gives 101 rupees to Vijay Mallya.",
+      "expected_start_ts": 92.5,
+      "expected_end_ts": 108.0,
+      "tolerance_seconds": 5.0,
+      "difficulty": "easy",
+      "failure_category": null,
+      "tags": ["action", "monetary"]
+    },
+    {
+      "id": "bench_007",
+      "video_id": "interview_fixture",
+      "prompt": "Find where he mentions the fifty crore birthday party cost.",
+      "expected_start_ts": 415.0,
+      "expected_end_ts": 432.0,
+      "tolerance_seconds": 6.0,
+      "difficulty": "medium",
+      "failure_category": "reaction_preferred_over_statement",
+      "tags": ["monetary", "action"]
+    },
+    {
+      "id": "bench_008",
+      "video_id": "interview_fixture",
+      "prompt": "Find where the interviewer asks about nine thousand crore rupees.",
+      "expected_start_ts": 185.0,
+      "expected_end_ts": 198.0,
+      "tolerance_seconds": 6.0,
+      "difficulty": "medium",
+      "failure_category": "query_framing_meta_phrase",
+      "tags": ["monetary"]
+    },
+    {
+      "id": "bench_009",
+      "video_id": "interview_fixture",
+      "prompt": "Extract the funniest moment.",
+      "expected_start_ts": 55.0,
+      "expected_end_ts": 68.3,
+      "tolerance_seconds": 8.0,
+      "difficulty": "hard",
+      "failure_category": null,
+      "tags": ["affect"]
+    },
+    {
+      "id": "bench_010",
+      "video_id": "interview_fixture",
+      "prompt": "Find where he gets emotional and talks about crying.",
+      "expected_start_ts": 142.0,
+      "expected_end_ts": 158.5,
+      "tolerance_seconds": 6.0,
+      "difficulty": "medium",
+      "failure_category": "ambiguous_multi_region",
+      "tags": ["affect"]
+    },
+    {
+      "id": "bench_011",
+      "video_id": "interview_fixture",
+      "prompt": "Find where the audience laughs.",
+      "expected_start_ts": 108.0,
+      "expected_end_ts": 118.5,
+      "tolerance_seconds": 6.0,
+      "difficulty": "medium",
+      "failure_category": null,
+      "tags": ["audience_reaction"]
+    },
+    {
+      "id": "bench_012",
+      "video_id": "interview_fixture",
+      "prompt": "Find where the audience applauds hearing about Kingfisher's golden days.",
+      "expected_start_ts": 45.5,
+      "expected_end_ts": 55.0,
+      "tolerance_seconds": 6.0,
+      "difficulty": "medium",
+      "failure_category": null,
+      "tags": ["audience_reaction"]
+    },
+    {
+      "id": "bench_013",
+      "video_id": "interview_fixture",
+      "prompt": "Find where the guest reacts to the accusation that he diverted funds to Formula One.",
+      "expected_start_ts": 215.5,
+      "expected_end_ts": 245.0,
+      "tolerance_seconds": 8.0,
+      "difficulty": "hard",
+      "failure_category": null,
+      "_gt_note": "Reaction clip spans accusation (seg_018) through the guest's denial (seg_019); the accusation provides the context a standalone clip needs.",
+      "tags": ["reaction"]
+    },
+    {
+      "id": "bench_014",
+      "video_id": "interview_fixture",
+      "prompt": "Find the viral clip where he stood up and pointed at the camera.",
+      "expected_start_ts": 740.0,
+      "expected_end_ts": 770.0,
+      "tolerance_seconds": 8.0,
+      "difficulty": "hard",
+      "failure_category": null,
+      "_gt_note": "Clip spans the setup (seg_057) through the described action (seg_058 'I stood up, pointed at the lens... ten million views').",
+      "tags": ["reaction", "topic"]
+    }
+  ]
+}

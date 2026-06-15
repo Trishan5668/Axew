@@ -55,11 +55,13 @@ class RetrievalCandidate:
     score_bm25: float = 0.0
     score_entity: float = 0.0
     score_fuzzy: float = 0.0
+    score_strategy: float = 0.0
     score_fused: float = 0.0
     match_explanation: str = ""
     is_opener: bool = False
     rank: int = 0
     score_entity_bonus: bool = False
+    strategy_origins: list[str] = field(default_factory=list)
     tags: list[str] = field(default_factory=list)
     expanded_start: Optional[float] = None
     expanded_end: Optional[float] = None
@@ -92,6 +94,7 @@ class RetrievalCandidate:
             "score_bm25": self.score_bm25,
             "score_entity": self.score_entity,
             "score_fuzzy": self.score_fuzzy,
+            "score_strategy": self.score_strategy,
             "score_fused": self.score_fused,
             "score_cross_encoder": self.score_cross_encoder,
             "score_final": self.score_final,
@@ -100,5 +103,6 @@ class RetrievalCandidate:
             "match_explanation": self.match_explanation,
             "is_opener": self.is_opener,
             "rank": self.rank,
+            "strategy_origins": self.strategy_origins,
             "tags": self.tags,
         }

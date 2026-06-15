@@ -132,7 +132,18 @@ export function PreviewPanel() {
     setMediaReady(false)
     setPreviewReady(false)
     setPlaybackError(null)
-  }, [previewClip?.id, previewClip?.mediaId, setActiveClip, setMediaReady, setPreviewReady, setPlaybackError])
+    const frame = requestAnimationFrame(() => {
+      usePlaybackStore.getState().syncMediaToPlayhead()
+    })
+    return () => cancelAnimationFrame(frame)
+  }, [
+    previewClip?.id,
+    previewClip?.mediaId,
+    setActiveClip,
+    setMediaReady,
+    setPreviewReady,
+    setPlaybackError,
+  ])
 
   const bindVideoRef = useCallback(
     (el: HTMLVideoElement | null) => {

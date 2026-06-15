@@ -1,0 +1,622 @@
+{
+  "id": "-TbrSc3VAWXTnUP86ZRsR",
+  "name": "Untitled Project",
+  "description": "",
+  "path": "Untitled_Project.axew",
+  "timeline": {
+    "id": "Sl8TBGuZ1TI7_wewkoB_u",
+    "projectId": "-TbrSc3VAWXTnUP86ZRsR",
+    "name": "Timeline 1",
+    "duration": 300,
+    "frameRate": 30,
+    "width": 1920,
+    "height": 1080,
+    "sampleRate": 48000,
+    "tracks": [
+      {
+        "id": "jv3xPFxUU4TjpS-pH8fWa",
+        "timelineId": "Sl8TBGuZ1TI7_wewkoB_u",
+        "name": "Video 1",
+        "type": "video",
+        "index": 0,
+        "height": 80,
+        "locked": false,
+        "muted": false,
+        "visible": true,
+        "solo": false,
+        "color": "#1E3A5F",
+        "clips": [
+          {
+            "id": "bML3PwmEGNz4WqAxxEQKF",
+            "trackId": "jv3xPFxUU4TjpS-pH8fWa",
+            "mediaId": "JTO2Mc5SzTfyC7iUmF6pf",
+            "name": "AI Extract",
+            "startTime": 0,
+            "duration": 6.980000000000004,
+            "mediaInPoint": 74.22,
+            "mediaOutPoint": 81.2,
+            "speed": 1,
+            "opacity": 1,
+            "volume": 1,
+            "disabled": false,
+            "color": "#5B5BFF",
+            "effects": [],
+            "transitions": {
+              "in": null,
+              "out": null
+            },
+            "keyframes": [],
+            "aiConfidence": 0.2632241519431203,
+            "aiConfidenceGrade": "LOW"
+          }
+        ]
+      },
+      {
+        "id": "XZDSuR6srqiIBYIUpsqgF",
+        "timelineId": "Sl8TBGuZ1TI7_wewkoB_u",
+        "name": "Audio 1",
+        "type": "audio",
+        "index": 1,
+        "height": 60,
+        "locked": false,
+        "muted": false,
+        "visible": true,
+        "solo": false,
+        "color": "#1E4F3A",
+        "clips": []
+      }
+    ],
+    "markers": [
+      {
+        "id": "_rtTOjEdc2FqD7tX6ocM3",
+        "time": 0,
+        "duration": 0.88,
+        "name": "AI Extract",
+        "color": "#22C55E",
+        "type": "ai",
+        "notes": "Vijay Mahalya sir,"
+      },
+      {
+        "id": "jh_oV9W602domf3Nx5yta",
+        "time": 0,
+        "duration": 0.88,
+        "name": "AI Extract",
+        "color": "#22C55E",
+        "type": "ai",
+        "notes": "Vijay Mahalya sir,"
+      },
+      {
+        "id": "R6xb5F3qVHoE9CKBbAlrJ",
+        "time": 0,
+        "duration": 0.88,
+        "name": "AI Extract",
+        "color": "#22C55E",
+        "type": "ai",
+        "notes": "Vijay Mahalya sir,"
+      },
+      {
+        "id": "rMjQFDr_IVAtZUZAX0zKS",
+        "time": 0,
+        "duration": 6.980000000000004,
+        "name": "AI Extract",
+        "color": "#22C55E",
+        "type": "ai",
+        "notes": "Uけど mo makat klhi aayat"
+      },
+      {
+        "id": "nkVuStosfrLeSyXLNqYlF",
+        "time": 0.88,
+        "duration": 0,
+        "name": "Extract end",
+        "color": "#22C55E",
+        "type": "ai",
+        "notes": ""
+      },
+      {
+        "id": "66jWPEP7dHGvozm6vIyM_",
+        "time": 0.88,
+        "duration": 0,
+        "name": "Extract end",
+        "color": "#22C55E",
+        "type": "ai",
+        "notes": ""
+      },
+      {
+        "id": "ItTfzy4VRTmmfr5mulGRc",
+        "time": 0.88,
+        "duration": 0,
+        "name": "Extract end",
+        "color": "#22C55E",
+        "type": "ai",
+        "notes": ""
+      },
+      {
+        "id": "6HCOZz9EvH6lijB8a4rar",
+        "time": 6.980000000000004,
+        "duration": 0,
+        "name": "Extract end",
+        "color": "#22C55E",
+        "type": "ai",
+        "notes": ""
+      }
+    ],
+    "createdAt": 1780054810196,
+    "updatedAt": 1780054810196
+  },
+  "mediaFiles": {
+    "JTO2Mc5SzTfyC7iUmF6pf": {
+      "id": "JTO2Mc5SzTfyC7iUmF6pf",
+      "name": "input.mp4",
+      "path": "D:\\Dev\\Project\\Video_Editor\\assets\\input.mp4",
+      "type": "video",
+      "duration": 5,
+      "width": 0,
+      "height": 0,
+      "fps": 30,
+      "codec": "unknown",
+      "audioCodec": null,
+      "sampleRate": null,
+      "channels": null,
+      "bitrate": 0,
+      "fileSize": 0,
+      "thumbnail": null,
+      "createdAt": 1780054815452,
+      "updatedAt": 1780054815452,
+      "metadata": {}
+    }
+  },
+  "transcripts": {
+    "JTO2Mc5SzTfyC7iUmF6pf": {
+      "mediaId": "JTO2Mc5SzTfyC7iUmF6pf",
+      "language": "hi",
+      "segments": [
+        {
+          "id": "0",
+          "start": 0,
+          "end": 0.88,
+          "text": "Vijay Mahalya sir,",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "1",
+          "start": 1.28,
+          "end": 2.66,
+          "text": "Ape Ne initial days ke baaray mein baatayi",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "2",
+          "start": 2.66,
+          "end": 4.4,
+          "text": "O Kuldi Bir was a great time",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "3",
+          "start": 4.4,
+          "end": 6.26,
+          "text": "King Fischer aur Yubi Grupayet Taken",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "4",
+          "start": 6.26,
+          "end": 7.7,
+          "text": "Daru ki Divan bhaat rai thi",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "5",
+          "start": 7.7,
+          "end": 10.38,
+          "text": "King Fischer ka 52% share thaum loke ke paas",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "6",
+          "start": 10.38,
+          "end": 11.92,
+          "text": "Veski ki NUMBER ONE Brandt hai am",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "7",
+          "start": 11.92,
+          "end": 12.38,
+          "text": "Y'know,",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "8",
+          "start": 12.8,
+          "end": 14.3,
+          "text": "Haratarav sa PAS AAY PAS AAY",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "9",
+          "start": 14.3,
+          "end": 14.7,
+          "text": "SWEET",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "10",
+          "start": 14.7,
+          "end": 16.74,
+          "text": "Aur suna Aur mumbe indian savi karina sajata",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "11",
+          "start": 16.74,
+          "end": 18.16,
+          "text": "Ame Ne hush time be bitt la gaya tha",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "12",
+          "start": 18.16,
+          "end": 20.1,
+          "text": "And I lost by a very small margin",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "13",
+          "start": 20.1,
+          "end": 21.92,
+          "text": "And then Aur sam bani lega hai",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "14",
+          "start": 21.92,
+          "end": 22.52,
+          "text": "Kair,",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "15",
+          "start": 23.14,
+          "end": 24.14,
+          "text": "Oost time be on sa haane mein",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "16",
+          "start": 24.14,
+          "end": 25.14,
+          "text": "Pala aayi thi",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "17",
+          "start": 25.14,
+          "end": 26.38,
+          "text": "If you know you know",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "18",
+          "start": 26.38,
+          "end": 27.36,
+          "text": "Bir RRCB ke sa li",
+          "confidence": -0.9581851535373264
+        },
+        {
+          "id": "19",
+          "start": 27.36,
+          "end": 29.28,
+          "text": "Utskava teen teams ke li aayi was the highest bitter",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "20",
+          "start": 29.28,
+          "end": 31.46,
+          "text": "And then me na finally banglao choos ke ya",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "21",
+          "start": 31.46,
+          "end": 32.32,
+          "text": "Ne specific reason",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "22",
+          "start": 32.32,
+          "end": 33.3,
+          "text": "Banglao reekyom",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "23",
+          "start": 33.3,
+          "end": 34.82,
+          "text": "Hero Royal Challenge me re viski thi",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "24",
+          "start": 34.82,
+          "end": 37.06,
+          "text": "And Banglao ar uskasad perfectly suit kar rata",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "25",
+          "start": 37.06,
+          "end": 38.94,
+          "text": "So Royal Challenger Banglao",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "26",
+          "start": 38.94,
+          "end": 41.82,
+          "text": "Lege ni IPL team bhai kane ke peechhe kui specific reason",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "27",
+          "start": 41.82,
+          "end": 43.54,
+          "text": "Tune ye 10 like ki omega ki humbhai karee",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "28",
+          "start": 44.660000000000004,
+          "end": 45.1,
+          "text": "Shoghe",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "29",
+          "start": 45.1,
+          "end": 46.76,
+          "text": "Exact ki maa boi mogei bi shoghe",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "30",
+          "start": 46.76,
+          "end": 49.64,
+          "text": "Youth ko IPL team ke thru apne brand keethe ra fatrak kaan naa tha",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "31",
+          "start": 49.64,
+          "end": 52.42,
+          "text": "2008 ta King Fischer India ki NUMBER ONE AAYLINE thi right",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "32",
+          "start": 52.42,
+          "end": 53.88,
+          "text": "Vira Chanik sa keya aayata",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "33",
+          "start": 53.88,
+          "end": 55.5,
+          "text": "Dos aar at mein global crisis aayata",
+          "confidence": -0.7856807801781631
+        },
+        {
+          "id": "34",
+          "start": 55.5,
+          "end": 57.26,
+          "text": "Rood oilke dham bhan ne lagei thi",
+          "confidence": -4.067900158110119
+        },
+        {
+          "id": "35",
+          "start": 57.26,
+          "end": 59.98,
+          "text": "Amas labke losses ar a Grade nand n theyna hi lagei thi",
+          "confidence": -4.067900158110119
+        },
+        {
+          "id": "36",
+          "start": 59.98,
+          "end": 61.14,
+          "text": "Uste a étanti ek uponne hai bahnne弸",
+          "confidence": -4.067900158110119
+        },
+        {
+          "id": "37",
+          "start": 61.14,
+          "end": 61.14,
+          "text": "",
+          "confidence": -4.067900158110119
+        },
+        {
+          "id": "38",
+          "start": 61.14,
+          "end": 62.28,
+          "text": "Cry他们 ne decan phaya bhaju aqslia sa tha",
+          "confidence": -4.067900158110119
+        },
+        {
+          "id": "39",
+          "start": 62.84,
+          "end": 64.44,
+          "text": "Losses aor sa redistek na gaila",
+          "confidence": -4.067900158110119
+        },
+        {
+          "id": "40",
+          "start": 64.44,
+          "end": 65.52,
+          "text": "Bak na wÌs beauty",
+          "confidence": -4.067900158110119
+        },
+        {
+          "id": "41",
+          "start": 66.94,
+          "end": 74.22,
+          "text": "Uけど mo makat klhi aayat",
+          "confidence": -4.067900158110119
+        },
+        {
+          "id": "42",
+          "start": 74.22,
+          "end": 81.2,
+          "text": "Y Taketor",
+          "confidence": -4.067900158110119
+        },
+        {
+          "id": "43",
+          "start": 85.2,
+          "end": 85.48,
+          "text": "Giving Fischer",
+          "confidence": -4.067900158110119
+        },
+        {
+          "id": "44",
+          "start": 85.48,
+          "end": 87.32,
+          "text": "آپ نے 대�kowabis chukana chiaap",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "45",
+          "start": 88.1,
+          "end": 89.14,
+          "text": "Lekin ik baad baat baat hai ye",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "46",
+          "start": 89.75999999999999,
+          "end": 91.42,
+          "text": "Employees ke salary ke saaleri kewne de ita time tak",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "47",
+          "start": 91.42,
+          "end": 92.22,
+          "text": "Deena chata tha",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "48",
+          "start": 92.22,
+          "end": 94.26,
+          "text": "Lekin courts ne bank ek enepis stale aagatia",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "49",
+          "start": 94.26,
+          "end": 95.74,
+          "text": "Ne re saare transaction rogk hai",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "50",
+          "start": 95.74,
+          "end": 97.28,
+          "text": "Araj bhi mge sa baat tha",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "51",
+          "start": 97.72,
+          "end": 98.4,
+          "text": "Bhoodh dhuk hai",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "52",
+          "start": 98.4,
+          "end": 99.32,
+          "text": "Akri sa baat",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "53",
+          "start": 99.32,
+          "end": 101.06,
+          "text": "Dozaa solaa me am landan ke maagat",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "54",
+          "start": 101.06,
+          "end": 101.86,
+          "text": "Bhaagah nahi tha",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "55",
+          "start": 101.86,
+          "end": 105.04,
+          "text": "Finance Minister se baat chit kar ke dhai chini khakya aram se kaya tha",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "56",
+          "start": 105.04,
+          "end": 107.62,
+          "text": "Lekin landan jaati hun loga na mera paspoti sees kalya",
+          "confidence": -0.9174504258897569
+        },
+        {
+          "id": "57",
+          "start": 107.62,
+          "end": 110.48,
+          "text": "Mme nha bhoodh baar indiaanagi kosis karyi settlement kone ki kosis karyi",
+          "confidence": -0.9174504258897569
+        }
+      ],
+      "fullText": "Vijay Mahalya sir, Ape Ne initial days ke baaray mein baatayi O Kuldi Bir was a great time King Fischer aur Yubi Grupayet Taken Daru ki Divan bhaat rai thi King Fischer ka 52% share thaum loke ke paas Veski ki NUMBER ONE Brandt hai am Y'know, Haratarav sa PAS AAY PAS AAY SWEET Aur suna Aur mumbe indian savi karina sajata Ame Ne hush time be bitt la gaya tha And I lost by a very small margin And then Aur sam bani lega hai Kair, Oost time be on sa haane mein Pala aayi thi If you know you know Bir RRCB ke sa li Utskava teen teams ke li aayi was the highest bitter And then me na finally banglao choos ke ya Ne specific reason Banglao reekyom Hero Royal Challenge me re viski thi And Banglao ar uskasad perfectly suit kar rata So Royal Challenger Banglao Lege ni IPL team bhai kane ke peechhe kui specific reason Tune ye 10 like ki omega ki humbhai karee Shoghe Exact ki maa boi mogei bi shoghe Youth ko IPL team ke thru apne brand keethe ra fatrak kaan naa tha 2008 ta King Fischer India ki NUMBER ONE AAYLINE thi right Vira Chanik sa keya aayata Dos aar at mein global crisis aayata Rood oilke dham bhan ne lagei thi Amas labke losses ar a Grade nand n theyna hi lagei thi Uste a étanti ek uponne hai bahnne弸 Cry他们 ne decan phaya bhaju aqslia sa tha Losses aor sa redistek na gaila Bak na wÌs beauty Uけど mo makat klhi aayat Y Taketor Giving Fischer آپ نے 대�kowabis chukana chiaap Lekin ik baad baat baat hai ye Employees ke salary ke saaleri kewne de ita time tak Deena chata tha Lekin courts ne bank ek enepis stale aagatia Ne re saare transaction rogk hai Araj bhi mge sa baat tha Bhoodh dhuk hai Akri sa baat Dozaa solaa me am landan ke maagat Bhaagah nahi tha Finance Minister se baat chit kar ke dhai chini khakya aram se kaya tha Lekin landan jaati hun loga na mera paspoti sees kalya Mme nha bhoodh baar indiaanagi kosis karyi settlement kone ki kosis karyi",
+      "generatedAt": 1780054977219
+    }
+  },
+  "mediaBin": {
+    "rootFolder": {
+      "id": "RRgv42V06RWrPDqj_MStS",
+      "name": "Root",
+      "parentId": null,
+      "children": [],
+      "mediaIds": [
+        "JTO2Mc5SzTfyC7iUmF6pf"
+      ]
+    },
+    "folders": {}
+  },
+  "settings": {
+    "timeline": {
+      "frameRate": 30,
+      "width": 1920,
+      "height": 1080,
+      "sampleRate": 48000
+    },
+    "playback": {
+      "proxyEnabled": false,
+      "proxyResolution": 720,
+      "cacheSize": 4096
+    },
+    "ai": {
+      "preferredModel": "llama3",
+      "autoTranscribe": false,
+      "silenceThresholdDb": -40,
+      "sceneDetectionSensitivity": 0.4
+    },
+    "export": {
+      "defaultPreset": "h264-1080p",
+      "outputDirectory": ""
+    }
+  },
+  "createdAt": 1780054810196,
+  "updatedAt": 1780054810196,
+  "version": "0.1.0"
+}

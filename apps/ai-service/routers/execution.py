@@ -347,6 +347,47 @@ def _assert_window(start: float, end: float) -> None:
     assert (end - start) > 0.5, f"duration must exceed 0.5s ({start} -> {end})"
 
 
+def _timestamp_boundary_trace(
+    *,
+    anchor_start: float,
+    anchor_end: float,
+    expanded_start: float,
+    expanded_end: float,
+    action_start: float,
+    action_end: float,
+    ffmpeg_start: Optional[float] = None,
+    ffmpeg_end: Optional[float] = None,
+) -> dict:
+    ffmpeg_start = action_start if ffmpeg_start is None else ffmpeg_start
+    ffmpeg_end = action_end if ffmpeg_end is None else ffmpeg_end
+    stages = [
+        ("anchor", anchor_start, anchor_end),
+        ("context_expansion", expanded_start, expanded_end),
+        ("timeline_action", action_start, action_end),
+        ("execution_plan", action_start, action_end),
+        ("ffmpeg_request", ffmpeg_start, ffmpeg_end),
+    ]
+    first_end_divergence = None
+    for stage, _start, end in stages[1:]:
+        if abs(float(end) - float(anchor_end)) > 1e-3:
+            first_end_divergence = stage
+            break
+
+    return {
+        "anchor_start": anchor_start,
+        "anchor_end": anchor_end,
+        "expanded_start": expanded_start,
+        "expanded_end": expanded_end,
+        "action_start": action_start,
+        "action_end": action_end,
+        "ffmpeg_start": ffmpeg_start,
+        "ffmpeg_end": ffmpeg_end,
+        "first_end_divergence_from_anchor": first_end_divergence,
+        "end_matches_anchor_at_action": abs(float(action_end) - float(anchor_end)) <= 1e-3,
+        "end_matches_anchor_at_ffmpeg": abs(float(ffmpeg_end) - float(anchor_end)) <= 1e-3,
+    }
+
+
 async def _intelligent_retrieve(
     request: PlanActionsRequest,
 ) -> Optional[IntelligentPlanResponse]:
@@ -381,15 +422,15 @@ async def _intelligent_retrieve(
         pipeline = RetrievalPipeline()
         result = pipeline.retrieve(request.prompt, chunks)
         best = result.top_candidate
-        retrieval_start = float(best.expanded_start)
-        retrieval_end = float(best.expanded_end)
+        context_start = float(best.expanded_start)
+        context_end = float(best.expanded_end)
+        retrieval_start = float(best.anchor_start)
+        retrieval_end = float(best.anchor_end)
+        _assert_window(context_start, context_end)
         _assert_window(retrieval_start, retrieval_end)
 
-        pad = request.padding_seconds
-        start = max(0.0, retrieval_start - pad)
-        end = retrieval_end + pad
-        if request.media_duration > 0:
-            end = min(request.media_duration, end)
+        start = retrieval_start
+        end = retrieval_end
         TimestampContract.validate_extraction_matches_retrieval(
             retrieval_start=start,
             retrieval_end=end,
@@ -397,6 +438,14 @@ async def _intelligent_retrieve(
             extraction_end=end,
         )
         _assert_window(start, end)
+        boundary_trace = _timestamp_boundary_trace(
+            anchor_start=retrieval_start,
+            anchor_end=retrieval_end,
+            expanded_start=context_start,
+            expanded_end=context_end,
+            action_start=start,
+            action_end=end,
+        )
 
         match_text = ""
         for seg in request.segments:
@@ -404,7 +453,11 @@ async def _intelligent_retrieve(
                 match_text = seg.text[:200]
                 break
 
-        conf = best.score_calibrated
+        conf = float(
+            best.score_final
+            if getattr(best, "score_final", None) is not None
+            else best.score_calibrated
+        )
         grade = "HIGH" if conf > 0.75 else "MEDIUM" if conf > 0.4 else "LOW"
         ctx_mgr = get_session(request.session_id)
         matches = [
@@ -413,7 +466,11 @@ async def _intelligent_retrieve(
                 text=c.chunk.text[:160],
                 start=float(c.expanded_start),
                 end=float(c.expanded_end),
-                score=c.score_calibrated,
+                score=float(
+                    c.score_final
+                    if getattr(c, "score_final", None) is not None
+                    else c.score_calibrated
+                ),
             )
             for c in result.all_candidates[:8]
         ]
@@ -435,7 +492,22 @@ async def _intelligent_retrieve(
             trace=[best.match_explanation],
             confidence_grade=grade,
             session_id=ctx_mgr.session_id,
-            debug=result.trace.to_dict(),
+            debug={
+                **result.trace.to_dict(),
+                "timestamp_boundary_trace": boundary_trace,
+                "timestamp_propagation": {
+                    "candidate_start_sec": retrieval_start,
+                    "candidate_end_sec": retrieval_end,
+                    "expanded_start_sec": context_start,
+                    "expanded_end_sec": context_end,
+                    "action_start_sec": start,
+                    "action_end_sec": end,
+                    "ffmpeg_start_sec": boundary_trace["ffmpeg_start"],
+                    "ffmpeg_end_sec": boundary_trace["ffmpeg_end"],
+                    "first_end_divergence_from_anchor": boundary_trace["first_end_divergence_from_anchor"],
+                    "changed_during_pipeline": not boundary_trace["end_matches_anchor_at_action"],
+                },
+            },
         )
 
         pipeline = SemanticRetrievalPipeline.from_segments(seg_dicts, video_id=video_id)

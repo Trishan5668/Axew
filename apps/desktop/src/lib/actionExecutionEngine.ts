@@ -19,6 +19,29 @@ function logPhase(phase: import('@shared/ai').AIExecutionPhase, message: string,
   useAIStore.getState().appendExecutionLog(phase, message, data)
 }
 
+function extractionTimelineRange(action: AIEditAction): AIHighlightRange | null {
+  if (
+    action.type !== 'keep-segment' &&
+    action.type !== 'isolate-segment' &&
+    action.type !== 'extract-clip'
+  ) {
+    return null
+  }
+
+  const sourceStart = action.params.start as number | undefined
+  const sourceEnd = action.params.end as number | undefined
+  if (typeof sourceStart !== 'number' || typeof sourceEnd !== 'number' || sourceEnd <= sourceStart) {
+    return null
+  }
+
+  return {
+    start: 0,
+    end: sourceEnd - sourceStart,
+    confidence: action.confidence,
+    label: (action.params.matchText as string) ?? action.description,
+  }
+}
+
 /**
  * Autonomous pipeline: prompt → semantic parse → transcript search → actions → timeline mutation → preview
  */
@@ -193,7 +216,11 @@ export async function executePromptPipeline(prompt: string): Promise<void> {
       }
     }
 
-    const firstHighlight = highlights[0]
+    const extractionPreview = applied
+      .filter((operation) => operation.success)
+      .map((operation) => extractionTimelineRange(operation.action))
+      .find((range): range is AIHighlightRange => range !== null)
+    const firstHighlight = extractionPreview ?? highlights[0]
     if (firstHighlight) {
       store.setExecutionPhase('preview')
       usePlaybackStore.getState().setCurrentTime(firstHighlight.start, { syncVideo: true })

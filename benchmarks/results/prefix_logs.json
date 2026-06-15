@@ -1,0 +1,3660 @@
+[
+  {
+    "prompt": "Find where he talks about the bank loans and debt.",
+    "intent": {
+      "original": "Find where he talks about the bank loans and debt.",
+      "entities": [],
+      "actions": [
+        "talk",
+        "talks",
+        "discuss",
+        "mention"
+      ],
+      "semantic_concepts": [
+        "money/finance"
+      ],
+      "monetary_refs": [],
+      "paraphrases": [
+        "the guest moment",
+        "where the guest talks about this",
+        "Find he talks about the bank loans and debt",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "search_terms": [
+        "Find where he talks about the bank loans and debt",
+        "talk",
+        "talks",
+        "discuss",
+        "mention",
+        "money/finance",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find he talks about the bank loans and debt",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_016",
+        "text": "Let's talk about the banks. The value of those loans. We're talking about nine thousand crore rupees. Nine thousand crore. Can you put that number in perspective?",
+        "start": 185.0,
+        "end": 198.0,
+        "anchor_start": 185.0,
+        "anchor_end": 198.0,
+        "expanded_start": 185.0,
+        "expanded_end": 215.5,
+        "segment": {
+          "segment_id": "6e954b2f-e735-4be8-9017-63fc644272c8",
+          "start": 185.0,
+          "end": 215.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_016",
+            "seg_017"
+          ]
+        },
+        "score_dense": 0.38726386427879333,
+        "score_bm25": 1.0,
+        "score_entity": 0.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.5355423524975776,
+        "score_cross_encoder": -2.970569133758545,
+        "score_final": 0.6706627057492733,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.39 BM25:1.00 Entity:0.00 Fuzzy:1.00 -> Fused:0.54 | CE:-2.97 -> Final:0.67 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_007",
+        "text": "Speaking of celebrations, there was a famous moment on this very show years ago. Do you remember the 101 rupees incident?",
+        "start": 68.3,
+        "end": 78.0,
+        "anchor_start": 68.3,
+        "anchor_end": 78.0,
+        "expanded_start": 68.3,
+        "expanded_end": 92.5,
+        "segment": {
+          "segment_id": "2509dae7-65fa-4c39-aa9c-95c9b3d2d707",
+          "start": 68.3,
+          "end": 92.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_007",
+            "seg_008"
+          ]
+        },
+        "score_dense": 0.31880444288253784,
+        "score_bm25": 0.48852901024470774,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.85,
+        "score_fused": 0.36121380757006516,
+        "score_cross_encoder": -7.990036964416504,
+        "score_final": 0.34999747613284743,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.32 BM25:0.49 Entity:0.00 Fuzzy:0.85 -> Fused:0.36 | CE:-7.99 -> Final:0.35 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 2,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_047",
+        "text": "You mentioned SBI and PNB. State Bank of India and Punjab National Bank were the largest creditors, correct?",
+        "start": 635.0,
+        "end": 648.0,
+        "anchor_start": 635.0,
+        "anchor_end": 648.0,
+        "expanded_start": 635.0,
+        "expanded_end": 662.0,
+        "segment": {
+          "segment_id": "d880e299-1a83-4fc9-97a9-4b281c0522c7",
+          "start": 635.0,
+          "end": 662.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_047",
+            "seg_048"
+          ]
+        },
+        "score_dense": 0.3373902440071106,
+        "score_bm25": 0.7879845966022289,
+        "score_entity": 0.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.46508273455304594,
+        "score_cross_encoder": -8.729434967041016,
+        "score_final": 0.3416261082077106,
+        "score_calibrated": 0.9781784999005853,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.34 BM25:0.79 Entity:0.00 Fuzzy:1.00 -> Fused:0.47 | CE:-8.73 -> Final:0.34 Calibrated:0.98 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 3,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_043",
+        "text": "Now for something completely different. There are rumors about a secret meeting in Dubai. Did you meet with bank officials there?",
+        "start": 578.0,
+        "end": 592.0,
+        "anchor_start": 578.0,
+        "anchor_end": 592.0,
+        "expanded_start": 565.0,
+        "expanded_end": 592.0,
+        "segment": {
+          "segment_id": "be1e6641-2c42-4f8f-ab2b-6b7e589d83e2",
+          "start": 552.0,
+          "end": 592.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_041",
+            "seg_042",
+            "seg_043"
+          ]
+        },
+        "score_dense": 0.4113365113735199,
+        "score_bm25": 0.4864994628909133,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.71,
+        "score_fused": 0.37209264470346026,
+        "score_cross_encoder": -9.471209526062012,
+        "score_final": 0.2740699856972911,
+        "score_calibrated": 0.6259843346226428,
+        "match_quality": "moderate_match",
+        "match_explanation": "Dense:0.41 BM25:0.49 Entity:0.00 Fuzzy:0.71 -> Fused:0.37 | CE:-9.47 -> Final:0.27 Calibrated:0.63 [moderate_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 4,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_010",
+        "text": "He accepts the notes with a smile and tucks them into his jacket pocket. The studio audience erupts in laughter and applause.",
+        "start": 108.0,
+        "end": 118.5,
+        "anchor_start": 108.0,
+        "anchor_end": 118.5,
+        "expanded_start": 108.0,
+        "expanded_end": 130.0,
+        "segment": {
+          "segment_id": "d64f8657-0712-4633-a252-4e5b26b130ad",
+          "start": 108.0,
+          "end": 130.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_010",
+            "seg_011"
+          ]
+        },
+        "score_dense": 0.39215463399887085,
+        "score_bm25": 0.5996216718729773,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.28715953986784915,
+        "score_cross_encoder": -9.661500930786133,
+        "score_final": 0.23841608676594822,
+        "score_calibrated": 0.44010784102886563,
+        "match_quality": "weak_match",
+        "match_explanation": "Dense:0.39 BM25:0.60 Entity:0.00 Fuzzy:0.00 -> Fused:0.29 | CE:-9.66 -> Final:0.24 Calibrated:0.44 [weak_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 5,
+        "tags": [
+          "weak_candidate"
+        ]
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_016",
+      "text": "Let's talk about the banks. The value of those loans. We're talking about nine thousand crore rupees. Nine thousand crore. Can you put that number in perspective?",
+      "start": 185.0,
+      "end": 198.0,
+      "anchor_start": 185.0,
+      "anchor_end": 198.0,
+      "expanded_start": 185.0,
+      "expanded_end": 215.5,
+      "segment": {
+        "segment_id": "6e954b2f-e735-4be8-9017-63fc644272c8",
+        "start": 185.0,
+        "end": 215.5,
+        "topic_label": "money/finance",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_016",
+          "seg_017"
+        ]
+      },
+      "score_dense": 0.38726386427879333,
+      "score_bm25": 1.0,
+      "score_entity": 0.0,
+      "score_fuzzy": 1.0,
+      "score_fused": 0.5355423524975776,
+      "score_cross_encoder": -2.970569133758545,
+      "score_final": 0.6706627057492733,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.39 BM25:1.00 Entity:0.00 Fuzzy:1.00 -> Fused:0.54 | CE:-2.97 -> Final:0.67 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      184.5,
+      199.5
+    ],
+    "extraction_path": "<ffmpeg -ss 184.50 -to 199.50>",
+    "stage_latencies": {
+      "decompose_ms": 14.999999999417923,
+      "segment_ms": 35485.00000000058,
+      "retrieval_ms": 7217.999999993481,
+      "expansion_ms": 16.00000000325963,
+      "rerank_ms": 10391.00000000326,
+      "total_ms": 53125.0
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where he discusses building Kingfisher Airlines in the early days.",
+    "intent": {
+      "original": "Find where he discusses building Kingfisher Airlines in the early days.",
+      "entities": [
+        "Kingfisher Airlines"
+      ],
+      "actions": [
+        "talk",
+        "talks",
+        "discuss",
+        "mention"
+      ],
+      "semantic_concepts": [],
+      "monetary_refs": [],
+      "paraphrases": [
+        "Kingfisher Airlines moment",
+        "where Kingfisher Airlines talks about this",
+        "Find he discusses building Kingfisher Airlines in the early days",
+        "Kingfisher Airlines receives",
+        "interviewer pays Kingfisher Airlines"
+      ],
+      "search_terms": [
+        "Find where he discusses building Kingfisher Airlines in the early days",
+        "Kingfisher Airlines",
+        "talk",
+        "talks",
+        "discuss",
+        "mention",
+        "Kingfisher Airlines moment",
+        "where Kingfisher Airlines talks about this",
+        "Find he discusses building Kingfisher Airlines in the early days",
+        "Kingfisher Airlines receives",
+        "interviewer pays Kingfisher Airlines"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": true
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_026",
+        "text": "The first time you mentioned Kingfisher Airlines in this interview was about the launch in 2005. But when did you actually conceive the idea?",
+        "start": 328.0,
+        "end": 342.0,
+        "anchor_start": 328.0,
+        "anchor_end": 342.0,
+        "expanded_start": 328.0,
+        "expanded_end": 358.0,
+        "segment": {
+          "segment_id": "62254945-6079-44e1-afed-f625acd7b042",
+          "start": 328.0,
+          "end": 358.0,
+          "topic_label": "advice",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_026",
+            "seg_027"
+          ]
+        },
+        "score_dense": 0.5559250116348267,
+        "score_bm25": 0.7909963195803363,
+        "score_entity": 1.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.9111712590623644,
+        "score_cross_encoder": 3.4918036460876465,
+        "score_final": 0.8033513777187092,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.56 BM25:0.79 Entity:1.00 Fuzzy:1.00 -> Fused:0.91 | CE:3.49 -> Final:0.80 Calibrated:1.00 [strong_match] | Opener:False | Segment:advice",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_003",
+        "text": "Let's start from the beginning. You built Kingfisher Airlines from nothing. What was that journey like in the early days?",
+        "start": 18.2,
+        "end": 28.0,
+        "anchor_start": 18.2,
+        "anchor_end": 28.0,
+        "expanded_start": 18.2,
+        "expanded_end": 45.5,
+        "segment": {
+          "segment_id": "3434660d-7f0d-43f3-be7a-4d2143db3a55",
+          "start": 18.2,
+          "end": 45.5,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_003",
+            "seg_004"
+          ]
+        },
+        "score_dense": 0.5486019849777222,
+        "score_bm25": 1.0,
+        "score_entity": 1.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.9683122989535331,
+        "score_cross_encoder": 2.8365519046783447,
+        "score_final": 0.8006589149534702,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.55 BM25:1.00 Entity:1.00 Fuzzy:1.00 -> Fused:0.97 | CE:2.84 -> Final:0.80 Calibrated:1.00 [strong_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 2,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_051",
+        "text": "Kingfisher.",
+        "start": 685.0,
+        "end": 690.0,
+        "anchor_start": 685.0,
+        "anchor_end": 690.0,
+        "expanded_start": 678.0,
+        "expanded_end": 697.0,
+        "segment": {
+          "segment_id": "00275b8f-fac2-4e87-a4c1-0e0c57cc73e3",
+          "start": 678.0,
+          "end": 710.0,
+          "topic_label": "advice",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_050",
+            "seg_051",
+            "seg_052",
+            "seg_053",
+            "seg_054"
+          ]
+        },
+        "score_dense": 0.4565756320953369,
+        "score_bm25": 0.44800489277971256,
+        "score_entity": 0.9,
+        "score_fuzzy": 0.9,
+        "score_fused": 0.7265730985925404,
+        "score_cross_encoder": -0.6221965551376343,
+        "score_final": 0.6234392180718722,
+        "score_calibrated": 0.875934743310813,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.46 BM25:0.45 Entity:0.90 Fuzzy:0.90 -> Fused:0.73 | CE:-0.62 -> Final:0.62 Calibrated:0.88 [strong_match] | Opener:False | Segment:advice",
+        "is_opener": false,
+        "rank": 3,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_004",
+        "text": "Kingfisher was a dream. We wanted to redefine aviation in India. Premium service, beautiful aircraft, and treating passengers like royalty. Those first flights in 2005 were magical.",
+        "start": 28.0,
+        "end": 45.5,
+        "anchor_start": 28.0,
+        "anchor_end": 45.5,
+        "expanded_start": 18.2,
+        "expanded_end": 45.5,
+        "segment": {
+          "segment_id": "3434660d-7f0d-43f3-be7a-4d2143db3a55",
+          "start": 18.2,
+          "end": 45.5,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_003",
+            "seg_004"
+          ]
+        },
+        "score_dense": 0.4289146363735199,
+        "score_bm25": 0.28663533834266497,
+        "score_entity": 1.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.5425458009138578,
+        "score_cross_encoder": 3.3040435314178467,
+        "score_final": 0.6070801661936902,
+        "score_calibrated": 0.8473037539313263,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.43 BM25:0.29 Entity:1.00 Fuzzy:0.00 -> Fused:0.54 | CE:3.30 -> Final:0.61 Calibrated:0.85 [strong_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 4,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_028",
+        "text": "And the last time we'll touch on this topic today: any message for the employees who lost their jobs when Kingfisher collapsed?",
+        "start": 358.0,
+        "end": 372.0,
+        "anchor_start": 358.0,
+        "anchor_end": 372.0,
+        "expanded_start": 358.0,
+        "expanded_end": 388.0,
+        "segment": {
+          "segment_id": "bef7d19c-f625-4d38-9794-e2e93f4f1622",
+          "start": 358.0,
+          "end": 388.0,
+          "topic_label": "advice",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_028",
+            "seg_029"
+          ]
+        },
+        "score_dense": 0.47831112146377563,
+        "score_bm25": 0.3270053387005554,
+        "score_entity": 1.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.5740342612655793,
+        "score_cross_encoder": -3.396885871887207,
+        "score_final": 0.4136864178059052,
+        "score_calibrated": 0.5088333830698856,
+        "match_quality": "moderate_match",
+        "match_explanation": "Dense:0.48 BM25:0.33 Entity:1.00 Fuzzy:0.00 -> Fused:0.57 | CE:-3.40 -> Final:0.41 Calibrated:0.51 [moderate_match] | Opener:False | Segment:advice",
+        "is_opener": false,
+        "rank": 5,
+        "tags": []
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_026",
+      "text": "The first time you mentioned Kingfisher Airlines in this interview was about the launch in 2005. But when did you actually conceive the idea?",
+      "start": 328.0,
+      "end": 342.0,
+      "anchor_start": 328.0,
+      "anchor_end": 342.0,
+      "expanded_start": 328.0,
+      "expanded_end": 358.0,
+      "segment": {
+        "segment_id": "62254945-6079-44e1-afed-f625acd7b042",
+        "start": 328.0,
+        "end": 358.0,
+        "topic_label": "advice",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_026",
+          "seg_027"
+        ]
+      },
+      "score_dense": 0.5559250116348267,
+      "score_bm25": 0.7909963195803363,
+      "score_entity": 1.0,
+      "score_fuzzy": 1.0,
+      "score_fused": 0.9111712590623644,
+      "score_cross_encoder": 3.4918036460876465,
+      "score_final": 0.8033513777187092,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.56 BM25:0.79 Entity:1.00 Fuzzy:1.00 -> Fused:0.91 | CE:3.49 -> Final:0.80 Calibrated:1.00 [strong_match] | Opener:False | Segment:advice",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      327.5,
+      343.5
+    ],
+    "extraction_path": "<ffmpeg -ss 327.50 -to 343.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 62.000000005355105,
+      "retrieval_ms": 10780.999999988126,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1688.0000000091968,
+      "total_ms": 12531.000000002678
+    },
+    "failure_stage": "STAGE 4 - Reranking",
+    "failure_reason": "correct candidate retrieved but demoted out of top-3"
+  },
+  {
+    "prompt": "Find where SBI and PNB are mentioned as the largest creditors.",
+    "intent": {
+      "original": "Find where SBI and PNB are mentioned as the largest creditors.",
+      "entities": [],
+      "actions": [
+        "talk",
+        "talks",
+        "discuss",
+        "mention"
+      ],
+      "semantic_concepts": [],
+      "monetary_refs": [],
+      "paraphrases": [
+        "the guest moment",
+        "where the guest talks about this",
+        "Find SBI and PNB are mentioned as the largest creditors",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "search_terms": [
+        "Find where SBI and PNB are mentioned as the largest creditors",
+        "talk",
+        "talks",
+        "discuss",
+        "mention",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find SBI and PNB are mentioned as the largest creditors",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_047",
+        "text": "You mentioned SBI and PNB. State Bank of India and Punjab National Bank were the largest creditors, correct?",
+        "start": 635.0,
+        "end": 648.0,
+        "anchor_start": 635.0,
+        "anchor_end": 648.0,
+        "expanded_start": 635.0,
+        "expanded_end": 662.0,
+        "segment": {
+          "segment_id": "44009ea7-9d80-4333-905e-46daab4441a2",
+          "start": 635.0,
+          "end": 662.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_047",
+            "seg_048"
+          ]
+        },
+        "score_dense": 0.6015413999557495,
+        "score_bm25": 1.0,
+        "score_entity": 0.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.6105394899845124,
+        "score_cross_encoder": 7.681994915008545,
+        "score_final": 0.6331618469953537,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.60 BM25:1.00 Entity:0.00 Fuzzy:1.00 -> Fused:0.61 | CE:7.68 -> Final:0.63 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_048",
+        "text": "Correct. SBI alone had exposure of over sixteen hundred crore. PNB was close behind. Together they held the majority of the debt portfolio.",
+        "start": 648.0,
+        "end": 662.0,
+        "anchor_start": 648.0,
+        "anchor_end": 662.0,
+        "expanded_start": 635.0,
+        "expanded_end": 662.0,
+        "segment": {
+          "segment_id": "44009ea7-9d80-4333-905e-46daab4441a2",
+          "start": 635.0,
+          "end": 662.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_047",
+            "seg_048"
+          ]
+        },
+        "score_dense": 0.49616867303848267,
+        "score_bm25": 0.4404821300039811,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.2837795680644642,
+        "score_cross_encoder": 0.7162451148033142,
+        "score_final": 0.370754771407918,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.50 BM25:0.44 Entity:0.00 Fuzzy:0.00 -> Fused:0.28 | CE:0.72 -> Final:0.37 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 2,
+        "tags": [
+          "weak_candidate"
+        ]
+      },
+      {
+        "chunk_id": "seg_046",
+        "text": "And I want fairness. When SBI and PNB refuse to consider asset-backed settlements while simultaneously seizing my properties, transparency cuts both ways.",
+        "start": 620.0,
+        "end": 635.0,
+        "anchor_start": 620.0,
+        "anchor_end": 635.0,
+        "expanded_start": 608.0,
+        "expanded_end": 635.0,
+        "segment": {
+          "segment_id": "7bc30071-420b-40a7-9c5d-53d6a6a732eb",
+          "start": 608.0,
+          "end": 635.0,
+          "topic_label": "funding",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_045",
+            "seg_046"
+          ]
+        },
+        "score_dense": 0.426914244890213,
+        "score_bm25": 0.2972327446284497,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.223728171868687,
+        "score_cross_encoder": -3.2345378398895264,
+        "score_final": 0.25950803365813646,
+        "score_calibrated": 0.9434163459006895,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.43 BM25:0.30 Entity:0.00 Fuzzy:0.00 -> Fused:0.22 | CE:-3.23 -> Final:0.26 Calibrated:0.94 [strong_match] | Opener:False | Segment:funding",
+        "is_opener": false,
+        "rank": 3,
+        "tags": [
+          "weak_candidate"
+        ]
+      },
+      {
+        "chunk_id": "seg_007",
+        "text": "Speaking of celebrations, there was a famous moment on this very show years ago. Do you remember the 101 rupees incident?",
+        "start": 68.3,
+        "end": 78.0,
+        "anchor_start": 68.3,
+        "anchor_end": 78.0,
+        "expanded_start": 68.3,
+        "expanded_end": 92.5,
+        "segment": {
+          "segment_id": "4ca6835e-2311-49d7-b0c1-8c927d4b9cac",
+          "start": 68.3,
+          "end": 92.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_007",
+            "seg_008"
+          ]
+        },
+        "score_dense": 0.31620100140571594,
+        "score_bm25": 0.24846912356224593,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.85,
+        "score_fused": 0.30028763138256204,
+        "score_cross_encoder": -7.990036964416504,
+        "score_final": 0.17025470055044212,
+        "score_calibrated": 0.4894456964434772,
+        "match_quality": "moderate_match",
+        "match_explanation": "Dense:0.32 BM25:0.25 Entity:0.00 Fuzzy:0.85 -> Fused:0.30 | CE:-7.99 -> Final:0.17 Calibrated:0.49 [moderate_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 4,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_032",
+        "text": "My 60th birthday on Goa beach. Five hundred guests, fireworks over the Arabian Sea, and a performance by a Grammy-winning artist. It cost roughly fifty crore.",
+        "start": 415.0,
+        "end": 432.0,
+        "anchor_start": 415.0,
+        "anchor_end": 432.0,
+        "expanded_start": 415.0,
+        "expanded_end": 445.0,
+        "segment": {
+          "segment_id": "3b5d12f5-116c-4ba3-86d7-c0e3fa00c66f",
+          "start": 415.0,
+          "end": 445.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_032",
+            "seg_033"
+          ]
+        },
+        "score_dense": 0.33816972374916077,
+        "score_bm25": 0.3110778179311451,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.19612885779499253,
+        "score_cross_encoder": -8.04631519317627,
+        "score_final": 0.1376790062080599,
+        "score_calibrated": 0.3237554235739252,
+        "match_quality": "weak_match",
+        "match_explanation": "Dense:0.34 BM25:0.31 Entity:0.00 Fuzzy:0.00 -> Fused:0.20 | CE:-8.05 -> Final:0.14 Calibrated:0.32 [weak_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 5,
+        "tags": [
+          "weak_candidate"
+        ]
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_047",
+      "text": "You mentioned SBI and PNB. State Bank of India and Punjab National Bank were the largest creditors, correct?",
+      "start": 635.0,
+      "end": 648.0,
+      "anchor_start": 635.0,
+      "anchor_end": 648.0,
+      "expanded_start": 635.0,
+      "expanded_end": 662.0,
+      "segment": {
+        "segment_id": "44009ea7-9d80-4333-905e-46daab4441a2",
+        "start": 635.0,
+        "end": 662.0,
+        "topic_label": "money/finance",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_047",
+          "seg_048"
+        ]
+      },
+      "score_dense": 0.6015413999557495,
+      "score_bm25": 1.0,
+      "score_entity": 0.0,
+      "score_fuzzy": 1.0,
+      "score_fused": 0.6105394899845124,
+      "score_cross_encoder": 7.681994915008545,
+      "score_final": 0.6331618469953537,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.60 BM25:1.00 Entity:0.00 Fuzzy:1.00 -> Fused:0.61 | CE:7.68 -> Final:0.63 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      634.5,
+      649.5
+    ],
+    "extraction_path": "<ffmpeg -ss 634.50 -to 649.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 46.999999991385266,
+      "retrieval_ms": 6922.000000005937,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1562.000000005355,
+      "total_ms": 8531.000000002678
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where he talks about his father Vittal Mallya and the UB Group legacy.",
+    "intent": {
+      "original": "Find where he talks about his father Vittal Mallya and the UB Group legacy.",
+      "entities": [
+        "Vittal Mallya"
+      ],
+      "actions": [
+        "talk",
+        "talks",
+        "discuss",
+        "mention"
+      ],
+      "semantic_concepts": [],
+      "monetary_refs": [],
+      "paraphrases": [
+        "Vittal Mallya moment",
+        "where Vittal Mallya talks about this",
+        "Find he talks about his father Vittal Mallya and the UB Group legacy",
+        "Vittal Mallya receives",
+        "interviewer pays Vittal Mallya"
+      ],
+      "search_terms": [
+        "Find where he talks about his father Vittal Mallya and the UB Group legacy",
+        "Vittal Mallya",
+        "talk",
+        "talks",
+        "discuss",
+        "mention",
+        "Vittal Mallya moment",
+        "where Vittal Mallya talks about this",
+        "Find he talks about his father Vittal Mallya and the UB Group legacy",
+        "Vittal Mallya receives",
+        "interviewer pays Vittal Mallya"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": true
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_035",
+        "text": "When the interviewer asked about your UB Group earlier, you mentioned your father. Tell us about Vittal Mallya and the legacy he left you.",
+        "start": 460.0,
+        "end": 475.0,
+        "anchor_start": 460.0,
+        "anchor_end": 475.0,
+        "expanded_start": 460.0,
+        "expanded_end": 475.0,
+        "segment": {
+          "segment_id": "c01f9d3c-9353-4b21-96a7-9096341a8a2a",
+          "start": 460.0,
+          "end": 475.0,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_035"
+          ]
+        },
+        "score_dense": 0.7739880681037903,
+        "score_bm25": 1.0,
+        "score_entity": 1.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 1.0590301974117755,
+        "score_cross_encoder": 5.953347206115723,
+        "score_final": 0.8477090592235327,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.77 BM25:1.00 Entity:1.00 Fuzzy:1.00 -> Fused:1.06 | CE:5.95 -> Final:0.85 Calibrated:1.00 [strong_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_063",
+        "text": "Air Deccan acquisition. Noted. Ladies and gentlemen, please join me in thanking Vijay Mallya for this candid conversation.",
+        "start": 825.0,
+        "end": 838.0,
+        "anchor_start": 825.0,
+        "anchor_end": 838.0,
+        "expanded_start": 810.0,
+        "expanded_end": 850.0,
+        "segment": {
+          "segment_id": "a0e7b966-8f66-4d65-914a-b5e932bddd71",
+          "start": 810.0,
+          "end": 860.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5000256299972534,
+          "chunk_ids": [
+            "seg_062",
+            "seg_063",
+            "seg_064",
+            "seg_065"
+          ]
+        },
+        "score_dense": 0.46332240104675293,
+        "score_bm25": 0.2746906180616102,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.76,
+        "score_fused": 0.34483549488176607,
+        "score_cross_encoder": -3.424838066101074,
+        "score_final": 0.3104805454390934,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.46 BM25:0.27 Entity:0.00 Fuzzy:0.76 -> Fused:0.34 | CE:-3.42 -> Final:0.31 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 2,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_036",
+        "text": "My father was a giant. He built United Breweries from a single brewery in Bangalore. He taught me that business is about relationships, not transactions.",
+        "start": 475.0,
+        "end": 492.0,
+        "anchor_start": 475.0,
+        "anchor_end": 492.0,
+        "expanded_start": 460.0,
+        "expanded_end": 492.0,
+        "segment": {
+          "segment_id": "21d69387-7e88-4f34-a0bd-b0686ce24021",
+          "start": 475.0,
+          "end": 492.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_036"
+          ]
+        },
+        "score_dense": 0.4299022853374481,
+        "score_bm25": 0.17193670380230833,
+        "score_entity": 1.0,
+        "score_fuzzy": 0.71,
+        "score_fused": 0.6324424721914864,
+        "score_cross_encoder": -9.84636116027832,
+        "score_final": 0.23039377639050293,
+        "score_calibrated": 0.8565292394438714,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.43 BM25:0.17 Entity:1.00 Fuzzy:0.71 -> Fused:0.63 | CE:-9.85 -> Final:0.23 Calibrated:0.86 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 3,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_052",
+        "text": "Legacy.",
+        "start": 690.0,
+        "end": 697.0,
+        "anchor_start": 690.0,
+        "anchor_end": 697.0,
+        "expanded_start": 685.0,
+        "expanded_end": 702.0,
+        "segment": {
+          "segment_id": "6dd399fb-de2a-4259-92f2-d5a0608b79c6",
+          "start": 678.0,
+          "end": 710.0,
+          "topic_label": "advice",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_050",
+            "seg_051",
+            "seg_052",
+            "seg_053",
+            "seg_054"
+          ]
+        },
+        "score_dense": 0.3852159082889557,
+        "score_bm25": 0.13540592346095826,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.85,
+        "score_fused": 0.2961770487663741,
+        "score_cross_encoder": -6.4612016677856445,
+        "score_final": 0.21721687891595348,
+        "score_calibrated": 0.7778437733581712,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.39 BM25:0.14 Entity:0.00 Fuzzy:0.85 -> Fused:0.30 | CE:-6.46 -> Final:0.22 Calibrated:0.78 [strong_match] | Opener:False | Segment:advice",
+        "is_opener": false,
+        "rank": 4,
+        "tags": [
+          "weak_candidate"
+        ]
+      },
+      {
+        "chunk_id": "seg_037",
+        "text": "He passed away when you were only twenty-seven. That must have been a tremendous shock for the family and the company.",
+        "start": 492.0,
+        "end": 505.0,
+        "anchor_start": 492.0,
+        "anchor_end": 505.0,
+        "expanded_start": 492.0,
+        "expanded_end": 520.0,
+        "segment": {
+          "segment_id": "3c133000-daae-435d-a8d2-215703bc184d",
+          "start": 492.0,
+          "end": 520.0,
+          "topic_label": "emotional",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_037",
+            "seg_038"
+          ]
+        },
+        "score_dense": 0.0,
+        "score_bm25": 0.16007297994753494,
+        "score_entity": 1.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.33352098173491623,
+        "score_cross_encoder": -10.132055282592773,
+        "score_final": 0.1333155622529759,
+        "score_calibrated": 0.2768294625478001,
+        "match_quality": "weak_match",
+        "match_explanation": "Dense:0.00 BM25:0.16 Entity:1.00 Fuzzy:0.00 -> Fused:0.33 | CE:-10.13 -> Final:0.13 Calibrated:0.28 [weak_match] | Opener:False | Segment:emotional",
+        "is_opener": false,
+        "rank": 5,
+        "tags": []
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_035",
+      "text": "When the interviewer asked about your UB Group earlier, you mentioned your father. Tell us about Vittal Mallya and the legacy he left you.",
+      "start": 460.0,
+      "end": 475.0,
+      "anchor_start": 460.0,
+      "anchor_end": 475.0,
+      "expanded_start": 460.0,
+      "expanded_end": 475.0,
+      "segment": {
+        "segment_id": "c01f9d3c-9353-4b21-96a7-9096341a8a2a",
+        "start": 460.0,
+        "end": 475.0,
+        "topic_label": "personal story",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_035"
+        ]
+      },
+      "score_dense": 0.7739880681037903,
+      "score_bm25": 1.0,
+      "score_entity": 1.0,
+      "score_fuzzy": 1.0,
+      "score_fused": 1.0590301974117755,
+      "score_cross_encoder": 5.953347206115723,
+      "score_final": 0.8477090592235327,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.77 BM25:1.00 Entity:1.00 Fuzzy:1.00 -> Fused:1.06 | CE:5.95 -> Final:0.85 Calibrated:1.00 [strong_match] | Opener:False | Segment:personal story",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      459.5,
+      476.5
+    ],
+    "extraction_path": "<ffmpeg -ss 459.50 -to 476.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 46.999999991385266,
+      "retrieval_ms": 8406.000000002678,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1750.0,
+      "total_ms": 10202.999999994063
+    },
+    "failure_stage": "STAGE 4 - Reranking",
+    "failure_reason": "correct candidate retrieved & in top-3 but not ranked #1"
+  },
+  {
+    "prompt": "Find where the interviewer hands 101 rupees to Vijay Malia.",
+    "intent": {
+      "original": "Find where the interviewer hands 101 rupees to Vijay Malia.",
+      "entities": [
+        "Vijay Malia",
+        "interviewer"
+      ],
+      "actions": [],
+      "semantic_concepts": [
+        "money/finance"
+      ],
+      "monetary_refs": [
+        "101 rupees",
+        "give money",
+        "hand over",
+        "payment",
+        "transfer",
+        "here take",
+        "yeh lo"
+      ],
+      "paraphrases": [
+        "Vijay Malia moment",
+        "where Vijay Malia talks about this",
+        "Find the interviewer hands 101 rupees to Vijay Malia",
+        "Vijay Malia receives 101 rupees",
+        "interviewer pays Vijay Malia 101 rupees"
+      ],
+      "search_terms": [
+        "Find where the interviewer hands 101 rupees to Vijay Malia",
+        "Vijay Malia",
+        "interviewer",
+        "money/finance",
+        "101 rupees",
+        "give money",
+        "hand over",
+        "payment",
+        "transfer",
+        "here take",
+        "yeh lo",
+        "Vijay Malia moment",
+        "where Vijay Malia talks about this",
+        "Find the interviewer hands 101 rupees to Vijay Malia",
+        "Vijay Malia receives 101 rupees",
+        "interviewer pays Vijay Malia 101 rupees"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": true
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_009",
+        "text": "That's right. I wanted to make a point about starting small. Here, let me recreate it. Vijay Mallya, I'm giving you 101 rupees right now as a reminder that every empire starts with a single coin.",
+        "start": 92.5,
+        "end": 108.0,
+        "anchor_start": 92.5,
+        "anchor_end": 108.0,
+        "expanded_start": 92.5,
+        "expanded_end": 108.0,
+        "segment": {
+          "segment_id": "87140ac3-b96b-4919-99c7-03392df0c578",
+          "start": 92.5,
+          "end": 108.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_009"
+          ]
+        },
+        "score_dense": 0.3458477854728699,
+        "score_bm25": 1.0,
+        "score_entity": 0.81,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.83207873365283,
+        "score_cross_encoder": -0.7121727466583252,
+        "score_final": 0.8396236200958489,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.35 BM25:1.00 Entity:0.81 Fuzzy:1.00 -> Fused:0.83 | CE:-0.71 -> Final:0.84 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_063",
+        "text": "Air Deccan acquisition. Noted. Ladies and gentlemen, please join me in thanking Vijay Mallya for this candid conversation.",
+        "start": 825.0,
+        "end": 838.0,
+        "anchor_start": 825.0,
+        "anchor_end": 838.0,
+        "expanded_start": 810.0,
+        "expanded_end": 850.0,
+        "segment": {
+          "segment_id": "8ae1046a-8516-42ee-bebb-df5c620c515a",
+          "start": 810.0,
+          "end": 860.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5000256299972534,
+          "chunk_ids": [
+            "seg_062",
+            "seg_063",
+            "seg_064",
+            "seg_065"
+          ]
+        },
+        "score_dense": 0.41011080145835876,
+        "score_bm25": 0.6189898918399188,
+        "score_entity": 0.81,
+        "score_fuzzy": 0.81,
+        "score_fused": 0.7156291914909659,
+        "score_cross_encoder": -4.053069114685059,
+        "score_final": 0.6644110766926281,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.41 BM25:0.62 Entity:0.81 Fuzzy:0.81 -> Fused:0.72 | CE:-4.05 -> Final:0.66 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 2,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_008",
+        "text": "Oh absolutely. That was quite a stunt. You pulled out exactly 101 rupees from your wallet and handed them to me on live television as a symbolic gesture.",
+        "start": 78.0,
+        "end": 92.5,
+        "anchor_start": 78.0,
+        "anchor_end": 92.5,
+        "expanded_start": 68.3,
+        "expanded_end": 92.5,
+        "segment": {
+          "segment_id": "245fc8fe-db68-43b3-bde5-6366ceb1f284",
+          "start": 68.3,
+          "end": 92.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_007",
+            "seg_008"
+          ]
+        },
+        "score_dense": 0.38273167610168457,
+        "score_bm25": 0.6127149805389669,
+        "score_entity": 0.81,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.735580056535881,
+        "score_cross_encoder": -3.6982364654541016,
+        "score_final": 0.6052950685106757,
+        "score_calibrated": 0.9338467890438934,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.38 BM25:0.61 Entity:0.81 Fuzzy:1.00 -> Fused:0.74 | CE:-3.70 -> Final:0.61 Calibrated:0.93 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 3,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_011",
+        "text": "I still have those 101 rupees framed in my office. It's the most valuable money I've ever received because of what it represents.",
+        "start": 118.5,
+        "end": 130.0,
+        "anchor_start": 118.5,
+        "anchor_end": 130.0,
+        "expanded_start": 108.0,
+        "expanded_end": 130.0,
+        "segment": {
+          "segment_id": "44105080-288a-47b8-92bb-90a263286844",
+          "start": 108.0,
+          "end": 130.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_010",
+            "seg_011"
+          ]
+        },
+        "score_dense": 0.4255916178226471,
+        "score_bm25": 0.7950251014053049,
+        "score_entity": 0.81,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.8052453428276406,
+        "score_cross_encoder": -5.012116432189941,
+        "score_final": 0.5710274085333356,
+        "score_calibrated": 0.8571529664701291,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.43 BM25:0.80 Entity:0.81 Fuzzy:1.00 -> Fused:0.81 | CE:-5.01 -> Final:0.57 Calibrated:0.86 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 4,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_007",
+        "text": "Speaking of celebrations, there was a famous moment on this very show years ago. Do you remember the 101 rupees incident?",
+        "start": 68.3,
+        "end": 78.0,
+        "anchor_start": 68.3,
+        "anchor_end": 78.0,
+        "expanded_start": 68.3,
+        "expanded_end": 92.5,
+        "segment": {
+          "segment_id": "245fc8fe-db68-43b3-bde5-6366ceb1f284",
+          "start": 68.3,
+          "end": 92.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_007",
+            "seg_008"
+          ]
+        },
+        "score_dense": 0.4704716205596924,
+        "score_bm25": 0.8440845226499718,
+        "score_entity": 0.81,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.8374141275371431,
+        "score_cross_encoder": -5.4290008544921875,
+        "score_final": 0.5631738942708171,
+        "score_calibrated": 0.8395761599467655,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.47 BM25:0.84 Entity:0.81 Fuzzy:1.00 -> Fused:0.84 | CE:-5.43 -> Final:0.56 Calibrated:0.84 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 5,
+        "tags": []
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_009",
+      "text": "That's right. I wanted to make a point about starting small. Here, let me recreate it. Vijay Mallya, I'm giving you 101 rupees right now as a reminder that every empire starts with a single coin.",
+      "start": 92.5,
+      "end": 108.0,
+      "anchor_start": 92.5,
+      "anchor_end": 108.0,
+      "expanded_start": 92.5,
+      "expanded_end": 108.0,
+      "segment": {
+        "segment_id": "87140ac3-b96b-4919-99c7-03392df0c578",
+        "start": 92.5,
+        "end": 108.0,
+        "topic_label": "money/finance",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_009"
+        ]
+      },
+      "score_dense": 0.3458477854728699,
+      "score_bm25": 1.0,
+      "score_entity": 0.81,
+      "score_fuzzy": 1.0,
+      "score_fused": 0.83207873365283,
+      "score_cross_encoder": -0.7121727466583252,
+      "score_final": 0.8396236200958489,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.35 BM25:1.00 Entity:0.81 Fuzzy:1.00 -> Fused:0.83 | CE:-0.71 -> Final:0.84 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      92.0,
+      109.5
+    ],
+    "extraction_path": "<ffmpeg -ss 92.00 -to 109.50>",
+    "stage_latencies": {
+      "decompose_ms": 16.00000000325963,
+      "segment_ms": 61.99999999080319,
+      "retrieval_ms": 12985.000000000582,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1562.000000005355,
+      "total_ms": 14625.0
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where the interviewer gives 101 rupees to Vijay Mallya.",
+    "intent": {
+      "original": "Find where the interviewer gives 101 rupees to Vijay Mallya.",
+      "entities": [
+        "Vijay Mallya",
+        "interviewer"
+      ],
+      "actions": [
+        "give",
+        "gives",
+        "gave",
+        "hand over"
+      ],
+      "semantic_concepts": [
+        "money/finance"
+      ],
+      "monetary_refs": [
+        "101 rupees",
+        "give money",
+        "hand over",
+        "payment",
+        "transfer",
+        "here take",
+        "yeh lo"
+      ],
+      "paraphrases": [
+        "Vijay Mallya moment",
+        "where Vijay Mallya talks about this",
+        "Find the interviewer gives 101 rupees to Vijay Mallya",
+        "Vijay Mallya receives 101 rupees",
+        "interviewer pays Vijay Mallya 101 rupees"
+      ],
+      "search_terms": [
+        "Find where the interviewer gives 101 rupees to Vijay Mallya",
+        "Vijay Mallya",
+        "interviewer",
+        "give",
+        "gives",
+        "gave",
+        "hand over",
+        "money/finance",
+        "101 rupees",
+        "give money",
+        "payment",
+        "transfer",
+        "here take",
+        "yeh lo",
+        "Vijay Mallya moment",
+        "where Vijay Mallya talks about this",
+        "Find the interviewer gives 101 rupees to Vijay Mallya",
+        "Vijay Mallya receives 101 rupees",
+        "interviewer pays Vijay Mallya 101 rupees"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": true
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_009",
+        "text": "That's right. I wanted to make a point about starting small. Here, let me recreate it. Vijay Mallya, I'm giving you 101 rupees right now as a reminder that every empire starts with a single coin.",
+        "start": 92.5,
+        "end": 108.0,
+        "anchor_start": 92.5,
+        "anchor_end": 108.0,
+        "expanded_start": 92.5,
+        "expanded_end": 108.0,
+        "segment": {
+          "segment_id": "6845bf0e-deb6-4dbe-bd5d-a0706cf12aab",
+          "start": 92.5,
+          "end": 108.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_009"
+          ]
+        },
+        "score_dense": 0.3858698904514313,
+        "score_bm25": 1.0,
+        "score_entity": 1.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.902812630906701,
+        "score_cross_encoder": 3.3873372077941895,
+        "score_final": 0.8608437892720102,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.39 BM25:1.00 Entity:1.00 Fuzzy:1.00 -> Fused:0.90 | CE:3.39 -> Final:0.86 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_063",
+        "text": "Air Deccan acquisition. Noted. Ladies and gentlemen, please join me in thanking Vijay Mallya for this candid conversation.",
+        "start": 825.0,
+        "end": 838.0,
+        "anchor_start": 825.0,
+        "anchor_end": 838.0,
+        "expanded_start": 810.0,
+        "expanded_end": 850.0,
+        "segment": {
+          "segment_id": "f9aa6175-0ad4-4963-a94a-49725ea2161f",
+          "start": 810.0,
+          "end": 860.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5000256299972534,
+          "chunk_ids": [
+            "seg_062",
+            "seg_063",
+            "seg_064",
+            "seg_065"
+          ]
+        },
+        "score_dense": 0.4670344591140747,
+        "score_bm25": 0.8492143264148303,
+        "score_entity": 1.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.8921304886376787,
+        "score_cross_encoder": 2.118232250213623,
+        "score_final": 0.8190134860526301,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.47 BM25:0.85 Entity:1.00 Fuzzy:1.00 -> Fused:0.89 | CE:2.12 -> Final:0.82 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 2,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_001",
+        "text": "Welcome everyone to today's special interview. I'm your host Rajesh Kumar, and we have an exclusive conversation lined-height businessman Vijay Mallya.",
+        "start": 0.0,
+        "end": 8.5,
+        "anchor_start": 0.0,
+        "anchor_end": 8.5,
+        "expanded_start": 0.0,
+        "expanded_end": 18.2,
+        "segment": {
+          "segment_id": "df19c6c7-2294-4560-9b84-21de47efda45",
+          "start": 0.0,
+          "end": 18.2,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_001",
+            "seg_002"
+          ]
+        },
+        "score_dense": 0.28337693214416504,
+        "score_bm25": 0.06191065006084627,
+        "score_entity": 1.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.4193585270805197,
+        "score_cross_encoder": 2.575308084487915,
+        "score_final": 0.7110931478191328,
+        "score_calibrated": 0.9101910417843398,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.28 BM25:0.06 Entity:1.00 Fuzzy:0.00 -> Fused:0.42 | CE:2.58 -> Final:0.71 Calibrated:0.91 [strong_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 3,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_035",
+        "text": "When the interviewer asked about your UB Group earlier, you mentioned your father. Tell us about Vittal Mallya and the legacy he left you.",
+        "start": 460.0,
+        "end": 475.0,
+        "anchor_start": 460.0,
+        "anchor_end": 475.0,
+        "expanded_start": 460.0,
+        "expanded_end": 475.0,
+        "segment": {
+          "segment_id": "501f708d-a188-4bef-8adf-377f372065bf",
+          "start": 460.0,
+          "end": 475.0,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_035"
+          ]
+        },
+        "score_dense": 0.4430248737335205,
+        "score_bm25": 0.7256441007659247,
+        "score_entity": 1.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.8469401906479452,
+        "score_cross_encoder": -4.3404340744018555,
+        "score_final": 0.5488844058081225,
+        "score_calibrated": 0.6402177931673754,
+        "match_quality": "moderate_match",
+        "match_explanation": "Dense:0.44 BM25:0.73 Entity:1.00 Fuzzy:1.00 -> Fused:0.85 | CE:-4.34 -> Final:0.55 Calibrated:0.64 [moderate_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 4,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_064",
+        "text": "Thank you, Rajesh. And thank you to everyone watching. Remember, every empire starts with 101 rupees.",
+        "start": 838.0,
+        "end": 850.0,
+        "anchor_start": 838.0,
+        "anchor_end": 850.0,
+        "expanded_start": 825.0,
+        "expanded_end": 860.0,
+        "segment": {
+          "segment_id": "f9aa6175-0ad4-4963-a94a-49725ea2161f",
+          "start": 810.0,
+          "end": 860.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5000256299972534,
+          "chunk_ids": [
+            "seg_062",
+            "seg_063",
+            "seg_064",
+            "seg_065"
+          ]
+        },
+        "score_dense": 0.46233484148979187,
+        "score_bm25": 0.5717637779461721,
+        "score_entity": 1.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.8104718598591656,
+        "score_cross_encoder": -4.045487403869629,
+        "score_final": 0.5269207237025311,
+        "score_calibrated": 0.6036623860042133,
+        "match_quality": "moderate_match",
+        "match_explanation": "Dense:0.46 BM25:0.57 Entity:1.00 Fuzzy:1.00 -> Fused:0.81 | CE:-4.05 -> Final:0.53 Calibrated:0.60 [moderate_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 5,
+        "tags": []
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_009",
+      "text": "That's right. I wanted to make a point about starting small. Here, let me recreate it. Vijay Mallya, I'm giving you 101 rupees right now as a reminder that every empire starts with a single coin.",
+      "start": 92.5,
+      "end": 108.0,
+      "anchor_start": 92.5,
+      "anchor_end": 108.0,
+      "expanded_start": 92.5,
+      "expanded_end": 108.0,
+      "segment": {
+        "segment_id": "6845bf0e-deb6-4dbe-bd5d-a0706cf12aab",
+        "start": 92.5,
+        "end": 108.0,
+        "topic_label": "money/finance",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_009"
+        ]
+      },
+      "score_dense": 0.3858698904514313,
+      "score_bm25": 1.0,
+      "score_entity": 1.0,
+      "score_fuzzy": 1.0,
+      "score_fused": 0.902812630906701,
+      "score_cross_encoder": 3.3873372077941895,
+      "score_final": 0.8608437892720102,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.39 BM25:1.00 Entity:1.00 Fuzzy:1.00 -> Fused:0.90 | CE:3.39 -> Final:0.86 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      92.0,
+      109.5
+    ],
+    "extraction_path": "<ffmpeg -ss 92.00 -to 109.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 31.000000002677552,
+      "retrieval_ms": 12812.999999994645,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1625.0,
+      "total_ms": 14468.999999997322
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where he mentions the fifty crore birthday party cost.",
+    "intent": {
+      "original": "Find where he mentions the fifty crore birthday party cost.",
+      "entities": [],
+      "actions": [
+        "talk",
+        "talks",
+        "discuss",
+        "mention"
+      ],
+      "semantic_concepts": [],
+      "monetary_refs": [],
+      "paraphrases": [
+        "the guest moment",
+        "where the guest talks about this",
+        "Find he mentions the fifty crore birthday party cost",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "search_terms": [
+        "Find where he mentions the fifty crore birthday party cost",
+        "talk",
+        "talks",
+        "discuss",
+        "mention",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find he mentions the fifty crore birthday party cost",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_033",
+        "text": "Fifty crore for a birthday party! The audience is gasping. Some are laughing nervously.",
+        "start": 432.0,
+        "end": 445.0,
+        "anchor_start": 432.0,
+        "anchor_end": 445.0,
+        "expanded_start": 415.0,
+        "expanded_end": 445.0,
+        "segment": {
+          "segment_id": "77871370-c677-4e20-a971-684dd0e81744",
+          "start": 415.0,
+          "end": 445.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_032",
+            "seg_033"
+          ]
+        },
+        "score_dense": 0.5832407474517822,
+        "score_bm25": 1.0,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.45413426160812376,
+        "score_cross_encoder": 1.3456060886383057,
+        "score_final": 0.5862402784824371,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.58 BM25:1.00 Entity:0.00 Fuzzy:0.00 -> Fused:0.45 | CE:1.35 -> Final:0.59 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_032",
+        "text": "My 60th birthday on Goa beach. Five hundred guests, fireworks over the Arabian Sea, and a performance by a Grammy-winning artist. It cost roughly fifty crore.",
+        "start": 415.0,
+        "end": 432.0,
+        "anchor_start": 415.0,
+        "anchor_end": 432.0,
+        "expanded_start": 415.0,
+        "expanded_end": 445.0,
+        "segment": {
+          "segment_id": "77871370-c677-4e20-a971-684dd0e81744",
+          "start": 415.0,
+          "end": 445.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_032",
+            "seg_033"
+          ]
+        },
+        "score_dense": 0.5832407474517822,
+        "score_bm25": 1.0,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.45413426160812376,
+        "score_cross_encoder": -0.3682265281677246,
+        "score_final": 0.5256706881523132,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.58 BM25:1.00 Entity:0.00 Fuzzy:0.00 -> Fused:0.45 | CE:-0.37 -> Final:0.53 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 2,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_007",
+        "text": "Speaking of celebrations, there was a famous moment on this very show years ago. Do you remember the 101 rupees incident?",
+        "start": 68.3,
+        "end": 78.0,
+        "anchor_start": 68.3,
+        "anchor_end": 78.0,
+        "expanded_start": 68.3,
+        "expanded_end": 92.5,
+        "segment": {
+          "segment_id": "0739f02a-80a0-4ac9-99c9-f6e3b03cadc8",
+          "start": 68.3,
+          "end": 92.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_007",
+            "seg_008"
+          ]
+        },
+        "score_dense": 0.4509868919849396,
+        "score_bm25": 0.29815500495086933,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.85,
+        "score_fused": 0.35988416343244617,
+        "score_cross_encoder": -7.990036964416504,
+        "score_final": 0.22802870294246885,
+        "score_calibrated": 0.5113264660502013,
+        "match_quality": "moderate_match",
+        "match_explanation": "Dense:0.45 BM25:0.30 Entity:0.00 Fuzzy:0.85 -> Fused:0.36 | CE:-7.99 -> Final:0.23 Calibrated:0.51 [moderate_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 3,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_016",
+        "text": "Let's talk about the banks. The value of those loans. We're talking about nine thousand crore rupees. Nine thousand crore. Can you put that number in perspective?",
+        "start": 185.0,
+        "end": 198.0,
+        "anchor_start": 185.0,
+        "anchor_end": 198.0,
+        "expanded_start": 185.0,
+        "expanded_end": 215.5,
+        "segment": {
+          "segment_id": "ff506f6a-bbc7-4f04-99d9-159c21242ba7",
+          "start": 185.0,
+          "end": 215.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_016",
+            "seg_017"
+          ]
+        },
+        "score_dense": 0.42690181732177734,
+        "score_bm25": 0.5077545563224547,
+        "score_entity": 0.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.42635427514323576,
+        "score_cross_encoder": -10.582429885864258,
+        "score_final": 0.15635041512432393,
+        "score_calibrated": 0.27596129357512067,
+        "match_quality": "weak_match",
+        "match_explanation": "Dense:0.43 BM25:0.51 Entity:0.00 Fuzzy:1.00 -> Fused:0.43 | CE:-10.58 -> Final:0.16 Calibrated:0.28 [weak_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 4,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_035",
+        "text": "When the interviewer asked about your UB Group earlier, you mentioned your father. Tell us about Vittal Mallya and the legacy he left you.",
+        "start": 460.0,
+        "end": 475.0,
+        "anchor_start": 460.0,
+        "anchor_end": 475.0,
+        "expanded_start": 460.0,
+        "expanded_end": 475.0,
+        "segment": {
+          "segment_id": "5bf3834f-8a95-429e-8cb8-16a7531ba7a7",
+          "start": 460.0,
+          "end": 475.0,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_035"
+          ]
+        },
+        "score_dense": 0.37310633063316345,
+        "score_bm25": 0.46968420402884137,
+        "score_entity": 0.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.3980082667288175,
+        "score_cross_encoder": -10.744656562805176,
+        "score_final": 0.14211326342573732,
+        "score_calibrated": 0.22921171616343125,
+        "match_quality": "weak_match",
+        "match_explanation": "Dense:0.37 BM25:0.47 Entity:0.00 Fuzzy:1.00 -> Fused:0.40 | CE:-10.74 -> Final:0.14 Calibrated:0.23 [weak_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 5,
+        "tags": []
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_033",
+      "text": "Fifty crore for a birthday party! The audience is gasping. Some are laughing nervously.",
+      "start": 432.0,
+      "end": 445.0,
+      "anchor_start": 432.0,
+      "anchor_end": 445.0,
+      "expanded_start": 415.0,
+      "expanded_end": 445.0,
+      "segment": {
+        "segment_id": "77871370-c677-4e20-a971-684dd0e81744",
+        "start": 415.0,
+        "end": 445.0,
+        "topic_label": "money/finance",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_032",
+          "seg_033"
+        ]
+      },
+      "score_dense": 0.5832407474517822,
+      "score_bm25": 1.0,
+      "score_entity": 0.0,
+      "score_fuzzy": 0.0,
+      "score_fused": 0.45413426160812376,
+      "score_cross_encoder": 1.3456060886383057,
+      "score_final": 0.5862402784824371,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.58 BM25:1.00 Entity:0.00 Fuzzy:0.00 -> Fused:0.45 | CE:1.35 -> Final:0.59 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      431.5,
+      446.5
+    ],
+    "extraction_path": "<ffmpeg -ss 431.50 -to 446.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 31.000000002677552,
+      "retrieval_ms": 7062.999999994645,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1139.999999999418,
+      "total_ms": 8233.99999999674
+    },
+    "failure_stage": "STAGE 4 - Reranking",
+    "failure_reason": "correct candidate retrieved & in top-3 but not ranked #1"
+  },
+  {
+    "prompt": "Find where the interviewer asks about nine thousand crore rupees.",
+    "intent": {
+      "original": "Find where the interviewer asks about nine thousand crore rupees.",
+      "entities": [
+        "interviewer"
+      ],
+      "actions": [
+        "talk",
+        "talks",
+        "discuss",
+        "mention"
+      ],
+      "semantic_concepts": [
+        "money/finance"
+      ],
+      "monetary_refs": [],
+      "paraphrases": [
+        "interviewer moment",
+        "where interviewer talks about this",
+        "Find the interviewer asks about nine thousand crore rupees",
+        "interviewer receives",
+        "interviewer pays interviewer"
+      ],
+      "search_terms": [
+        "Find where the interviewer asks about nine thousand crore rupees",
+        "interviewer",
+        "talk",
+        "talks",
+        "discuss",
+        "mention",
+        "money/finance",
+        "interviewer moment",
+        "where interviewer talks about this",
+        "Find the interviewer asks about nine thousand crore rupees",
+        "interviewer receives",
+        "interviewer pays interviewer"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": true
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_035",
+        "text": "When the interviewer asked about your UB Group earlier, you mentioned your father. Tell us about Vittal Mallya and the legacy he left you.",
+        "start": 460.0,
+        "end": 475.0,
+        "anchor_start": 460.0,
+        "anchor_end": 475.0,
+        "expanded_start": 460.0,
+        "expanded_end": 475.0,
+        "segment": {
+          "segment_id": "46e24158-d0b2-44ce-9608-bff6eb497b80",
+          "start": 460.0,
+          "end": 475.0,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_035"
+          ]
+        },
+        "score_dense": 0.3939773142337799,
+        "score_bm25": 1.0,
+        "score_entity": 1.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.9060758689790964,
+        "score_cross_encoder": -1.778085708618164,
+        "score_final": 0.7627828866168856,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.39 BM25:1.00 Entity:1.00 Fuzzy:1.00 -> Fused:0.91 | CE:-1.78 -> Final:0.76 Calibrated:1.00 [strong_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_016",
+        "text": "Let's talk about the banks. The value of those loans. We're talking about nine thousand crore rupees. Nine thousand crore. Can you put that number in perspective?",
+        "start": 185.0,
+        "end": 198.0,
+        "anchor_start": 185.0,
+        "anchor_end": 198.0,
+        "expanded_start": 185.0,
+        "expanded_end": 215.5,
+        "segment": {
+          "segment_id": "ce9c01c0-4d19-4657-b9c6-b2962c037ebc",
+          "start": 185.0,
+          "end": 215.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_016",
+            "seg_017"
+          ]
+        },
+        "score_dense": 0.5868068337440491,
+        "score_bm25": 0.9963891230130665,
+        "score_entity": 0.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.6044796725636838,
+        "score_cross_encoder": -0.8803349733352661,
+        "score_final": 0.6913439017691052,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.59 BM25:1.00 Entity:0.00 Fuzzy:1.00 -> Fused:0.60 | CE:-0.88 -> Final:0.69 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 2,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_017",
+        "text": "People throw around crore like it's nothing. Nine thousand crore represents thousands of jobs, hundreds of suppliers, and years of operational investment that kept India's aviation sector competitive.",
+        "start": 198.0,
+        "end": 215.5,
+        "anchor_start": 198.0,
+        "anchor_end": 215.5,
+        "expanded_start": 185.0,
+        "expanded_end": 215.5,
+        "segment": {
+          "segment_id": "ce9c01c0-4d19-4657-b9c6-b2962c037ebc",
+          "start": 185.0,
+          "end": 215.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_016",
+            "seg_017"
+          ]
+        },
+        "score_dense": 0.4831162691116333,
+        "score_bm25": 0.45425691216172054,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.71,
+        "score_fused": 0.38915492222950177,
+        "score_cross_encoder": -2.092771530151367,
+        "score_final": 0.5740220526642958,
+        "score_calibrated": 0.8843382768393573,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.48 BM25:0.45 Entity:0.00 Fuzzy:0.71 -> Fused:0.39 | CE:-2.09 -> Final:0.57 Calibrated:0.88 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 3,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_026",
+        "text": "The first time you mentioned Kingfisher Airlines in this interview was about the launch in 2005. But when did you actually conceive the idea?",
+        "start": 328.0,
+        "end": 342.0,
+        "anchor_start": 328.0,
+        "anchor_end": 342.0,
+        "expanded_start": 328.0,
+        "expanded_end": 358.0,
+        "segment": {
+          "segment_id": "e10132d5-f4ca-47c5-80df-55bb45afc630",
+          "start": 328.0,
+          "end": 358.0,
+          "topic_label": "advice",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_026",
+            "seg_027"
+          ]
+        },
+        "score_dense": 0.0,
+        "score_bm25": 0.23576264247489023,
+        "score_entity": 0.81,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.47315675971153087,
+        "score_cross_encoder": -4.706534385681152,
+        "score_final": 0.5055596785463176,
+        "score_calibrated": 0.7493510435589342,
+        "match_quality": "moderate_match",
+        "match_explanation": "Dense:0.00 BM25:0.24 Entity:0.81 Fuzzy:1.00 -> Fused:0.47 | CE:-4.71 -> Final:0.51 Calibrated:0.75 [moderate_match] | Opener:False | Segment:advice",
+        "is_opener": false,
+        "rank": 4,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_033",
+        "text": "Fifty crore for a birthday party! The audience is gasping. Some are laughing nervously.",
+        "start": 432.0,
+        "end": 445.0,
+        "anchor_start": 432.0,
+        "anchor_end": 445.0,
+        "expanded_start": 415.0,
+        "expanded_end": 445.0,
+        "segment": {
+          "segment_id": "47589d47-99cc-4c27-97c6-93162a4e47b8",
+          "start": 415.0,
+          "end": 445.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_032",
+            "seg_033"
+          ]
+        },
+        "score_dense": 0.4100070595741272,
+        "score_bm25": 0.21438487850694343,
+        "score_entity": 1.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.5141634940493324,
+        "score_cross_encoder": -7.6497039794921875,
+        "score_final": 0.36987408755386525,
+        "score_calibrated": 0.48181982279631,
+        "match_quality": "moderate_match",
+        "match_explanation": "Dense:0.41 BM25:0.21 Entity:1.00 Fuzzy:0.00 -> Fused:0.51 | CE:-7.65 -> Final:0.37 Calibrated:0.48 [moderate_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 5,
+        "tags": []
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_035",
+      "text": "When the interviewer asked about your UB Group earlier, you mentioned your father. Tell us about Vittal Mallya and the legacy he left you.",
+      "start": 460.0,
+      "end": 475.0,
+      "anchor_start": 460.0,
+      "anchor_end": 475.0,
+      "expanded_start": 460.0,
+      "expanded_end": 475.0,
+      "segment": {
+        "segment_id": "46e24158-d0b2-44ce-9608-bff6eb497b80",
+        "start": 460.0,
+        "end": 475.0,
+        "topic_label": "personal story",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_035"
+        ]
+      },
+      "score_dense": 0.3939773142337799,
+      "score_bm25": 1.0,
+      "score_entity": 1.0,
+      "score_fuzzy": 1.0,
+      "score_fused": 0.9060758689790964,
+      "score_cross_encoder": -1.778085708618164,
+      "score_final": 0.7627828866168856,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.39 BM25:1.00 Entity:1.00 Fuzzy:1.00 -> Fused:0.91 | CE:-1.78 -> Final:0.76 Calibrated:1.00 [strong_match] | Opener:False | Segment:personal story",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      459.5,
+      476.5
+    ],
+    "extraction_path": "<ffmpeg -ss 459.50 -to 476.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 63.00000000919681,
+      "retrieval_ms": 8718.999999997322,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1406.0000000026776,
+      "total_ms": 10188.000000009197
+    },
+    "failure_stage": "STAGE 4 - Reranking",
+    "failure_reason": "correct candidate retrieved & in top-3 but not ranked #1"
+  },
+  {
+    "prompt": "Extract the funniest moment.",
+    "intent": {
+      "original": "Extract the funniest moment.",
+      "entities": [],
+      "actions": [],
+      "semantic_concepts": [],
+      "monetary_refs": [],
+      "paraphrases": [
+        "the guest moment",
+        "where the guest talks about this",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "search_terms": [
+        "Extract the funniest moment",
+        "the guest moment",
+        "where the guest talks about this",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_007",
+        "text": "Speaking of celebrations, there was a famous moment on this very show years ago. Do you remember the 101 rupees incident?",
+        "start": 68.3,
+        "end": 78.0,
+        "anchor_start": 68.3,
+        "anchor_end": 78.0,
+        "expanded_start": 68.3,
+        "expanded_end": 92.5,
+        "segment": {
+          "segment_id": "59352af1-4029-4867-af65-f1568ecbd4b2",
+          "start": 68.3,
+          "end": 92.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_007",
+            "seg_008"
+          ]
+        },
+        "score_dense": 0.41084399819374084,
+        "score_bm25": 0.8370020442842075,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.35304591043886113,
+        "score_cross_encoder": -7.990036964416504,
+        "score_final": 0.5559137731316584,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.41 BM25:0.84 Entity:0.00 Fuzzy:0.00 -> Fused:0.35 | CE:-7.99 -> Final:0.56 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_032",
+        "text": "My 60th birthday on Goa beach. Five hundred guests, fireworks over the Arabian Sea, and a performance by a Grammy-winning artist. It cost roughly fifty crore.",
+        "start": 415.0,
+        "end": 432.0,
+        "anchor_start": 415.0,
+        "anchor_end": 432.0,
+        "expanded_start": 415.0,
+        "expanded_end": 445.0,
+        "segment": {
+          "segment_id": "68fcf0bb-a179-4b15-95d9-58115aa9538d",
+          "start": 415.0,
+          "end": 445.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_032",
+            "seg_033"
+          ]
+        },
+        "score_dense": 0.38582226634025574,
+        "score_bm25": 0.3471519437718591,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.22182577916205426,
+        "score_cross_encoder": -8.04631519317627,
+        "score_final": 0.5090930702335253,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.39 BM25:0.35 Entity:0.00 Fuzzy:0.00 -> Fused:0.22 | CE:-8.05 -> Final:0.51 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 2,
+        "tags": [
+          "weak_candidate"
+        ]
+      },
+      {
+        "chunk_id": "seg_010",
+        "text": "He accepts the notes with a smile and tucks them into his jacket pocket. The studio audience erupts in laughter and applause.",
+        "start": 108.0,
+        "end": 118.5,
+        "anchor_start": 108.0,
+        "anchor_end": 118.5,
+        "expanded_start": 108.0,
+        "expanded_end": 130.0,
+        "segment": {
+          "segment_id": "480ba427-1550-431f-ae6c-a00cefa136f5",
+          "start": 108.0,
+          "end": 130.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_010",
+            "seg_011"
+          ]
+        },
+        "score_dense": 0.4277842044830322,
+        "score_bm25": 0.4151351606272513,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.2535082617258741,
+        "score_cross_encoder": -9.661500930786133,
+        "score_final": 0.30464875754284004,
+        "score_calibrated": 0.9151500750599825,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.43 BM25:0.42 Entity:0.00 Fuzzy:0.00 -> Fused:0.25 | CE:-9.66 -> Final:0.30 Calibrated:0.92 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 3,
+        "tags": [
+          "weak_candidate"
+        ]
+      },
+      {
+        "chunk_id": "seg_057",
+        "text": "Before we wrap up, I want to ask about the viral clip from this show. The moment you stood up and pointed at the camera. What triggered that?",
+        "start": 740.0,
+        "end": 755.0,
+        "anchor_start": 740.0,
+        "anchor_end": 755.0,
+        "expanded_start": 740.0,
+        "expanded_end": 755.0,
+        "segment": {
+          "segment_id": "7c4dc63d-aecd-4ded-a38e-20087a10a098",
+          "start": 740.0,
+          "end": 755.0,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_057"
+          ]
+        },
+        "score_dense": 0.38743358850479126,
+        "score_bm25": 1.0,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.3856017559766769,
+        "score_cross_encoder": -10.059868812561035,
+        "score_final": 0.2915086081624031,
+        "score_calibrated": 0.8606148897731477,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.39 BM25:1.00 Entity:0.00 Fuzzy:0.00 -> Fused:0.39 | CE:-10.06 -> Final:0.29 Calibrated:0.86 [strong_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 4,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_065",
+        "text": "The audience gives a standing ovation. Some are cheering, a few are still booing from the bankruptcy section.",
+        "start": 850.0,
+        "end": 860.0,
+        "anchor_start": 850.0,
+        "anchor_end": 860.0,
+        "expanded_start": 838.0,
+        "expanded_end": 860.0,
+        "segment": {
+          "segment_id": "9d5fe98c-494a-4f31-b66f-463ae95d66fc",
+          "start": 810.0,
+          "end": 860.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5000256299972534,
+          "chunk_ids": [
+            "seg_062",
+            "seg_063",
+            "seg_064",
+            "seg_065"
+          ]
+        },
+        "score_dense": 0.31078577041625977,
+        "score_bm25": 0.4416642666672809,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.21919108631251116,
+        "score_cross_encoder": -9.858142852783203,
+        "score_final": 0.2683062171996768,
+        "score_calibrated": 0.7643186717001853,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.31 BM25:0.44 Entity:0.00 Fuzzy:0.00 -> Fused:0.22 | CE:-9.86 -> Final:0.27 Calibrated:0.76 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 5,
+        "tags": [
+          "weak_candidate"
+        ]
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_007",
+      "text": "Speaking of celebrations, there was a famous moment on this very show years ago. Do you remember the 101 rupees incident?",
+      "start": 68.3,
+      "end": 78.0,
+      "anchor_start": 68.3,
+      "anchor_end": 78.0,
+      "expanded_start": 68.3,
+      "expanded_end": 92.5,
+      "segment": {
+        "segment_id": "59352af1-4029-4867-af65-f1568ecbd4b2",
+        "start": 68.3,
+        "end": 92.5,
+        "topic_label": "money/finance",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_007",
+          "seg_008"
+        ]
+      },
+      "score_dense": 0.41084399819374084,
+      "score_bm25": 0.8370020442842075,
+      "score_entity": 0.0,
+      "score_fuzzy": 0.0,
+      "score_fused": 0.35304591043886113,
+      "score_cross_encoder": -7.990036964416504,
+      "score_final": 0.5559137731316584,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.41 BM25:0.84 Entity:0.00 Fuzzy:0.00 -> Fused:0.35 | CE:-7.99 -> Final:0.56 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      67.8,
+      79.5
+    ],
+    "extraction_path": "<ffmpeg -ss 67.80 -to 79.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 46.999999991385266,
+      "retrieval_ms": 3531.0000000026776,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1328.0000000086147,
+      "total_ms": 4906.000000002678
+    },
+    "failure_stage": "STAGE 4 - Reranking",
+    "failure_reason": "correct candidate retrieved but demoted out of top-3"
+  },
+  {
+    "prompt": "Find where he gets emotional and talks about crying.",
+    "intent": {
+      "original": "Find where he gets emotional and talks about crying.",
+      "entities": [],
+      "actions": [
+        "talk",
+        "talks",
+        "discuss",
+        "mention",
+        "emotional",
+        "cry",
+        "upset",
+        "serious"
+      ],
+      "semantic_concepts": [
+        "emotional"
+      ],
+      "monetary_refs": [],
+      "paraphrases": [
+        "the guest moment",
+        "where the guest talks about this",
+        "Find he gets emotional and talks about crying",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "search_terms": [
+        "Find where he gets emotional and talks about crying",
+        "talk",
+        "talks",
+        "discuss",
+        "mention",
+        "emotional",
+        "cry",
+        "upset",
+        "serious",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find he gets emotional and talks about crying",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_055",
+        "text": "That answer got emotional. You can see tears forming. The audience is completely silent again.",
+        "start": 710.0,
+        "end": 725.0,
+        "anchor_start": 710.0,
+        "anchor_end": 725.0,
+        "expanded_start": 710.0,
+        "expanded_end": 725.0,
+        "segment": {
+          "segment_id": "5c7b0470-ba90-46e4-8edf-3581b4f2b835",
+          "start": 710.0,
+          "end": 725.0,
+          "topic_label": "emotional",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_055"
+          ]
+        },
+        "score_dense": 0.5987598896026611,
+        "score_bm25": 0.9301364843717235,
+        "score_entity": 0.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.5921000824538623,
+        "score_cross_encoder": -0.3253732919692993,
+        "score_final": 0.6876300247361586,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.60 BM25:0.93 Entity:0.00 Fuzzy:1.00 -> Fused:0.59 | CE:-0.33 -> Final:0.69 Calibrated:1.00 [strong_match] | Opener:False | Segment:emotional",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_007",
+        "text": "Speaking of celebrations, there was a famous moment on this very show years ago. Do you remember the 101 rupees incident?",
+        "start": 68.3,
+        "end": 78.0,
+        "anchor_start": 68.3,
+        "anchor_end": 78.0,
+        "expanded_start": 68.3,
+        "expanded_end": 92.5,
+        "segment": {
+          "segment_id": "6469d684-c566-4a13-843e-4398fb96dbcd",
+          "start": 68.3,
+          "end": 92.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_007",
+            "seg_008"
+          ]
+        },
+        "score_dense": 0.3270634710788727,
+        "score_bm25": 0.4710627547577567,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.85,
+        "score_fused": 0.3597379035670446,
+        "score_cross_encoder": -7.990036964416504,
+        "score_final": 0.2461212786113884,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.33 BM25:0.47 Entity:0.00 Fuzzy:0.85 -> Fused:0.36 | CE:-7.99 -> Final:0.25 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 2,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_035",
+        "text": "When the interviewer asked about your UB Group earlier, you mentioned your father. Tell us about Vittal Mallya and the legacy he left you.",
+        "start": 460.0,
+        "end": 475.0,
+        "anchor_start": 460.0,
+        "anchor_end": 475.0,
+        "expanded_start": 460.0,
+        "expanded_end": 475.0,
+        "segment": {
+          "segment_id": "741e72f1-09ad-46cd-bcbf-49bc1a69d3cb",
+          "start": 460.0,
+          "end": 475.0,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_035"
+          ]
+        },
+        "score_dense": 0.3388693928718567,
+        "score_bm25": 1.0,
+        "score_entity": 0.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.5186042875051499,
+        "score_cross_encoder": -10.744656562805176,
+        "score_final": 0.18172270048409703,
+        "score_calibrated": 0.8670255417639567,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.34 BM25:1.00 Entity:0.00 Fuzzy:1.00 -> Fused:0.52 | CE:-10.74 -> Final:0.18 Calibrated:0.87 [strong_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 3,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_057",
+        "text": "Before we wrap up, I want to ask about the viral clip from this show. The moment you stood up and pointed at the camera. What triggered that?",
+        "start": 740.0,
+        "end": 755.0,
+        "anchor_start": 740.0,
+        "anchor_end": 755.0,
+        "expanded_start": 740.0,
+        "expanded_end": 755.0,
+        "segment": {
+          "segment_id": "8cd40565-f45b-41c6-833e-6c9d007f9ec0",
+          "start": 740.0,
+          "end": 755.0,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_057"
+          ]
+        },
+        "score_dense": 0.3049432933330536,
+        "score_bm25": 0.7632176810081159,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.71,
+        "score_fused": 0.40403457291859773,
+        "score_cross_encoder": -10.059868812561035,
+        "score_final": 0.1752090932665419,
+        "score_calibrated": 0.7997768933440956,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.30 BM25:0.76 Entity:0.00 Fuzzy:0.71 -> Fused:0.40 | CE:-10.06 -> Final:0.18 Calibrated:0.80 [strong_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 4,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_002",
+        "text": "Thank you for having me, Rajesh. It's always a pleasure to discuss business and life with an audience that cares about entrepreneurship.",
+        "start": 8.5,
+        "end": 18.2,
+        "anchor_start": 8.5,
+        "anchor_end": 18.2,
+        "expanded_start": 0.0,
+        "expanded_end": 18.2,
+        "segment": {
+          "segment_id": "5b42ecbd-c7a5-4a76-973d-7dd576d6cf1e",
+          "start": 0.0,
+          "end": 18.2,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_001",
+            "seg_002"
+          ]
+        },
+        "score_dense": 0.3167547583580017,
+        "score_bm25": 0.4472042830840403,
+        "score_entity": 0.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.37266523619631065,
+        "score_cross_encoder": -9.990640640258789,
+        "score_final": 0.16861451113265494,
+        "score_calibrated": 0.7316922329423403,
+        "match_quality": "moderate_match",
+        "match_explanation": "Dense:0.32 BM25:0.45 Entity:0.00 Fuzzy:1.00 -> Fused:0.37 | CE:-9.99 -> Final:0.17 Calibrated:0.73 [moderate_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 5,
+        "tags": []
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_055",
+      "text": "That answer got emotional. You can see tears forming. The audience is completely silent again.",
+      "start": 710.0,
+      "end": 725.0,
+      "anchor_start": 710.0,
+      "anchor_end": 725.0,
+      "expanded_start": 710.0,
+      "expanded_end": 725.0,
+      "segment": {
+        "segment_id": "5c7b0470-ba90-46e4-8edf-3581b4f2b835",
+        "start": 710.0,
+        "end": 725.0,
+        "topic_label": "emotional",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_055"
+        ]
+      },
+      "score_dense": 0.5987598896026611,
+      "score_bm25": 0.9301364843717235,
+      "score_entity": 0.0,
+      "score_fuzzy": 1.0,
+      "score_fused": 0.5921000824538623,
+      "score_cross_encoder": -0.3253732919692993,
+      "score_final": 0.6876300247361586,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.60 BM25:0.93 Entity:0.00 Fuzzy:1.00 -> Fused:0.59 | CE:-0.33 -> Final:0.69 Calibrated:1.00 [strong_match] | Opener:False | Segment:emotional",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      709.5,
+      726.5
+    ],
+    "extraction_path": "<ffmpeg -ss 709.50 -to 726.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 30.999999988125637,
+      "retrieval_ms": 6453.000000008615,
+      "expansion_ms": 16.00000000325963,
+      "rerank_ms": 1405.9999999881256,
+      "total_ms": 7905.999999988126
+    },
+    "failure_stage": "STAGE 2 - Retrieval",
+    "failure_reason": "ground-truth region not in retrieved candidate set"
+  },
+  {
+    "prompt": "Find where the audience laughs.",
+    "intent": {
+      "original": "Find where the audience laughs.",
+      "entities": [],
+      "actions": [
+        "funny",
+        "joke",
+        "laugh",
+        "humor"
+      ],
+      "semantic_concepts": [
+        "joke/humor"
+      ],
+      "monetary_refs": [],
+      "paraphrases": [
+        "the guest moment",
+        "where the guest talks about this",
+        "Find the audience laughs",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "search_terms": [
+        "Find where the audience laughs",
+        "funny",
+        "joke",
+        "laugh",
+        "humor",
+        "joke/humor",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find the audience laughs",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_010",
+        "text": "He accepts the notes with a smile and tucks them into his jacket pocket. The studio audience erupts in laughter and applause.",
+        "start": 108.0,
+        "end": 118.5,
+        "anchor_start": 108.0,
+        "anchor_end": 118.5,
+        "expanded_start": 108.0,
+        "expanded_end": 130.0,
+        "segment": {
+          "segment_id": "9b38f44d-1cd1-4ef3-b92a-bfbe97e33363",
+          "start": 108.0,
+          "end": 130.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_010",
+            "seg_011"
+          ]
+        },
+        "score_dense": 0.5650588870048523,
+        "score_bm25": 0.8378663264532172,
+        "score_entity": 0.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.5572371920650027,
+        "score_cross_encoder": -2.7884089946746826,
+        "score_final": 0.6171711576195008,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.57 BM25:0.84 Entity:0.00 Fuzzy:1.00 -> Fused:0.56 | CE:-2.79 -> Final:0.62 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_033",
+        "text": "Fifty crore for a birthday party! The audience is gasping. Some are laughing nervously.",
+        "start": 432.0,
+        "end": 445.0,
+        "anchor_start": 432.0,
+        "anchor_end": 445.0,
+        "expanded_start": 415.0,
+        "expanded_end": 445.0,
+        "segment": {
+          "segment_id": "2d460c35-6c32-4c47-b566-69bf633b0cf8",
+          "start": 415.0,
+          "end": 445.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_032",
+            "seg_033"
+          ]
+        },
+        "score_dense": 0.46194103360176086,
+        "score_bm25": 0.8088528071780711,
+        "score_entity": 0.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.513892563555134,
+        "score_cross_encoder": -3.5372297763824463,
+        "score_final": 0.5649801052729764,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.46 BM25:0.81 Entity:0.00 Fuzzy:1.00 -> Fused:0.51 | CE:-3.54 -> Final:0.56 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 2,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_065",
+        "text": "The audience gives a standing ovation. Some are cheering, a few are still booing from the bankruptcy section.",
+        "start": 850.0,
+        "end": 860.0,
+        "anchor_start": 850.0,
+        "anchor_end": 860.0,
+        "expanded_start": 838.0,
+        "expanded_end": 860.0,
+        "segment": {
+          "segment_id": "ed0ffb32-9f08-42af-a03e-0983cc0653f0",
+          "start": 810.0,
+          "end": 860.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5000256299972534,
+          "chunk_ids": [
+            "seg_062",
+            "seg_063",
+            "seg_064",
+            "seg_065"
+          ]
+        },
+        "score_dense": 0.43854784965515137,
+        "score_bm25": 0.8995344547919948,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.37837536107730163,
+        "score_cross_encoder": -5.040033340454102,
+        "score_final": 0.44567938438424853,
+        "score_calibrated": 0.9028331145421845,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.44 BM25:0.90 Entity:0.00 Fuzzy:0.00 -> Fused:0.38 | CE:-5.04 -> Final:0.45 Calibrated:0.90 [strong_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 3,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_005",
+        "text": "The audience is already applauding just hearing that. People remember those golden days fondly.",
+        "start": 45.5,
+        "end": 55.0,
+        "anchor_start": 45.5,
+        "anchor_end": 55.0,
+        "expanded_start": 45.5,
+        "expanded_end": 68.3,
+        "segment": {
+          "segment_id": "0bfe569a-4fbe-4dac-a6e1-7d90d0607e10",
+          "start": 45.5,
+          "end": 68.3,
+          "topic_label": "joke/humor",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_005",
+            "seg_006"
+          ]
+        },
+        "score_dense": 0.3967028856277466,
+        "score_bm25": 0.8088528071780711,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.34105921176422904,
+        "score_cross_encoder": -6.834204196929932,
+        "score_final": 0.4005909967045464,
+        "score_calibrated": 0.7804226291489461,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.40 BM25:0.81 Entity:0.00 Fuzzy:0.00 -> Fused:0.34 | CE:-6.83 -> Final:0.40 Calibrated:0.78 [strong_match] | Opener:False | Segment:joke/humor",
+        "is_opener": false,
+        "rank": 4,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_055",
+        "text": "That answer got emotional. You can see tears forming. The audience is completely silent again.",
+        "start": 710.0,
+        "end": 725.0,
+        "anchor_start": 710.0,
+        "anchor_end": 725.0,
+        "expanded_start": 710.0,
+        "expanded_end": 725.0,
+        "segment": {
+          "segment_id": "c84caa47-a11f-4d9f-9939-560f3d029a68",
+          "start": 710.0,
+          "end": 725.0,
+          "topic_label": "emotional",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_055"
+          ]
+        },
+        "score_dense": 0.43600839376449585,
+        "score_bm25": 0.7890362860205546,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.75,
+        "score_fused": 0.46236200932271215,
+        "score_cross_encoder": -8.033939361572266,
+        "score_final": 0.31419664711835066,
+        "score_calibrated": 0.5458705679130049,
+        "match_quality": "moderate_match",
+        "match_explanation": "Dense:0.44 BM25:0.79 Entity:0.00 Fuzzy:0.75 -> Fused:0.46 | CE:-8.03 -> Final:0.31 Calibrated:0.55 [moderate_match] | Opener:False | Segment:emotional",
+        "is_opener": false,
+        "rank": 5,
+        "tags": []
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_010",
+      "text": "He accepts the notes with a smile and tucks them into his jacket pocket. The studio audience erupts in laughter and applause.",
+      "start": 108.0,
+      "end": 118.5,
+      "anchor_start": 108.0,
+      "anchor_end": 118.5,
+      "expanded_start": 108.0,
+      "expanded_end": 130.0,
+      "segment": {
+        "segment_id": "9b38f44d-1cd1-4ef3-b92a-bfbe97e33363",
+        "start": 108.0,
+        "end": 130.0,
+        "topic_label": "money/finance",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_010",
+          "seg_011"
+        ]
+      },
+      "score_dense": 0.5650588870048523,
+      "score_bm25": 0.8378663264532172,
+      "score_entity": 0.0,
+      "score_fuzzy": 1.0,
+      "score_fused": 0.5572371920650027,
+      "score_cross_encoder": -2.7884089946746826,
+      "score_final": 0.6171711576195008,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.57 BM25:0.84 Entity:0.00 Fuzzy:1.00 -> Fused:0.56 | CE:-2.79 -> Final:0.62 Calibrated:1.00 [strong_match] | Opener:False | Segment:money/finance",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      107.5,
+      120.0
+    ],
+    "extraction_path": "<ffmpeg -ss 107.50 -to 120.00>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 47.00000000593718,
+      "retrieval_ms": 4422.000000005937,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1218.9999999973224,
+      "total_ms": 5688.000000009197
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where the audience applauds hearing about Kingfisher's golden days.",
+    "intent": {
+      "original": "Find where the audience applauds hearing about Kingfisher's golden days.",
+      "entities": [],
+      "actions": [],
+      "semantic_concepts": [],
+      "monetary_refs": [],
+      "paraphrases": [
+        "the guest moment",
+        "where the guest talks about this",
+        "Find the audience applauds hearing about Kingfisher's golden days",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "search_terms": [
+        "Find where the audience applauds hearing about Kingfisher's golden days",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find the audience applauds hearing about Kingfisher's golden days",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_005",
+        "text": "The audience is already applauding just hearing that. People remember those golden days fondly.",
+        "start": 45.5,
+        "end": 55.0,
+        "anchor_start": 45.5,
+        "anchor_end": 55.0,
+        "expanded_start": 45.5,
+        "expanded_end": 68.3,
+        "segment": {
+          "segment_id": "d5759fdb-e40d-4b44-a22e-27439da67ed7",
+          "start": 45.5,
+          "end": 68.3,
+          "topic_label": "joke/humor",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_005",
+            "seg_006"
+          ]
+        },
+        "score_dense": 0.5738915801048279,
+        "score_bm25": 1.0,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.45086205303668975,
+        "score_cross_encoder": 3.833848476409912,
+        "score_final": 0.5852586159110069,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.57 BM25:1.00 Entity:0.00 Fuzzy:0.00 -> Fused:0.45 | CE:3.83 -> Final:0.59 Calibrated:1.00 [strong_match] | Opener:False | Segment:joke/humor",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_051",
+        "text": "Kingfisher.",
+        "start": 685.0,
+        "end": 690.0,
+        "anchor_start": 685.0,
+        "anchor_end": 690.0,
+        "expanded_start": 678.0,
+        "expanded_end": 697.0,
+        "segment": {
+          "segment_id": "abb92a20-5409-4fd8-846e-68078404ddf9",
+          "start": 678.0,
+          "end": 710.0,
+          "topic_label": "advice",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_050",
+            "seg_051",
+            "seg_052",
+            "seg_053",
+            "seg_054"
+          ]
+        },
+        "score_dense": 0.4843314588069916,
+        "score_bm25": 0.0,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.9,
+        "score_fused": 0.30451601058244704,
+        "score_cross_encoder": -2.567776918411255,
+        "score_final": 0.35113093051314354,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.48 BM25:0.00 Entity:0.00 Fuzzy:0.90 -> Fused:0.30 | CE:-2.57 -> Final:0.35 Calibrated:1.00 [strong_match] | Opener:False | Segment:advice",
+        "is_opener": false,
+        "rank": 2,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_028",
+        "text": "And the last time we'll touch on this topic today: any message for the employees who lost their jobs when Kingfisher collapsed?",
+        "start": 358.0,
+        "end": 372.0,
+        "anchor_start": 358.0,
+        "anchor_end": 372.0,
+        "expanded_start": 358.0,
+        "expanded_end": 388.0,
+        "segment": {
+          "segment_id": "2af61494-44a3-4f99-9594-c2309878f1a7",
+          "start": 358.0,
+          "end": 388.0,
+          "topic_label": "advice",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_028",
+            "seg_029"
+          ]
+        },
+        "score_dense": 0.4552139937877655,
+        "score_bm25": 0.36654345433961505,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.2509607614106217,
+        "score_cross_encoder": -5.762418746948242,
+        "score_final": 0.24013578865010377,
+        "score_calibrated": 0.8732011969430199,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.46 BM25:0.37 Entity:0.00 Fuzzy:0.00 -> Fused:0.25 | CE:-5.76 -> Final:0.24 Calibrated:0.87 [strong_match] | Opener:False | Segment:advice",
+        "is_opener": false,
+        "rank": 3,
+        "tags": [
+          "weak_candidate"
+        ]
+      },
+      {
+        "chunk_id": "seg_039",
+        "text": "Around ten minutes into our conversation today, we touched on the airline's premium service. Can you describe what made Kingfisher First class special?",
+        "start": 520.0,
+        "end": 535.0,
+        "anchor_start": 520.0,
+        "anchor_end": 535.0,
+        "expanded_start": 520.0,
+        "expanded_end": 535.0,
+        "segment": {
+          "segment_id": "5edc00a1-0567-42ba-8878-1e2eb2567366",
+          "start": 520.0,
+          "end": 535.0,
+          "topic_label": "advice",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_039"
+          ]
+        },
+        "score_dense": 0.4553631842136383,
+        "score_bm25": 0.3073945672021689,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.2362257562753156,
+        "score_cross_encoder": -5.639739990234375,
+        "score_final": 0.23936067738165245,
+        "score_calibrated": 0.8687738329765504,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.46 BM25:0.31 Entity:0.00 Fuzzy:0.00 -> Fused:0.24 | CE:-5.64 -> Final:0.24 Calibrated:0.87 [strong_match] | Opener:False | Segment:advice",
+        "is_opener": false,
+        "rank": 4,
+        "tags": [
+          "weak_candidate"
+        ]
+      },
+      {
+        "chunk_id": "seg_026",
+        "text": "The first time you mentioned Kingfisher Airlines in this interview was about the launch in 2005. But when did you actually conceive the idea?",
+        "start": 328.0,
+        "end": 342.0,
+        "anchor_start": 328.0,
+        "anchor_end": 342.0,
+        "expanded_start": 328.0,
+        "expanded_end": 358.0,
+        "segment": {
+          "segment_id": "89530610-0148-49dd-9730-d0c868b6c67b",
+          "start": 328.0,
+          "end": 358.0,
+          "topic_label": "advice",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_026",
+            "seg_027"
+          ]
+        },
+        "score_dense": 0.41207361221313477,
+        "score_bm25": 0.49371558172758845,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.26765465970649427,
+        "score_cross_encoder": -5.962747573852539,
+        "score_final": 0.2391912109727088,
+        "score_calibrated": 0.867805856502691,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.41 BM25:0.49 Entity:0.00 Fuzzy:0.00 -> Fused:0.27 | CE:-5.96 -> Final:0.24 Calibrated:0.87 [strong_match] | Opener:False | Segment:advice",
+        "is_opener": false,
+        "rank": 5,
+        "tags": [
+          "weak_candidate"
+        ]
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_005",
+      "text": "The audience is already applauding just hearing that. People remember those golden days fondly.",
+      "start": 45.5,
+      "end": 55.0,
+      "anchor_start": 45.5,
+      "anchor_end": 55.0,
+      "expanded_start": 45.5,
+      "expanded_end": 68.3,
+      "segment": {
+        "segment_id": "d5759fdb-e40d-4b44-a22e-27439da67ed7",
+        "start": 45.5,
+        "end": 68.3,
+        "topic_label": "joke/humor",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_005",
+          "seg_006"
+        ]
+      },
+      "score_dense": 0.5738915801048279,
+      "score_bm25": 1.0,
+      "score_entity": 0.0,
+      "score_fuzzy": 0.0,
+      "score_fused": 0.45086205303668975,
+      "score_cross_encoder": 3.833848476409912,
+      "score_final": 0.5852586159110069,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.57 BM25:1.00 Entity:0.00 Fuzzy:0.00 -> Fused:0.45 | CE:3.83 -> Final:0.59 Calibrated:1.00 [strong_match] | Opener:False | Segment:joke/humor",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      45.0,
+      56.5
+    ],
+    "extraction_path": "<ffmpeg -ss 45.00 -to 56.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 46.999999991385266,
+      "retrieval_ms": 5031.000000002678,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1391.0000000032596,
+      "total_ms": 6468.999999997322
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where the guest reacts to the accusation that he diverted funds to Formula One.",
+    "intent": {
+      "original": "Find where the guest reacts to the accusation that he diverted funds to Formula One.",
+      "entities": [
+        "Formula One"
+      ],
+      "actions": [],
+      "semantic_concepts": [],
+      "monetary_refs": [],
+      "paraphrases": [
+        "Formula One moment",
+        "where Formula One talks about this",
+        "Find the guest reacts to the accusation that he diverted funds to Formula One",
+        "Formula One receives",
+        "interviewer pays Formula One"
+      ],
+      "search_terms": [
+        "Find where the guest reacts to the accusation that he diverted funds to Formula One",
+        "Formula One",
+        "Formula One moment",
+        "where Formula One talks about this",
+        "Find the guest reacts to the accusation that he diverted funds to Formula One",
+        "Formula One receives",
+        "interviewer pays Formula One"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": true
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_018",
+        "text": "Critics say you diverted funds to Formula One and your personal lifestyle. What's your response to that accusation?",
+        "start": 215.5,
+        "end": 228.0,
+        "anchor_start": 215.5,
+        "anchor_end": 228.0,
+        "expanded_start": 215.5,
+        "expanded_end": 245.0,
+        "segment": {
+          "segment_id": "649c0f7d-e99e-4556-92c0-5952b75a19e8",
+          "start": 215.5,
+          "end": 245.0,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_018",
+            "seg_019"
+          ]
+        },
+        "score_dense": 0.6255108714103699,
+        "score_bm25": 1.0,
+        "score_entity": 1.0,
+        "score_fuzzy": 1.0,
+        "score_fused": 0.9992681257426738,
+        "score_cross_encoder": 2.3880200386047363,
+        "score_final": 0.8297804377228021,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.63 BM25:1.00 Entity:1.00 Fuzzy:1.00 -> Fused:1.00 | CE:2.39 -> Final:0.83 Calibrated:1.00 [strong_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_015",
+        "text": "When the court announced the verdict, I was shocked. Completely shocked. I didn't expect the banks to pursue it so aggressively after all our settlement discussions.",
+        "start": 168.0,
+        "end": 185.0,
+        "anchor_start": 168.0,
+        "anchor_end": 185.0,
+        "expanded_start": 168.0,
+        "expanded_end": 185.0,
+        "segment": {
+          "segment_id": "e39bd9a8-79c5-4cc0-8297-2cb08966a052",
+          "start": 168.0,
+          "end": 185.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_015"
+          ]
+        },
+        "score_dense": 0.34581226110458374,
+        "score_bm25": 0.11102655267355507,
+        "score_entity": 1.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.458609568988242,
+        "score_cross_encoder": -10.844364166259766,
+        "score_final": 0.155340879720437,
+        "score_calibrated": 0.36762916172080484,
+        "match_quality": "weak_match",
+        "match_explanation": "Dense:0.35 BM25:0.11 Entity:1.00 Fuzzy:0.00 -> Fused:0.46 | CE:-10.84 -> Final:0.16 Calibrated:0.37 [weak_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 2,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_019",
+        "text": "I deny those allegations completely. Every transaction was documented and legal. Force India was a separate corporate entity with its own financing structure.",
+        "start": 228.0,
+        "end": 245.0,
+        "anchor_start": 228.0,
+        "anchor_end": 245.0,
+        "expanded_start": 215.5,
+        "expanded_end": 245.0,
+        "segment": {
+          "segment_id": "649c0f7d-e99e-4556-92c0-5952b75a19e8",
+          "start": 215.5,
+          "end": 245.0,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_018",
+            "seg_019"
+          ]
+        },
+        "score_dense": 0.28607428073883057,
+        "score_bm25": 0.0,
+        "score_entity": 1.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.4026448979973793,
+        "score_cross_encoder": -10.579431533813477,
+        "score_final": 0.14720562748610974,
+        "score_calibrated": 0.3294901152883713,
+        "match_quality": "weak_match",
+        "match_explanation": "Dense:0.29 BM25:0.00 Entity:1.00 Fuzzy:0.00 -> Fused:0.40 | CE:-10.58 -> Final:0.15 Calibrated:0.33 [weak_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 3,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_016",
+        "text": "Let's talk about the banks. The value of those loans. We're talking about nine thousand crore rupees. Nine thousand crore. Can you put that number in perspective?",
+        "start": 185.0,
+        "end": 198.0,
+        "anchor_start": 185.0,
+        "anchor_end": 198.0,
+        "expanded_start": 185.0,
+        "expanded_end": 215.5,
+        "segment": {
+          "segment_id": "7f5813f9-cc47-4458-aa73-9a0650afbb41",
+          "start": 185.0,
+          "end": 215.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_016",
+            "seg_017"
+          ]
+        },
+        "score_dense": 0.24333485960960388,
+        "score_bm25": 0.08804569073600724,
+        "score_entity": 1.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.4107554170794676,
+        "score_cross_encoder": -10.876169204711914,
+        "score_final": 0.13994570898435682,
+        "score_calibrated": 0.2954547392657697,
+        "match_quality": "weak_match",
+        "match_explanation": "Dense:0.24 BM25:0.09 Entity:1.00 Fuzzy:0.00 -> Fused:0.41 | CE:-10.88 -> Final:0.14 Calibrated:0.30 [weak_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 4,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_020",
+        "text": "You seem angry when that topic comes up. Is that frustration still raw?",
+        "start": 245.0,
+        "end": 258.0,
+        "anchor_start": 245.0,
+        "anchor_end": 258.0,
+        "expanded_start": 245.0,
+        "expanded_end": 272.0,
+        "segment": {
+          "segment_id": "dd65a563-4237-42bb-975c-24c611ea94c5",
+          "start": 245.0,
+          "end": 272.0,
+          "topic_label": "emotional",
+          "boundary_confidence": 0.5380969643592834,
+          "chunk_ids": [
+            "seg_020",
+            "seg_021"
+          ]
+        },
+        "score_dense": 0.2715330123901367,
+        "score_bm25": 0.0,
+        "score_entity": 1.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.39679203748702996,
+        "score_cross_encoder": -10.92470932006836,
+        "score_final": 0.13417110892385242,
+        "score_calibrated": 0.26838271574485145,
+        "match_quality": "weak_match",
+        "match_explanation": "Dense:0.27 BM25:0.00 Entity:1.00 Fuzzy:0.00 -> Fused:0.40 | CE:-10.92 -> Final:0.13 Calibrated:0.27 [weak_match] | Opener:False | Segment:emotional",
+        "is_opener": false,
+        "rank": 5,
+        "tags": []
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_018",
+      "text": "Critics say you diverted funds to Formula One and your personal lifestyle. What's your response to that accusation?",
+      "start": 215.5,
+      "end": 228.0,
+      "anchor_start": 215.5,
+      "anchor_end": 228.0,
+      "expanded_start": 215.5,
+      "expanded_end": 245.0,
+      "segment": {
+        "segment_id": "649c0f7d-e99e-4556-92c0-5952b75a19e8",
+        "start": 215.5,
+        "end": 245.0,
+        "topic_label": "personal story",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_018",
+          "seg_019"
+        ]
+      },
+      "score_dense": 0.6255108714103699,
+      "score_bm25": 1.0,
+      "score_entity": 1.0,
+      "score_fuzzy": 1.0,
+      "score_fused": 0.9992681257426738,
+      "score_cross_encoder": 2.3880200386047363,
+      "score_final": 0.8297804377228021,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.63 BM25:1.00 Entity:1.00 Fuzzy:1.00 -> Fused:1.00 | CE:2.39 -> Final:0.83 Calibrated:1.00 [strong_match] | Opener:False | Segment:personal story",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      215.0,
+      229.5
+    ],
+    "extraction_path": "<ffmpeg -ss 215.00 -to 229.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 46.000000002095476,
+      "retrieval_ms": 8766.00000000326,
+      "expansion_ms": 0.0,
+      "rerank_ms": 875.0,
+      "total_ms": 9687.000000005355
+    },
+    "failure_stage": "STAGE 4 - Reranking",
+    "failure_reason": "correct candidate retrieved & in top-3 but not ranked #1"
+  },
+  {
+    "prompt": "Find the viral clip where he stood up and pointed at the camera.",
+    "intent": {
+      "original": "Find the viral clip where he stood up and pointed at the camera.",
+      "entities": [],
+      "actions": [],
+      "semantic_concepts": [],
+      "monetary_refs": [],
+      "paraphrases": [
+        "the guest moment",
+        "where the guest talks about this",
+        "Find the viral clip he stood up and pointed at the camera",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "search_terms": [
+        "Find the viral clip where he stood up and pointed at the camera",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find the viral clip he stood up and pointed at the camera",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "lang_hint": "en",
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "seg_057",
+        "text": "Before we wrap up, I want to ask about the viral clip from this show. The moment you stood up and pointed at the camera. What triggered that?",
+        "start": 740.0,
+        "end": 755.0,
+        "anchor_start": 740.0,
+        "anchor_end": 755.0,
+        "expanded_start": 740.0,
+        "expanded_end": 755.0,
+        "segment": {
+          "segment_id": "d99b4fc7-205c-422e-be40-e5bdd106f086",
+          "start": 740.0,
+          "end": 755.0,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_057"
+          ]
+        },
+        "score_dense": 0.7001078128814697,
+        "score_bm25": 1.0,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.71,
+        "score_fused": 0.6015377345085144,
+        "score_cross_encoder": 6.184024810791016,
+        "score_final": 0.6304613203525543,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.70 BM25:1.00 Entity:0.00 Fuzzy:0.71 -> Fused:0.60 | CE:6.18 -> Final:0.63 Calibrated:1.00 [strong_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 1,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_058",
+        "text": "A reporter had published lies about my daughter. I stood up, pointed directly at the lens, and said leave my family out of this. That clip got ten million views.",
+        "start": 755.0,
+        "end": 770.0,
+        "anchor_start": 755.0,
+        "anchor_end": 770.0,
+        "expanded_start": 755.0,
+        "expanded_end": 782.0,
+        "segment": {
+          "segment_id": "a41e38aa-1fbe-4b51-917a-d1e59628b2bf",
+          "start": 755.0,
+          "end": 795.0,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_058",
+            "seg_059",
+            "seg_060"
+          ]
+        },
+        "score_dense": 0.5373895168304443,
+        "score_bm25": 0.5970421201731841,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.33734686093395155,
+        "score_cross_encoder": 1.8793144226074219,
+        "score_final": 0.4409606007244146,
+        "score_calibrated": 1.0,
+        "match_quality": "strong_match",
+        "match_explanation": "Dense:0.54 BM25:0.60 Entity:0.00 Fuzzy:0.00 -> Fused:0.34 | CE:1.88 -> Final:0.44 Calibrated:1.00 [strong_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 2,
+        "tags": []
+      },
+      {
+        "chunk_id": "seg_059",
+        "text": "Ten million views! That's the strongest hook for a viral short if I've ever heard one.",
+        "start": 770.0,
+        "end": 782.0,
+        "anchor_start": 770.0,
+        "anchor_end": 782.0,
+        "expanded_start": 755.0,
+        "expanded_end": 795.0,
+        "segment": {
+          "segment_id": "a41e38aa-1fbe-4b51-917a-d1e59628b2bf",
+          "start": 755.0,
+          "end": 795.0,
+          "topic_label": "personal story",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_058",
+            "seg_059",
+            "seg_060"
+          ]
+        },
+        "score_dense": 0.41104212403297424,
+        "score_bm25": 0.251240251648942,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.2066748063237765,
+        "score_cross_encoder": -7.560920238494873,
+        "score_final": 0.15999495671603975,
+        "score_calibrated": 0.6624959358441778,
+        "match_quality": "moderate_match",
+        "match_explanation": "Dense:0.41 BM25:0.25 Entity:0.00 Fuzzy:0.00 -> Fused:0.21 | CE:-7.56 -> Final:0.16 Calibrated:0.66 [moderate_match] | Opener:False | Segment:personal story",
+        "is_opener": false,
+        "rank": 3,
+        "tags": [
+          "weak_candidate"
+        ]
+      },
+      {
+        "chunk_id": "seg_007",
+        "text": "Speaking of celebrations, there was a famous moment on this very show years ago. Do you remember the 101 rupees incident?",
+        "start": 68.3,
+        "end": 78.0,
+        "anchor_start": 68.3,
+        "anchor_end": 78.0,
+        "expanded_start": 68.3,
+        "expanded_end": 92.5,
+        "segment": {
+          "segment_id": "ae17f4e1-e401-4c03-9216-d3b6ed31971b",
+          "start": 68.3,
+          "end": 92.5,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_007",
+            "seg_008"
+          ]
+        },
+        "score_dense": 0.37960508465766907,
+        "score_bm25": 0.21109751766278667,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.18563615904588082,
+        "score_cross_encoder": -7.990036964416504,
+        "score_final": 0.14269370176297003,
+        "score_calibrated": 0.558582093854096,
+        "match_quality": "moderate_match",
+        "match_explanation": "Dense:0.38 BM25:0.21 Entity:0.00 Fuzzy:0.00 -> Fused:0.19 | CE:-7.99 -> Final:0.14 Calibrated:0.56 [moderate_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 4,
+        "tags": [
+          "weak_candidate"
+        ]
+      },
+      {
+        "chunk_id": "seg_010",
+        "text": "He accepts the notes with a smile and tucks them into his jacket pocket. The studio audience erupts in laughter and applause.",
+        "start": 108.0,
+        "end": 118.5,
+        "anchor_start": 108.0,
+        "anchor_end": 118.5,
+        "expanded_start": 108.0,
+        "expanded_end": 130.0,
+        "segment": {
+          "segment_id": "1337ee41-c8a3-4343-98e2-dd023f8cea91",
+          "start": 108.0,
+          "end": 130.0,
+          "topic_label": "money/finance",
+          "boundary_confidence": 0.5,
+          "chunk_ids": [
+            "seg_010",
+            "seg_011"
+          ]
+        },
+        "score_dense": 0.42500442266464233,
+        "score_bm25": 0.2645437342284865,
+        "score_entity": 0.0,
+        "score_fuzzy": 0.0,
+        "score_fused": 0.2148874814897464,
+        "score_cross_encoder": -9.661500930786133,
+        "score_final": 0.10866297380893489,
+        "score_calibrated": 0.3541886150564416,
+        "match_quality": "weak_match",
+        "match_explanation": "Dense:0.43 BM25:0.26 Entity:0.00 Fuzzy:0.00 -> Fused:0.21 | CE:-9.66 -> Final:0.11 Calibrated:0.35 [weak_match] | Opener:False | Segment:money/finance",
+        "is_opener": false,
+        "rank": 5,
+        "tags": [
+          "weak_candidate"
+        ]
+      }
+    ],
+    "winner": {
+      "chunk_id": "seg_057",
+      "text": "Before we wrap up, I want to ask about the viral clip from this show. The moment you stood up and pointed at the camera. What triggered that?",
+      "start": 740.0,
+      "end": 755.0,
+      "anchor_start": 740.0,
+      "anchor_end": 755.0,
+      "expanded_start": 740.0,
+      "expanded_end": 755.0,
+      "segment": {
+        "segment_id": "d99b4fc7-205c-422e-be40-e5bdd106f086",
+        "start": 740.0,
+        "end": 755.0,
+        "topic_label": "personal story",
+        "boundary_confidence": 0.5,
+        "chunk_ids": [
+          "seg_057"
+        ]
+      },
+      "score_dense": 0.7001078128814697,
+      "score_bm25": 1.0,
+      "score_entity": 0.0,
+      "score_fuzzy": 0.71,
+      "score_fused": 0.6015377345085144,
+      "score_cross_encoder": 6.184024810791016,
+      "score_final": 0.6304613203525543,
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match",
+      "match_explanation": "Dense:0.70 BM25:1.00 Entity:0.00 Fuzzy:0.71 -> Fused:0.60 | CE:6.18 -> Final:0.63 Calibrated:1.00 [strong_match] | Opener:False | Segment:personal story",
+      "is_opener": false,
+      "rank": 1,
+      "tags": []
+    },
+    "resolved_timestamps": [
+      739.5,
+      756.5
+    ],
+    "extraction_path": "<ffmpeg -ss 739.50 -to 756.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 62.999999994644895,
+      "retrieval_ms": 6437.000000005355,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1515.9999999887077,
+      "total_ms": 8015.999999988708
+    },
+    "failure_stage": "STAGE 4 - Reranking",
+    "failure_reason": "correct candidate retrieved & in top-3 but not ranked #1"
+  }
+]

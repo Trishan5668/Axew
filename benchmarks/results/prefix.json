@@ -1,0 +1,335 @@
+{
+  "tag": "prefix",
+  "timestamp": "2026-05-29T13:30:34.539118+00:00",
+  "total": 14,
+  "passed": 6,
+  "pass_rate": 0.42857142857142855,
+  "results": [
+    {
+      "id": "bench_001",
+      "prompt": "Find where he talks about the bank loans and debt.",
+      "difficulty": "medium",
+      "tags": [
+        "topic"
+      ],
+      "expected": [
+        185.0,
+        198.0
+      ],
+      "resolved": [
+        184.5,
+        199.5
+      ],
+      "winner_chunk": "seg_016",
+      "start_drift": 0.5,
+      "overlap_sec": 13.0,
+      "tolerance": 8.0,
+      "passed": true,
+      "failure_stage": null,
+      "failure_reason": null
+    },
+    {
+      "id": "bench_002",
+      "prompt": "Find where he discusses building Kingfisher Airlines in the early days.",
+      "difficulty": "easy",
+      "tags": [
+        "topic"
+      ],
+      "expected": [
+        28.0,
+        45.5
+      ],
+      "resolved": [
+        327.5,
+        343.5
+      ],
+      "winner_chunk": "seg_026",
+      "start_drift": 299.5,
+      "overlap_sec": 0.0,
+      "tolerance": 6.0,
+      "passed": false,
+      "failure_stage": "STAGE 4 - Reranking",
+      "failure_reason": "correct candidate retrieved but demoted out of top-3"
+    },
+    {
+      "id": "bench_003",
+      "prompt": "Find where SBI and PNB are mentioned as the largest creditors.",
+      "difficulty": "medium",
+      "tags": [
+        "named_entity"
+      ],
+      "expected": [
+        635.0,
+        648.0
+      ],
+      "resolved": [
+        634.5,
+        649.5
+      ],
+      "winner_chunk": "seg_047",
+      "start_drift": 0.5,
+      "overlap_sec": 13.0,
+      "tolerance": 6.0,
+      "passed": true,
+      "failure_stage": null,
+      "failure_reason": null
+    },
+    {
+      "id": "bench_004",
+      "prompt": "Find where he talks about his father Vittal Mallya and the UB Group legacy.",
+      "difficulty": "medium",
+      "tags": [
+        "named_entity"
+      ],
+      "expected": [
+        475.0,
+        492.0
+      ],
+      "resolved": [
+        459.5,
+        476.5
+      ],
+      "winner_chunk": "seg_035",
+      "start_drift": 15.5,
+      "overlap_sec": 1.5,
+      "tolerance": 6.0,
+      "passed": false,
+      "failure_stage": "STAGE 4 - Reranking",
+      "failure_reason": "correct candidate retrieved & in top-3 but not ranked #1"
+    },
+    {
+      "id": "bench_005",
+      "prompt": "Find where the interviewer hands 101 rupees to Vijay Malia.",
+      "difficulty": "hard",
+      "tags": [
+        "named_entity",
+        "action"
+      ],
+      "expected": [
+        92.5,
+        108.0
+      ],
+      "resolved": [
+        92.0,
+        109.5
+      ],
+      "winner_chunk": "seg_009",
+      "start_drift": 0.5,
+      "overlap_sec": 15.5,
+      "tolerance": 5.0,
+      "passed": true,
+      "failure_stage": null,
+      "failure_reason": null
+    },
+    {
+      "id": "bench_006",
+      "prompt": "Find where the interviewer gives 101 rupees to Vijay Mallya.",
+      "difficulty": "easy",
+      "tags": [
+        "action",
+        "monetary"
+      ],
+      "expected": [
+        92.5,
+        108.0
+      ],
+      "resolved": [
+        92.0,
+        109.5
+      ],
+      "winner_chunk": "seg_009",
+      "start_drift": 0.5,
+      "overlap_sec": 15.5,
+      "tolerance": 5.0,
+      "passed": true,
+      "failure_stage": null,
+      "failure_reason": null
+    },
+    {
+      "id": "bench_007",
+      "prompt": "Find where he mentions the fifty crore birthday party cost.",
+      "difficulty": "medium",
+      "tags": [
+        "monetary",
+        "action"
+      ],
+      "expected": [
+        415.0,
+        432.0
+      ],
+      "resolved": [
+        431.5,
+        446.5
+      ],
+      "winner_chunk": "seg_033",
+      "start_drift": 16.5,
+      "overlap_sec": 0.5,
+      "tolerance": 6.0,
+      "passed": false,
+      "failure_stage": "STAGE 4 - Reranking",
+      "failure_reason": "correct candidate retrieved & in top-3 but not ranked #1"
+    },
+    {
+      "id": "bench_008",
+      "prompt": "Find where the interviewer asks about nine thousand crore rupees.",
+      "difficulty": "medium",
+      "tags": [
+        "monetary"
+      ],
+      "expected": [
+        185.0,
+        198.0
+      ],
+      "resolved": [
+        459.5,
+        476.5
+      ],
+      "winner_chunk": "seg_035",
+      "start_drift": 274.5,
+      "overlap_sec": 0.0,
+      "tolerance": 6.0,
+      "passed": false,
+      "failure_stage": "STAGE 4 - Reranking",
+      "failure_reason": "correct candidate retrieved & in top-3 but not ranked #1"
+    },
+    {
+      "id": "bench_009",
+      "prompt": "Extract the funniest moment.",
+      "difficulty": "hard",
+      "tags": [
+        "affect"
+      ],
+      "expected": [
+        55.0,
+        68.3
+      ],
+      "resolved": [
+        67.8,
+        79.5
+      ],
+      "winner_chunk": "seg_007",
+      "start_drift": 12.8,
+      "overlap_sec": 0.5,
+      "tolerance": 8.0,
+      "passed": false,
+      "failure_stage": "STAGE 4 - Reranking",
+      "failure_reason": "correct candidate retrieved but demoted out of top-3"
+    },
+    {
+      "id": "bench_010",
+      "prompt": "Find where he gets emotional and talks about crying.",
+      "difficulty": "medium",
+      "tags": [
+        "affect"
+      ],
+      "expected": [
+        142.0,
+        158.5
+      ],
+      "resolved": [
+        709.5,
+        726.5
+      ],
+      "winner_chunk": "seg_055",
+      "start_drift": 567.5,
+      "overlap_sec": 0.0,
+      "tolerance": 6.0,
+      "passed": false,
+      "failure_stage": "STAGE 2 - Retrieval",
+      "failure_reason": "ground-truth region not in retrieved candidate set"
+    },
+    {
+      "id": "bench_011",
+      "prompt": "Find where the audience laughs.",
+      "difficulty": "medium",
+      "tags": [
+        "audience_reaction"
+      ],
+      "expected": [
+        108.0,
+        118.5
+      ],
+      "resolved": [
+        107.5,
+        120.0
+      ],
+      "winner_chunk": "seg_010",
+      "start_drift": 0.5,
+      "overlap_sec": 10.5,
+      "tolerance": 6.0,
+      "passed": true,
+      "failure_stage": null,
+      "failure_reason": null
+    },
+    {
+      "id": "bench_012",
+      "prompt": "Find where the audience applauds hearing about Kingfisher's golden days.",
+      "difficulty": "medium",
+      "tags": [
+        "audience_reaction"
+      ],
+      "expected": [
+        45.5,
+        55.0
+      ],
+      "resolved": [
+        45.0,
+        56.5
+      ],
+      "winner_chunk": "seg_005",
+      "start_drift": 0.5,
+      "overlap_sec": 9.5,
+      "tolerance": 6.0,
+      "passed": true,
+      "failure_stage": null,
+      "failure_reason": null
+    },
+    {
+      "id": "bench_013",
+      "prompt": "Find where the guest reacts to the accusation that he diverted funds to Formula One.",
+      "difficulty": "hard",
+      "tags": [
+        "reaction"
+      ],
+      "expected": [
+        228.0,
+        245.0
+      ],
+      "resolved": [
+        215.0,
+        229.5
+      ],
+      "winner_chunk": "seg_018",
+      "start_drift": 13.0,
+      "overlap_sec": 1.5,
+      "tolerance": 8.0,
+      "passed": false,
+      "failure_stage": "STAGE 4 - Reranking",
+      "failure_reason": "correct candidate retrieved & in top-3 but not ranked #1"
+    },
+    {
+      "id": "bench_014",
+      "prompt": "Find the viral clip where he stood up and pointed at the camera.",
+      "difficulty": "hard",
+      "tags": [
+        "reaction",
+        "topic"
+      ],
+      "expected": [
+        755.0,
+        770.0
+      ],
+      "resolved": [
+        739.5,
+        756.5
+      ],
+      "winner_chunk": "seg_057",
+      "start_drift": 15.5,
+      "overlap_sec": 1.5,
+      "tolerance": 8.0,
+      "passed": false,
+      "failure_stage": "STAGE 4 - Reranking",
+      "failure_reason": "correct candidate retrieved & in top-3 but not ranked #1"
+    }
+  ]
+}

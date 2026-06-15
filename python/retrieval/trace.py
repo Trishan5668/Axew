@@ -14,6 +14,12 @@ class RetrievalTrace:
     query_original: str
     decomposed: Optional[DecomposedQuery] = None
     candidates_after_retrieval: list[dict] = field(default_factory=list)
+    hybrid_candidates: list[dict] = field(default_factory=list)
+    emotional_strategy_candidates: list[dict] = field(default_factory=list)
+    entity_action_strategy_candidates: list[dict] = field(default_factory=list)
+    event_index_candidates: list[dict] = field(default_factory=list)
+    merged_pool: list[dict] = field(default_factory=list)
+    strategy_errors: list[dict] = field(default_factory=list)
     candidates_after_expansion: list[dict] = field(default_factory=list)
     candidates_after_reranking: list[dict] = field(default_factory=list)
     opener_suppressions: list[dict] = field(default_factory=list)

@@ -2,6 +2,7 @@ import type { AIEditAction, SilenceRegion } from '@shared/ai'
 import type { Clip } from '@shared/timeline'
 import { detectScenes, detectSilence, transcribeMedia } from './aiClient'
 import { useAIStore } from '../stores/aiStore'
+import { usePlaybackStore } from '../stores/playbackStore'
 import { useProjectStore } from '../stores/projectStore'
 import { useTimelineStore } from '../stores/timelineStore'
 import { useUIStore } from '../stores/uiStore'
@@ -235,6 +236,9 @@ export async function applyAIAction(action: AIEditAction): Promise<void> {
           label: (action.params.matchText as string) ?? action.description,
         },
       ])
+      usePlaybackStore.getState().setCurrentTime(0, { syncVideo: true })
+      usePlaybackStore.getState().setLoopPoints(0, segmentDuration)
+      usePlaybackStore.getState().setLoop(true)
 
       addMarker({
         time: 0,

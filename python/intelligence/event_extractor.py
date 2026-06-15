@@ -26,7 +26,7 @@ EVENT_SCHEMA: Dict[str, List[str]] = {
     "transaction": ["give", "hand", "pay", "transfer", "receive", "present"],
     "emotional": ["laugh", "cry", "smile", "angry", "shocked", "nervous", "excited"],
     "speech_act": ["announce", "reveal", "admit", "deny", "promise", "threaten", "joke", "insult"],
-    "audience_reaction": ["applause", "laughter", "booing", "cheering"],
+    "audience_reaction": ["applause", "applaud", "clap", "laughter", "booing", "cheer", "cheering"],
     "physical_action": ["stand", "sit", "leave", "enter", "point", "hold", "show"],
     "interview_event": ["question", "answer", "interrupt", "pause", "cut_to"],
 }

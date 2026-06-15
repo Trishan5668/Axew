@@ -1,0 +1,17 @@
+[
+  {"id": "g_001", "start": 0.0, "end": 9.0, "text": "Welcome back to the show. I'm Dana Lewis, and today we're joined by Aria Chen, founder of the AI startup Nebula Labs.", "speaker": "interviewer"},
+  {"id": "g_002", "start": 9.0, "end": 22.0, "text": "Thanks for having me, Dana. It's exciting to talk about where machine learning is heading over the next decade.", "speaker": "aria_chen"},
+  {"id": "g_003", "start": 22.0, "end": 36.0, "text": "Let's start with the money. How did you raise your first round of startup funding for Nebula Labs?", "speaker": "interviewer"},
+  {"id": "g_004", "start": 36.0, "end": 54.0, "text": "Our seed round was brutal. We pitched forty investors before Sequoia led a twelve million dollar round. That funding changed everything for the company.", "speaker": "aria_chen"},
+  {"id": "g_005", "start": 54.0, "end": 64.0, "text": "Twelve million dollars! The audience is applauding that milestone.", "speaker": "interviewer"},
+  {"id": "g_006", "start": 64.0, "end": 78.0, "text": "Honestly, I laugh now when I remember our first office was a tiny garage with a broken air conditioner. We coded in shorts all summer.", "speaker": "aria_chen"},
+  {"id": "g_007", "start": 78.0, "end": 90.0, "text": "The whole studio audience bursts into laughter at that image. That's a great story.", "speaker": "narrator"},
+  {"id": "g_008", "start": 90.0, "end": 104.0, "text": "There were critics who said you copied your core algorithm from a competitor called DeepMind. What's your response to that accusation?", "speaker": "interviewer"},
+  {"id": "g_009", "start": 104.0, "end": 120.0, "text": "I completely deny that. Every line of our model was built in-house. Those allegations were hurtful and simply false.", "speaker": "aria_chen"},
+  {"id": "g_010", "start": 120.0, "end": 134.0, "text": "You got emotional during the lawsuit. Can you talk about that period?", "speaker": "interviewer"},
+  {"id": "g_011", "start": 134.0, "end": 150.0, "text": "I cried almost every night. The stress of the litigation and the debt we took on nearly broke me. It was the hardest year of my life.", "speaker": "aria_chen"},
+  {"id": "g_012", "start": 150.0, "end": 164.0, "text": "Speaking of debt, you mentioned the company owed nearly eight million dollars to creditors at one point. How did you survive that?", "speaker": "interviewer"},
+  {"id": "g_013", "start": 164.0, "end": 180.0, "text": "We restructured the debt with our lenders and cut burn rate by sixty percent. Survival mode teaches you discipline you never forget.", "speaker": "aria_chen"},
+  {"id": "g_014", "start": 180.0, "end": 196.0, "text": "Before we close, tell us about the viral keynote where you unveiled the Nebula One chip on stage to a standing ovation.", "speaker": "interviewer"},
+  {"id": "g_015", "start": 196.0, "end": 210.0, "text": "I held up the chip, the crowd went wild, and that clip hit twenty million views overnight. It put Nebula Labs on the map.", "speaker": "aria_chen"}
+]

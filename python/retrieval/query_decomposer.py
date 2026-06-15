@@ -34,15 +34,15 @@ class QueryDecomposer:
     ACTION_TERMS = {
         "give": ["give", "gives", "gave", "hand over", "transfer", "pay", "payment", "here take", "yeh lo"],
         "talk": ["talk", "talks", "discuss", "mention", "explain", "says", "asks"],
-        "emotion": ["emotional", "cry", "upset", "serious", "heartfelt"],
-        "humor": ["funny", "joke", "laugh", "humor", "banter"],
+        "emotion": ["emotional", "cry", "crying", "cried", "tears", "upset", "serious", "heartfelt"],
+        "humor": ["funny", "joke", "laugh", "humor", "funnier", "funniest", "hilarious", "banter"],
         "debate": ["debate", "argue", "disagree", "controversy"],
     }
     CONCEPT_TERMS = {
         "money/finance": ["money", "rupee", "rs", "payment", "debt", "funding", "finance", "bank", "loan"],
         "controversy": ["controversy", "scam", "fraud", "case", "accuse"],
-        "emotional": ["emotional", "cry", "heartfelt", "sad"],
-        "joke/humor": ["funny", "joke", "laugh", "humor"],
+        "emotional": ["emotional", "cry", "crying", "cried", "tears", "heartfelt", "sad"],
+        "joke/humor": ["funny", "funnier", "funniest", "hilarious", "joke", "laugh", "humor"],
         "personal story": ["story", "journey", "childhood", "life"],
         "advice": ["advice", "suggest", "recommend", "lesson"],
         "opening": ["intro", "opening", "beginning", "start"],

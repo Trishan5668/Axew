@@ -1,0 +1,837 @@
+[
+  {
+    "prompt": "Find where he talks about debt.",
+    "intent": {
+      "entities": [],
+      "actions": [
+        "talk",
+        "talks",
+        "discuss",
+        "mention"
+      ],
+      "monetary_refs": [],
+      "semantic_concepts": [
+        "money/finance"
+      ],
+      "search_terms": [
+        "Find where he talks about debt",
+        "talk",
+        "talks",
+        "discuss",
+        "mention",
+        "money/finance",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find he talks about debt",
+        "the guest receives"
+      ],
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "g_012",
+        "anchor": [
+          150.0,
+          164.0
+        ],
+        "expanded": [
+          134.0,
+          164.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.4,
+        "score_cross_encoder": -5.198,
+        "match_quality": "strong_match",
+        "text": "Speaking of debt, you mentioned the company owed nearly eight million dollars to creditors"
+      },
+      {
+        "chunk_id": "g_010",
+        "anchor": [
+          120.0,
+          134.0
+        ],
+        "expanded": [
+          120.0,
+          150.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.493,
+        "score_cross_encoder": -10.738,
+        "match_quality": "strong_match",
+        "text": "You got emotional during the lawsuit. Can you talk about that period?"
+      },
+      {
+        "chunk_id": "g_002",
+        "anchor": [
+          9.0,
+          22.0
+        ],
+        "expanded": [
+          0.0,
+          22.0
+        ],
+        "score_calibrated": 0.825,
+        "score_fused": 0.511,
+        "score_cross_encoder": -9.277,
+        "match_quality": "strong_match",
+        "text": "Thanks for having me, Dana. It's exciting to talk about where machine learning is heading "
+      },
+      {
+        "chunk_id": "g_014",
+        "anchor": [
+          180.0,
+          196.0
+        ],
+        "expanded": [
+          180.0,
+          210.0
+        ],
+        "score_calibrated": 0.6,
+        "score_fused": 0.47,
+        "score_cross_encoder": -10.366,
+        "match_quality": "moderate_match",
+        "text": "Before we close, tell us about the viral keynote where you unveiled the Nebula One chip on"
+      },
+      {
+        "chunk_id": "g_011",
+        "anchor": [
+          134.0,
+          150.0
+        ],
+        "expanded": [
+          120.0,
+          164.0
+        ],
+        "score_calibrated": 0.558,
+        "score_fused": 0.248,
+        "score_cross_encoder": -9.991,
+        "match_quality": "moderate_match",
+        "text": "I cried almost every night. The stress of the litigation and the debt we took on nearly br"
+      }
+    ],
+    "winner": {
+      "chunk_id": "g_012",
+      "anchor": [
+        150.0,
+        164.0
+      ],
+      "expanded": [
+        134.0,
+        164.0
+      ],
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match"
+    },
+    "resolved_timestamps": [
+      149.5,
+      165.5
+    ],
+    "extraction_path": "<ffmpeg -ss 149.50 -to 165.50>",
+    "stage_latencies": {
+      "decompose_ms": 14.999999999417923,
+      "segment_ms": 33407.00000000652,
+      "retrieval_ms": 1733.9999999967404,
+      "expansion_ms": 0.0,
+      "rerank_ms": 9250.0,
+      "total_ms": 44406.00000000268
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where the interviewer gives 101 rupees to Vijay Mallya.",
+    "intent": {
+      "entities": [
+        "Vijay Mallya",
+        "interviewer"
+      ],
+      "actions": [
+        "give",
+        "gives",
+        "gave",
+        "hand over"
+      ],
+      "monetary_refs": [
+        "101 rupees",
+        "give money",
+        "hand over",
+        "payment",
+        "transfer",
+        "here take",
+        "yeh lo"
+      ],
+      "semantic_concepts": [
+        "money/finance"
+      ],
+      "search_terms": [
+        "Find where the interviewer gives 101 rupees to Vijay Mallya",
+        "Vijay Mallya",
+        "interviewer",
+        "give",
+        "gives",
+        "gave",
+        "hand over",
+        "money/finance",
+        "101 rupees",
+        "give money"
+      ],
+      "entity_anchored": true
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "g_003",
+        "anchor": [
+          22.0,
+          36.0
+        ],
+        "expanded": [
+          22.0,
+          54.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.37,
+        "score_cross_encoder": -11.439,
+        "match_quality": "strong_match",
+        "text": "Let's start with the money. How did you raise your first round of startup funding for Nebu"
+      },
+      {
+        "chunk_id": "g_012",
+        "anchor": [
+          150.0,
+          164.0
+        ],
+        "expanded": [
+          134.0,
+          164.0
+        ],
+        "score_calibrated": 0.806,
+        "score_fused": 0.275,
+        "score_cross_encoder": -11.221,
+        "match_quality": "strong_match",
+        "text": "Speaking of debt, you mentioned the company owed nearly eight million dollars to creditors"
+      },
+      {
+        "chunk_id": "g_010",
+        "anchor": [
+          120.0,
+          134.0
+        ],
+        "expanded": [
+          120.0,
+          150.0
+        ],
+        "score_calibrated": 0.806,
+        "score_fused": 0.275,
+        "score_cross_encoder": -11.326,
+        "match_quality": "strong_match",
+        "text": "You got emotional during the lawsuit. Can you talk about that period?"
+      },
+      {
+        "chunk_id": "g_004",
+        "anchor": [
+          36.0,
+          54.0
+        ],
+        "expanded": [
+          22.0,
+          64.0
+        ],
+        "score_calibrated": 0.511,
+        "score_fused": 0.217,
+        "score_cross_encoder": -11.362,
+        "match_quality": "moderate_match",
+        "text": "Our seed round was brutal. We pitched forty investors before Sequoia led a twelve million "
+      },
+      {
+        "chunk_id": "g_002",
+        "anchor": [
+          9.0,
+          22.0
+        ],
+        "expanded": [
+          0.0,
+          22.0
+        ],
+        "score_calibrated": 0.108,
+        "score_fused": 0.338,
+        "score_cross_encoder": -10.957,
+        "match_quality": "poor_match",
+        "text": "Thanks for having me, Dana. It's exciting to talk about where machine learning is heading "
+      }
+    ],
+    "winner": {
+      "chunk_id": "g_003",
+      "anchor": [
+        22.0,
+        36.0
+      ],
+      "expanded": [
+        22.0,
+        54.0
+      ],
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match"
+    },
+    "resolved_timestamps": [
+      21.5,
+      37.5
+    ],
+    "extraction_path": "<ffmpeg -ss 21.50 -to 37.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 16.00000000325963,
+      "retrieval_ms": 3358.9999999967404,
+      "expansion_ms": 0.0,
+      "rerank_ms": 718.9999999973224,
+      "total_ms": 4093.9999999973224
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Extract the funniest moment.",
+    "intent": {
+      "entities": [],
+      "actions": [
+        "funny",
+        "joke",
+        "laugh",
+        "humor"
+      ],
+      "monetary_refs": [],
+      "semantic_concepts": [
+        "joke/humor"
+      ],
+      "search_terms": [
+        "Extract the funniest moment",
+        "funny",
+        "joke",
+        "laugh",
+        "humor",
+        "joke/humor",
+        "the guest moment",
+        "where the guest talks about this",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "g_007",
+        "anchor": [
+          78.0,
+          90.0
+        ],
+        "expanded": [
+          64.0,
+          90.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.411,
+        "score_cross_encoder": -10.859,
+        "match_quality": "strong_match",
+        "text": "The whole studio audience bursts into laughter at that image. That's a great story."
+      },
+      {
+        "chunk_id": "g_006",
+        "anchor": [
+          64.0,
+          78.0
+        ],
+        "expanded": [
+          64.0,
+          90.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.411,
+        "score_cross_encoder": -11.354,
+        "match_quality": "strong_match",
+        "text": "Honestly, I laugh now when I remember our first office was a tiny garage with a broken air"
+      },
+      {
+        "chunk_id": "g_002",
+        "anchor": [
+          9.0,
+          22.0
+        ],
+        "expanded": [
+          0.0,
+          22.0
+        ],
+        "score_calibrated": 0.488,
+        "score_fused": 0.307,
+        "score_cross_encoder": -9.277,
+        "match_quality": "moderate_match",
+        "text": "Thanks for having me, Dana. It's exciting to talk about where machine learning is heading "
+      },
+      {
+        "chunk_id": "g_014",
+        "anchor": [
+          180.0,
+          196.0
+        ],
+        "expanded": [
+          180.0,
+          210.0
+        ],
+        "score_calibrated": 0.471,
+        "score_fused": 0.373,
+        "score_cross_encoder": -10.366,
+        "match_quality": "moderate_match",
+        "text": "Before we close, tell us about the viral keynote where you unveiled the Nebula One chip on"
+      },
+      {
+        "chunk_id": "g_011",
+        "anchor": [
+          134.0,
+          150.0
+        ],
+        "expanded": [
+          120.0,
+          164.0
+        ],
+        "score_calibrated": 0.456,
+        "score_fused": 0.367,
+        "score_cross_encoder": -11.189,
+        "match_quality": "moderate_match",
+        "text": "I cried almost every night. The stress of the litigation and the debt we took on nearly br"
+      }
+    ],
+    "winner": {
+      "chunk_id": "g_007",
+      "anchor": [
+        78.0,
+        90.0
+      ],
+      "expanded": [
+        64.0,
+        90.0
+      ],
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match"
+    },
+    "resolved_timestamps": [
+      77.5,
+      91.5
+    ],
+    "extraction_path": "<ffmpeg -ss 77.50 -to 91.50>",
+    "stage_latencies": {
+      "decompose_ms": 14.999999999417923,
+      "segment_ms": 16.00000000325963,
+      "retrieval_ms": 1218.9999999973224,
+      "expansion_ms": 0.0,
+      "rerank_ms": 797.0000000059372,
+      "total_ms": 2047.0000000059372
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where the audience laughs.",
+    "intent": {
+      "entities": [],
+      "actions": [
+        "funny",
+        "joke",
+        "laugh",
+        "humor"
+      ],
+      "monetary_refs": [],
+      "semantic_concepts": [
+        "joke/humor"
+      ],
+      "search_terms": [
+        "Find where the audience laughs",
+        "funny",
+        "joke",
+        "laugh",
+        "humor",
+        "joke/humor",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find the audience laughs",
+        "the guest receives"
+      ],
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "g_007",
+        "anchor": [
+          78.0,
+          90.0
+        ],
+        "expanded": [
+          64.0,
+          90.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.544,
+        "score_cross_encoder": 0.6,
+        "match_quality": "strong_match",
+        "text": "The whole studio audience bursts into laughter at that image. That's a great story."
+      },
+      {
+        "chunk_id": "g_006",
+        "anchor": [
+          64.0,
+          78.0
+        ],
+        "expanded": [
+          64.0,
+          90.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.544,
+        "score_cross_encoder": -10.895,
+        "match_quality": "strong_match",
+        "text": "Honestly, I laugh now when I remember our first office was a tiny garage with a broken air"
+      },
+      {
+        "chunk_id": "g_005",
+        "anchor": [
+          54.0,
+          64.0
+        ],
+        "expanded": [
+          36.0,
+          64.0
+        ],
+        "score_calibrated": 0.692,
+        "score_fused": 0.454,
+        "score_cross_encoder": -8.955,
+        "match_quality": "moderate_match",
+        "text": "Twelve million dollars! The audience is applauding that milestone."
+      },
+      {
+        "chunk_id": "g_003",
+        "anchor": [
+          22.0,
+          36.0
+        ],
+        "expanded": [
+          22.0,
+          54.0
+        ],
+        "score_calibrated": 0.499,
+        "score_fused": 0.454,
+        "score_cross_encoder": -11.426,
+        "match_quality": "moderate_match",
+        "text": "Let's start with the money. How did you raise your first round of startup funding for Nebu"
+      },
+      {
+        "chunk_id": "g_002",
+        "anchor": [
+          9.0,
+          22.0
+        ],
+        "expanded": [
+          0.0,
+          22.0
+        ],
+        "score_calibrated": 0.405,
+        "score_fused": 0.33,
+        "score_cross_encoder": -9.277,
+        "match_quality": "weak_match",
+        "text": "Thanks for having me, Dana. It's exciting to talk about where machine learning is heading "
+      }
+    ],
+    "winner": {
+      "chunk_id": "g_007",
+      "anchor": [
+        78.0,
+        90.0
+      ],
+      "expanded": [
+        64.0,
+        90.0
+      ],
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match"
+    },
+    "resolved_timestamps": [
+      77.5,
+      91.5
+    ],
+    "extraction_path": "<ffmpeg -ss 77.50 -to 91.50>",
+    "stage_latencies": {
+      "decompose_ms": 14.999999999417923,
+      "segment_ms": 0.0,
+      "retrieval_ms": 1468.9999999973224,
+      "expansion_ms": 0.0,
+      "rerank_ms": 812.0000000053551,
+      "total_ms": 2296.0000000020955
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where the guest reacts to the statement.",
+    "intent": {
+      "entities": [],
+      "actions": [],
+      "monetary_refs": [],
+      "semantic_concepts": [],
+      "search_terms": [
+        "Find where the guest reacts to the statement",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find the guest reacts to the statement",
+        "the guest receives",
+        "interviewer pays the guest"
+      ],
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "g_002",
+        "anchor": [
+          9.0,
+          22.0
+        ],
+        "expanded": [
+          0.0,
+          22.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.318,
+        "score_cross_encoder": -9.277,
+        "match_quality": "strong_match",
+        "text": "Thanks for having me, Dana. It's exciting to talk about where machine learning is heading "
+      },
+      {
+        "chunk_id": "g_014",
+        "anchor": [
+          180.0,
+          196.0
+        ],
+        "expanded": [
+          180.0,
+          210.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.379,
+        "score_cross_encoder": -10.366,
+        "match_quality": "strong_match",
+        "text": "Before we close, tell us about the viral keynote where you unveiled the Nebula One chip on"
+      },
+      {
+        "chunk_id": "g_001",
+        "anchor": [
+          0.0,
+          9.0
+        ],
+        "expanded": [
+          0.0,
+          22.0
+        ],
+        "score_calibrated": 0.674,
+        "score_fused": 0.318,
+        "score_cross_encoder": -10.812,
+        "match_quality": "moderate_match",
+        "text": "Welcome back to the show. I'm Dana Lewis, and today we're joined by Aria Chen, founder of "
+      },
+      {
+        "chunk_id": "g_010",
+        "anchor": [
+          120.0,
+          134.0
+        ],
+        "expanded": [
+          120.0,
+          150.0
+        ],
+        "score_calibrated": 0.503,
+        "score_fused": 0.288,
+        "score_cross_encoder": -10.738,
+        "match_quality": "moderate_match",
+        "text": "You got emotional during the lawsuit. Can you talk about that period?"
+      },
+      {
+        "chunk_id": "g_011",
+        "anchor": [
+          134.0,
+          150.0
+        ],
+        "expanded": [
+          120.0,
+          164.0
+        ],
+        "score_calibrated": 0.175,
+        "score_fused": 0.232,
+        "score_cross_encoder": -11.189,
+        "match_quality": "poor_match",
+        "text": "I cried almost every night. The stress of the litigation and the debt we took on nearly br"
+      }
+    ],
+    "winner": {
+      "chunk_id": "g_002",
+      "anchor": [
+        9.0,
+        22.0
+      ],
+      "expanded": [
+        0.0,
+        22.0
+      ],
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match"
+    },
+    "resolved_timestamps": [
+      8.5,
+      23.5
+    ],
+    "extraction_path": "<ffmpeg -ss 8.50 -to 23.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 16.00000000325963,
+      "retrieval_ms": 1483.9999999967404,
+      "expansion_ms": 0.0,
+      "rerank_ms": 828.9999999979045,
+      "total_ms": 2328.9999999979045
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  },
+  {
+    "prompt": "Find where startup funding is discussed.",
+    "intent": {
+      "entities": [],
+      "actions": [
+        "talk",
+        "talks",
+        "discuss",
+        "mention"
+      ],
+      "monetary_refs": [],
+      "semantic_concepts": [
+        "money/finance",
+        "opening"
+      ],
+      "search_terms": [
+        "Find where startup funding is discussed",
+        "talk",
+        "talks",
+        "discuss",
+        "mention",
+        "money/finance",
+        "opening",
+        "the guest moment",
+        "where the guest talks about this",
+        "Find startup funding is discussed"
+      ],
+      "entity_anchored": false
+    },
+    "top_candidates": [
+      {
+        "chunk_id": "g_003",
+        "anchor": [
+          22.0,
+          36.0
+        ],
+        "expanded": [
+          22.0,
+          54.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.415,
+        "score_cross_encoder": -4.206,
+        "match_quality": "strong_match",
+        "text": "Let's start with the money. How did you raise your first round of startup funding for Nebu"
+      },
+      {
+        "chunk_id": "g_010",
+        "anchor": [
+          120.0,
+          134.0
+        ],
+        "expanded": [
+          120.0,
+          150.0
+        ],
+        "score_calibrated": 1.0,
+        "score_fused": 0.389,
+        "score_cross_encoder": -10.738,
+        "match_quality": "strong_match",
+        "text": "You got emotional during the lawsuit. Can you talk about that period?"
+      },
+      {
+        "chunk_id": "g_002",
+        "anchor": [
+          9.0,
+          22.0
+        ],
+        "expanded": [
+          0.0,
+          22.0
+        ],
+        "score_calibrated": 0.995,
+        "score_fused": 0.514,
+        "score_cross_encoder": -9.277,
+        "match_quality": "strong_match",
+        "text": "Thanks for having me, Dana. It's exciting to talk about where machine learning is heading "
+      },
+      {
+        "chunk_id": "g_004",
+        "anchor": [
+          36.0,
+          54.0
+        ],
+        "expanded": [
+          22.0,
+          64.0
+        ],
+        "score_calibrated": 0.846,
+        "score_fused": 0.325,
+        "score_cross_encoder": -10.62,
+        "match_quality": "strong_match",
+        "text": "Our seed round was brutal. We pitched forty investors before Sequoia led a twelve million "
+      },
+      {
+        "chunk_id": "g_012",
+        "anchor": [
+          150.0,
+          164.0
+        ],
+        "expanded": [
+          134.0,
+          164.0
+        ],
+        "score_calibrated": 0.74,
+        "score_fused": 0.28,
+        "score_cross_encoder": -11.31,
+        "match_quality": "moderate_match",
+        "text": "Speaking of debt, you mentioned the company owed nearly eight million dollars to creditors"
+      }
+    ],
+    "winner": {
+      "chunk_id": "g_003",
+      "anchor": [
+        22.0,
+        36.0
+      ],
+      "expanded": [
+        22.0,
+        54.0
+      ],
+      "score_calibrated": 1.0,
+      "match_quality": "strong_match"
+    },
+    "resolved_timestamps": [
+      21.5,
+      37.5
+    ],
+    "extraction_path": "<ffmpeg -ss 21.50 -to 37.50>",
+    "stage_latencies": {
+      "decompose_ms": 0.0,
+      "segment_ms": 14.999999999417923,
+      "retrieval_ms": 1906.0000000026776,
+      "expansion_ms": 0.0,
+      "rerank_ms": 1218.9999999973224,
+      "total_ms": 3139.999999999418
+    },
+    "failure_stage": null,
+    "failure_reason": null
+  }
+]

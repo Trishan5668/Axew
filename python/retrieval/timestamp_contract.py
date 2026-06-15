@@ -13,6 +13,25 @@ class PlannerError(Exception):
     """Raised when planning cannot produce a valid clip without fallback."""
 
 
+class StrategyExecutionError(Exception):
+    """Raised when a retrieval strategy fails instead of falling back silently."""
+
+    def __init__(self, query: str, strategy_name: str, cause: Exception) -> None:
+        self.query = query
+        self.strategy_name = strategy_name
+        self.exception_type = type(cause).__name__
+        self.exception_message = str(cause)
+        super().__init__(
+            "Strategy execution failed | "
+            f"query={query!r} strategy={strategy_name!r} "
+            f"exception_type={self.exception_type!r} exception_message={self.exception_message!r}"
+        )
+
+
+class RetrievalLowConfidenceError(Exception):
+    """Raised when retrieval cannot produce a candidate above the confidence floor."""
+
+
 class TimestampContract:
     @staticmethod
     def validate_candidate(c: Any, stage: str) -> None:

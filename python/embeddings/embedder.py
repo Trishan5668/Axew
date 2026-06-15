@@ -65,13 +65,26 @@ class EmbeddingEngine:
             _DISK_CACHE.set(key, vec.tolist())
         np.save(self._cache_path(text), vec)
 
+    def _valid_cached(self, cached: Optional[np.ndarray], expected_dim: Optional[int]) -> Optional[np.ndarray]:
+        if cached is None:
+            return None
+        if expected_dim is None or cached.ndim == 1 and cached.shape[0] == expected_dim:
+            return cached
+        logger.info(
+            "Ignoring stale embedding cache entry with dim=%s; expected dim=%s",
+            cached.shape[0] if cached.ndim else "scalar",
+            expected_dim,
+        )
+        return None
+
     def embed_query(self, query: str, instruction: Optional[str] = None) -> np.ndarray:
         prefix = instruction or QUERY_PREFIX
         text = f"{prefix}{query}"
-        cached = self._load_cached(text)
+        model = self.registry.get_bi_encoder()
+        expected_dim = model.get_sentence_embedding_dimension()
+        cached = self._valid_cached(self._load_cached(text), expected_dim)
         if cached is not None:
             return cached
-        model = self.registry.get_bi_encoder()
         vec = model.encode(text, normalize_embeddings=True, show_progress_bar=False)
         vec = np.asarray(vec, dtype=np.float32)
         self._save_cached(text, vec)
@@ -79,10 +92,11 @@ class EmbeddingEngine:
 
     def embed_passage(self, text: str) -> np.ndarray:
         full = f"{PASSAGE_PREFIX}{text}"
-        cached = self._load_cached(full)
+        model = self.registry.get_bi_encoder()
+        expected_dim = model.get_sentence_embedding_dimension()
+        cached = self._valid_cached(self._load_cached(full), expected_dim)
         if cached is not None:
             return cached
-        model = self.registry.get_bi_encoder()
         vec = model.encode(full, normalize_embeddings=True, show_progress_bar=False)
         vec = np.asarray(vec, dtype=np.float32)
         self._save_cached(full, vec)
@@ -90,12 +104,13 @@ class EmbeddingEngine:
 
     def embed_chunks(self, chunks: List[Chunk], batch_size: int = 32) -> List[Chunk]:
         model = self.registry.get_bi_encoder()
+        expected_dim = model.get_sentence_embedding_dimension()
         texts = [f"{PASSAGE_PREFIX}{c.text}" for c in chunks]
         to_encode: List[int] = []
         vectors: List[Optional[np.ndarray]] = [None] * len(chunks)
 
         for i, text in enumerate(texts):
-            cached = self._load_cached(text)
+            cached = self._valid_cached(self._load_cached(text), expected_dim)
             if cached is not None:
                 vectors[i] = cached
             else:

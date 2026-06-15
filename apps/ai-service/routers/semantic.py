@@ -49,7 +49,11 @@ async def semantic_extract(request: SemanticExtractRequest) -> SemanticExtractRe
     """
     from python.models.transcript import TranscriptChunk
     from python.retrieval.pipeline import RetrievalPipeline
-    from python.retrieval.timestamp_contract import PlannerError, RetrievalIntegrityError
+    from python.retrieval.timestamp_contract import (
+        RetrievalIntegrityError,
+        RetrievalLowConfidenceError,
+        StrategyExecutionError,
+    )
 
     if not request.segments:
         return SemanticExtractResponse(
@@ -76,11 +80,11 @@ async def semantic_extract(request: SemanticExtractRequest) -> SemanticExtractRe
                 "start": float(top.expanded_start),
                 "end": float(top.expanded_end),
             },
-            confidence=top.score_calibrated,
+            confidence=float(top.score_final or 0.0),
             debug=result.trace.to_dict(),
         )
 
-    except (PlannerError, RetrievalIntegrityError) as e:
+    except (RetrievalIntegrityError, RetrievalLowConfidenceError, StrategyExecutionError) as e:
         logger.warning("Semantic retrieval failed explicitly: %s", e)
         return SemanticExtractResponse(
             status="error",

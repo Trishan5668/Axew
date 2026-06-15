@@ -158,7 +158,7 @@ class ConversationalReranker:
 
         ranked = sorted(candidates, key=lambda c: c.score_final or 0.0, reverse=True)
         intro_terms = {"intro", "opening", "beginning", "start"}
-        if ranked and ranked[0].is_opener and not query.entity_anchored and not (set(query.semantic_concepts) & intro_terms):
+        if ranked and ranked[0].is_opener and not (set(query.semantic_concepts) & intro_terms):
             if len(ranked) > 1:
                 opener = ranked.pop(0)
                 insert_at = min(2, len(ranked))
@@ -174,7 +174,9 @@ class ConversationalReranker:
             cand.rank = rank
             cand.match_explanation = (
                 f"Dense:{cand.score_dense:.2f} BM25:{cand.score_bm25:.2f} Entity:{cand.score_entity:.2f} "
-                f"Fuzzy:{cand.score_fuzzy:.2f} -> Fused:{cand.score_fused:.2f} | "
+                f"Fuzzy:{cand.score_fuzzy:.2f} Strategy:{cand.score_strategy:.2f}"
+                f"{'/' + ','.join(cand.strategy_origins) if cand.strategy_origins else ''} "
+                f"-> Fused:{cand.score_fused:.2f} | "
                 f"CE:{cand.score_cross_encoder:.2f} -> Final:{(cand.score_final or 0.0):.2f} "
                 f"Calibrated:{cand.score_calibrated:.2f} [{cand.match_quality}] | "
                 f"Opener:{cand.is_opener} | Segment:{cand.segment.topic_label if cand.segment else 'none'}"
@@ -225,12 +227,27 @@ class ConversationalReranker:
             return np.asarray(emb, dtype=np.float32)
         return self.embedder.embed_passage(chunk.text or "")
 
+    # Intrinsic logit range of the ms-marco cross-encoders (a property of the
+    # model, not of any video/benchmark): irrelevant pairs score around -10,
+    # clearly-relevant pairs around +5 and above.
+    _CE_LOGIT_FLOOR = -10.0
+    _CE_LOGIT_CEIL = 5.0
+
     def _normalize(self, scores: List[float]) -> List[float]:
-        arr = np.asarray(scores, dtype=np.float32)
-        mn, mx = float(arr.min()), float(arr.max())
-        if mx - mn < 1e-6:
-            return [0.5 for _ in scores]
-        return [float((s - mn) / (mx - mn)) for s in arr]
+        # Absolute, fixed-range normalization of cross-encoder logits instead of
+        # per-query min-max scaling. Min-max always maps the best candidate to
+        # 1.0 -- even when EVERY candidate is irrelevant (all logits strongly
+        # negative) -- which fabricates a full-strength relevance signal out of
+        # noise and lets the cross-encoder override the topically-correct fused
+        # retrieval score (a single "attractor" segment then wins unrelated
+        # queries). Anchoring to the model's intrinsic logit range instead means
+        # a query whose best match is still poor (e.g. max logit -8) yields a
+        # uniformly low CE contribution so the fused score governs, while a
+        # genuine match (logit > 0) still dominates. This stays monotonic in the
+        # logit, so the cross-encoder's relative ordering is preserved.
+        lo, hi = self._CE_LOGIT_FLOOR, self._CE_LOGIT_CEIL
+        span = hi - lo
+        return [float(np.clip((s - lo) / span, 0.0, 1.0)) for s in scores]
 
     def _calibrate(self, candidates: List[RetrievalCandidate]) -> None:
         scores = np.asarray([c.score_final or 0.0 for c in candidates], dtype=np.float32)
