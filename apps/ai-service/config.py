@@ -13,6 +13,11 @@ class Settings(BaseSettings):
     device: str = "cpu"
     log_level: str = "info"
 
+    # OpusClip cloud integration
+    opusclip_api_key: str = ""
+    opusclip_base_url: str = "https://api.opus.pro"
+    opusclip_health_timeout_sec: float = 0.8
+
     # Resource management
     max_models: int = 3
     embed_model: str = "minilm"  # "minilm" (90 MB) or "bge-large" (420 MB)

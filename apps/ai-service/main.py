@@ -22,7 +22,7 @@ _PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
-from routers import analysis, chat, debug, execution, models, retrieval, semantic
+from routers import analysis, chat, debug, execution, models, opusclip, retrieval, semantic
 
 _START_TIME = time.time()
 
@@ -217,7 +217,9 @@ async def resource_guard_middleware(request: Request, call_next):
     if request.method == "OPTIONS":
         return await call_next(request)
 
-    if request.url.path.startswith("/health"):
+    # Health-style probes must always be reachable, even during startup, so the
+    # frontend polling system can render status badges immediately.
+    if request.url.path.startswith("/health") or request.url.path == "/opusclip/health":
         response = await call_next(request)
         return response
 
@@ -317,6 +319,7 @@ app.include_router(semantic.router, prefix="/api/semantic", tags=["semantic"])
 app.include_router(retrieval.router, prefix="/api/retrieval", tags=["retrieval"])
 app.include_router(debug.router, prefix="/debug", tags=["debug"])
 app.include_router(models.router, prefix="/api/models", tags=["models"])
+app.include_router(opusclip.router, prefix="/opusclip", tags=["opusclip"])
 
 
 # ---------------------------------------------------------------------------
