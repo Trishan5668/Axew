@@ -211,6 +211,54 @@ export async function fetchTranscriptionDiagnostics(): Promise<TranscriptionDiag
   }
 }
 
+export type OpusClipHealthStatus = 'online' | 'offline'
+
+export interface OpusClipHealthResult {
+  status: OpusClipHealthStatus
+  service: string
+  apiKeyPresent: boolean
+  reason: string | null
+}
+
+/**
+ * Query the OpusClip health endpoint.
+ *
+ * This NEVER throws — any network/timeout/parse failure resolves to an
+ * `offline` result so the polling UI can render safely and never crash the
+ * application. The check is fast (<1s) and never exposes the API key.
+ */
+export async function fetchOpusClipHealth(): Promise<OpusClipHealthResult> {
+  try {
+    const response = await fetch(`${AI_SERVICE_URL}/opusclip/health`, {
+      signal: AbortSignal.timeout(2500),
+    })
+    const data = (await response.json().catch(() => ({}))) as Partial<{
+      status: string
+      service: string
+      api_key_present: boolean
+      reason: string
+    }>
+    const online = response.ok && data.status === 'online'
+    return {
+      status: online ? 'online' : 'offline',
+      service: data.service ?? 'opusclip',
+      apiKeyPresent: Boolean(data.api_key_present),
+      reason: online ? null : data.reason ?? `http_${response.status}`,
+    }
+  } catch (err) {
+    const reason =
+      err instanceof DOMException && err.name === 'TimeoutError'
+        ? 'timeout'
+        : 'backend_unreachable'
+    return {
+      status: 'offline',
+      service: 'opusclip',
+      apiKeyPresent: false,
+      reason,
+    }
+  }
+}
+
 async function parseApiError(response: Response, fallback: string): Promise<string> {
   try {
     const body = await response.json()
