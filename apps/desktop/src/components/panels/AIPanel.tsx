@@ -5,6 +5,7 @@ import { applyPromptToTimeline, confirmSuggestedAction } from '../../lib/editOrc
 import { useAIStore } from '../../stores/aiStore'
 import { useProjectStore } from '../../stores/projectStore'
 import { useTimelineStore } from '../../stores/timelineStore'
+import { OpusClipStatusBadge } from './OpusClipStatusBadge'
 import { cn } from '../../lib/cn'
 
 const QUICK_PROMPTS = [
@@ -72,12 +73,15 @@ export function AIPanel() {
 
   return (
     <div className="flex h-full flex-col bg-axew-surface">
-      <div className="flex flex-shrink-0 items-center justify-between border-b border-axew-border px-3 py-2">
-        <div className="flex items-center gap-1.5">
-          <Zap size={12} className="text-axew-ai" />
-          <span className="text-xs font-medium text-axew-text">AI Engine</span>
+      <div className="flex flex-shrink-0 flex-col gap-1 border-b border-axew-border px-3 py-2">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1.5">
+            <Zap size={12} className="text-axew-ai" />
+            <span className="text-xs font-medium text-axew-text">AI Engine</span>
+          </div>
+          <OpusClipStatusBadge />
         </div>
-        <div className="flex items-center gap-2 text-2xs text-axew-textDim">
+        <div className="flex items-center justify-end gap-2 text-2xs text-axew-textDim">
           <span className={
             aiServiceStatus === 'connected'
               ? 'text-axew-success'

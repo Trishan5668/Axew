@@ -3,6 +3,7 @@ import { useProjectStore } from '../../stores/projectStore'
 import { usePlaybackStore } from '../../stores/playbackStore'
 import { useAIStore } from '../../stores/aiStore'
 import { useTimelineStore } from '../../stores/timelineStore'
+import { useTimelineOpusClipMenu } from '../../hooks/useTimelineOpusClipMenu'
 import { TimelineRuler } from './TimelineRuler'
 import { TimelineToolbar } from './TimelineToolbar'
 import { TrackHeader } from './TrackHeader'
@@ -12,17 +13,33 @@ const TRACK_HEADER_WIDTH = 180
 
 export function Timeline() {
   const { currentProject } = useProjectStore()
-  const { zoom, scrollX, scrollY, setScrollX, setScrollY, setZoom } = useTimelineStore()
+  const { zoom, scrollX, scrollY, setScrollX, setScrollY, setZoom, selectedClipIds } =
+    useTimelineStore()
   const { highlightRanges } = useAIStore()
   const { currentTime, duration, setCurrentTime, frameRate } = usePlaybackStore()
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const timelineRef = useRef<HTMLDivElement>(null)
   const [timelineWidth, setTimelineWidth] = useState(0)
 
+  // IMPORTANT: this hook is called unconditionally, before any early return,
+  // so it runs in identical order in dev and in the packaged production EXE.
+  // It internally no-ops when cloud features are disabled.
+  const opusClipMenu = useTimelineOpusClipMenu()
+
   const timeline = currentProject?.timeline
   const tracks = timeline?.tracks ?? []
   const totalDuration = Math.max(duration, timeline?.duration ?? 0, 30)
   const totalWidth = totalDuration * zoom
+
+  const handleClipContextMenu = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      opusClipMenu.openMenu(
+        { clientX: e.clientX, clientY: e.clientY, preventDefault: () => e.preventDefault() },
+        selectedClipIds[0] ?? '',
+      )
+    },
+    [opusClipMenu, selectedClipIds],
+  )
 
   useEffect(() => {
     const observer = new ResizeObserver((entries) => {
@@ -119,6 +136,7 @@ export function Timeline() {
             className="relative flex-1 overflow-x-scroll overflow-y-hidden"
             style={{ scrollbarWidth: 'thin' }}
             onScroll={handleScroll}
+            onContextMenu={opusClipMenu.enabled ? handleClipContextMenu : undefined}
           >
             <div
               className="pointer-events-none absolute bottom-0 top-0 z-20 w-px bg-axew-playhead"
@@ -156,6 +174,27 @@ export function Timeline() {
           </div>
         </div>
       </div>
+
+      {opusClipMenu.state.open && opusClipMenu.items.length > 0 && (
+        <div
+          data-testid="opusclip-context-menu"
+          className="fixed z-50 min-w-44 rounded border border-axew-border bg-axew-surface py-1 shadow-lg"
+          style={{ left: opusClipMenu.state.x, top: opusClipMenu.state.y }}
+          onContextMenu={(e) => e.preventDefault()}
+        >
+          {opusClipMenu.items.map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              disabled={item.disabled}
+              className="flex w-full items-center px-3 py-1.5 text-left text-2xs text-axew-textMuted hover:bg-axew-panel hover:text-axew-text disabled:opacity-40"
+              onClick={() => item.onSelect()}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
