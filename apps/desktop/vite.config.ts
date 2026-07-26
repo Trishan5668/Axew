@@ -18,7 +18,12 @@ export default defineConfig({
           build: {
             outDir: 'dist-electron',
             rollupOptions: {
-              external: ['electron'],
+              // `electron` is always external. `electron-updater` must stay
+              // external too: it reads its own package.json + app-update.yml
+              // and require()s electron internals, so it cannot be bundled.
+              // electron-builder ships it (the sole production dependency)
+              // into the asar's node_modules, where this require resolves.
+              external: ['electron', 'electron-updater'],
             },
           },
         },

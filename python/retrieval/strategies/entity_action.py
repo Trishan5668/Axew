@@ -12,6 +12,8 @@ from python.retrieval.video_index import VideoIndex
 
 
 class EntityActionStrategy(RetrievalStrategy):
+    MIN_FALLBACK_CANDIDATES = 3
+
     async def retrieve_candidates(
         self,
         parsed: ParsedQuery,
@@ -72,6 +74,8 @@ class EntityActionStrategy(RetrievalStrategy):
         ]
 
         merged = int_results + hybrid_results
+        if len(merged) < self.MIN_FALLBACK_CANDIDATES:
+            merged.extend(self._event_fallback(parsed, index))
         seen: set[str] = set()
         out: List[RetrievalResult] = []
         for r in sorted(merged, key=lambda x: x.score_fused, reverse=True):
@@ -79,6 +83,37 @@ class EntityActionStrategy(RetrievalStrategy):
                 seen.add(r.chunk_id)
                 out.append(r)
         return out[:top_k]
+
+    def _event_fallback(self, parsed: ParsedQuery, index: VideoIndex) -> List[RetrievalResult]:
+        event_index = index.artifacts.event_index
+        mentions = []
+        if parsed.actions:
+            mentions.extend(event_index.lookup_verbs(parsed.actions))
+        for event_type in event_index.action_event_types():
+            mentions.extend(event_index.lookup(event_type))
+
+        seen: set[tuple[str, str]] = set()
+        results: List[RetrievalResult] = []
+        for mention in sorted(mentions, key=lambda m: m.confidence, reverse=True):
+            key = (mention.chunk_id, mention.verb)
+            if key in seen:
+                continue
+            seen.add(key)
+            chunk = index.chunks_by_id.get(mention.chunk_id)
+            if not chunk:
+                continue
+            results.append(
+                RetrievalResult(
+                    chunk_id=mention.chunk_id,
+                    chunk=chunk,
+                    text=chunk.text,
+                    start_sec=mention.start_sec,
+                    end_sec=mention.end_sec,
+                    score_fused=max(0.55, float(mention.confidence)),
+                    events=[mention.verb, mention.event_type],
+                )
+            )
+        return results
 
     def _has_monetary(self, chunk: Chunk, amounts: List[str]) -> bool:
         t = chunk.text.lower()

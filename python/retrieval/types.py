@@ -14,7 +14,13 @@ from python.models.transcript import TranscriptChunk
 class DecomposedQuery:
     original: str
     entities: list[str] = field(default_factory=list)
+    entity_types: list[str] = field(default_factory=list)
     actions: list[str] = field(default_factory=list)
+    event_verbs: list[str] = field(default_factory=list)
+    event_types: list[str] = field(default_factory=list)
+    affect_signals: list[str] = field(default_factory=list)
+    intent_signals: list[str] = field(default_factory=list)
+    routing_confidence: float = 0.5
     semantic_concepts: list[str] = field(default_factory=list)
     monetary_refs: list[str] = field(default_factory=list)
     paraphrases: list[str] = field(default_factory=list)

@@ -53,6 +53,20 @@ axew/
 - FFmpeg export via Rust service
 - AI panel with Ollama chat and quick-edit prompts
 - Silence detection, scene markers, subtitle/transcript pipeline
-- Local-first — no cloud dependency
+- **Local-first by default** — no cloud dependency. Optional cloud features
+  (Supabase auth, Razorpay billing, OpusClip post-processing) are opt-in
+  behind a single feature flag. See [docs/CLOUD_INTEGRATION.md](docs/CLOUD_INTEGRATION.md).
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for system design.
+
+## Packaging (Windows)
+
+```bash
+pnpm install
+pnpm make-installer
+```
+
+Produces `apps/desktop/release/AxewSetup-<version>.exe`. End users do not
+need Node / Python / Rust / FFmpeg installed. Whisper models download on
+first launch into `%APPDATA%/Axew/models/`. Full details in
+[docs/CLOUD_INTEGRATION.md](docs/CLOUD_INTEGRATION.md).

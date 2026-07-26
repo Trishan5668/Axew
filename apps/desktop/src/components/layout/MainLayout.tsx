@@ -7,6 +7,8 @@ import { Toolbar } from '../toolbar/Toolbar'
 import { StatusBar } from './StatusBar'
 import { TitleBar } from './TitleBar'
 import { RetrievalDebugPanel } from '../RetrievalDebugPanel'
+import { OpusClipPanel } from '../OpusClipPanel'
+import { isCloudAvailable } from '../../lib/supabase'
 import { useUIStore } from '../../stores/uiStore'
 import { useAIStore } from '../../stores/aiStore'
 
@@ -139,7 +141,14 @@ export function MainLayout() {
               className="flex flex-shrink-0 flex-col overflow-hidden border-l border-axew-border"
               style={{ width: layout.rightWidth }}
             >
-              <AIPanel />
+              <div className="min-h-0 flex-1 overflow-hidden">
+                <AIPanel />
+              </div>
+              {isCloudAvailable() && (
+                <div className="min-h-[200px] flex-shrink-0 overflow-hidden">
+                  <OpusClipPanel />
+                </div>
+              )}
             </div>
           </>
         )}

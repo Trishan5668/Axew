@@ -25,6 +25,7 @@ class RetrievalTrace:
     opener_suppressions: list[dict] = field(default_factory=list)
     fallback_removals: list[str] = field(default_factory=list)
     timestamp_violations: list[str] = field(default_factory=list)
+    routing_decisions: dict[str, dict] = field(default_factory=dict)
     final_result: Optional[dict] = None
     total_latency_ms: float = 0.0
     stage_latencies: dict[str, float] = field(default_factory=dict)

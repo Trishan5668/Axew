@@ -9,6 +9,9 @@
     "test": "turbo run test",
     "lint": "turbo run lint",
     "type-check": "turbo run type-check",
+    "test": "turbo run test",
+    "package": "pnpm --filter @axew/desktop package",
+    "make-installer": "pnpm --filter @axew/desktop make-installer",
     "clean": "turbo run clean"
   },
   "devDependencies": {

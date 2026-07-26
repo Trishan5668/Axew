@@ -5,6 +5,13 @@ import net from 'net'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { runBootstrap } from './services/bootstrapManager'
+import { setupAutoUpdater } from './services/autoUpdater'
+import {
+  attachOAuthDeepLinkListeners,
+  oauthRedirectUrl,
+  registerOAuthProtocol,
+} from './services/oauthHandler'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -31,6 +38,13 @@ protocol.registerSchemesAsPrivileged([
     },
   },
 ])
+
+// Register axew:// OAuth protocol BEFORE app.whenReady() so single-instance
+// lock acquisition + cold-start argv parsing happen at the right moment.
+registerOAuthProtocol()
+attachOAuthDeepLinkListeners({
+  getMainWindow: () => mainWindow,
+})
 
 function getPreloadPath(): string {
   const candidates = [
@@ -834,6 +848,8 @@ ipcMain.handle('app:getPaths', () => ({
   temp: app.getPath('temp'),
 }))
 
+ipcMain.handle('auth:getOAuthRedirectUrl', () => oauthRedirectUrl(isDev))
+
 ipcMain.handle('fs:readFile', async (_, filePath: string) => {
   try {
     const content = fs.readFileSync(filePath)
@@ -952,13 +968,22 @@ ipcMain.handle('services:getStatus', async () => {
   }
 })
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
   registerMediaProtocol()
-  startRustService()
-  startAIService().catch((err) => {
-    console.error('[Supervisor][AI] Unhandled error in startAIService:', err)
-  })
   createWindow()
+
+  // Bootstrap manager handles Rust + AI start AND broadcasts the first-run
+  // signal if no Whisper model is installed yet. This replaces the previous
+  // direct startRustService() / startAIService() calls.
+  await runBootstrap({
+    startRust: startRustService,
+    startAI: startAIService,
+    getMainWindow: () => mainWindow,
+  })
+
+  // Auto-update — no-op in dev, no-op if no publish channel is configured.
+  const updater = await setupAutoUpdater(() => mainWindow)
+  updater.start()
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {

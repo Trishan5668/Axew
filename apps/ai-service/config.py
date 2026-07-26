@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     cache_dir: str = os.path.expanduser("~/.axew/cache")
     ollama_host: str = "http://localhost:11434"
     default_llm_model: str = "llama3"
-    default_whisper_model: str = "base"
+    default_whisper_model: str = "large-v3"
     device: str = "cpu"
     log_level: str = "info"
 

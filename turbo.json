@@ -24,6 +24,10 @@
     "type-check": {
       "outputs": []
     },
+    "test": {
+      "outputs": [],
+      "dependsOn": []
+    },
     "clean": {
       "cache": false
     }

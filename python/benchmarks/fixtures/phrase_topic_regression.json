@@ -1,0 +1,346 @@
+{
+  "name": "phrase_topic_regression",
+  "description": "Regression guardrails for exact phrase, semantic topic, entity, timestamp, and confidence calibration retrieval. Ground truth uses existing AXEW transcript fixtures from interview, tech, and default corpora.",
+  "queries": [
+    {
+      "id": "phrase_mallya_001",
+      "type": "phrase",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where they discuss nine thousand crore rupees",
+      "expected_chunk_id": "seg_016",
+      "expected_start": 185.0,
+      "expected_end": 198.0
+    },
+    {
+      "id": "phrase_mallya_002",
+      "type": "phrase",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where Force India is mentioned as a separate corporate entity",
+      "expected_chunk_id": "seg_019",
+      "expected_start": 228.0,
+      "expected_end": 245.0
+    },
+    {
+      "id": "phrase_mallya_003",
+      "type": "phrase",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where he says Air Deccan was his worst decision",
+      "expected_chunk_id": "seg_062",
+      "expected_start": 810.0,
+      "expected_end": 825.0
+    },
+    {
+      "id": "phrase_mallya_004",
+      "type": "phrase",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where that clip got ten million views",
+      "expected_chunk_id": "seg_058",
+      "expected_start": 755.0,
+      "expected_end": 770.0
+    },
+    {
+      "id": "phrase_mallya_005",
+      "type": "phrase",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where he says he still has those 101 rupees framed",
+      "expected_chunk_id": "seg_011",
+      "expected_start": 118.5,
+      "expected_end": 130.0
+    },
+    {
+      "id": "phrase_mallya_006",
+      "type": "phrase",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where gourmet meals by Sanjeev Kapoor are mentioned",
+      "expected_chunk_id": "seg_040",
+      "expected_start": 535.0,
+      "expected_end": 552.0
+    },
+    {
+      "id": "phrase_mallya_007",
+      "type": "phrase",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where they discuss debt and SBI exposure",
+      "expected_chunk_id": "seg_048",
+      "expected_start": 648.0,
+      "expected_end": 662.0
+    },
+    {
+      "id": "phrase_mallya_008",
+      "type": "phrase",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where it cost roughly fifty crore",
+      "expected_chunk_id": "seg_032",
+      "expected_start": 415.0,
+      "expected_end": 432.0
+    },
+    {
+      "id": "phrase_mallya_009",
+      "type": "phrase",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where I am giving you 101 rupees right now",
+      "expected_chunk_id": "seg_009",
+      "expected_start": 92.5,
+      "expected_end": 108.0
+    },
+    {
+      "id": "phrase_mallya_010",
+      "type": "phrase",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where Kingfisher was a dream in the early days",
+      "expected_chunk_id": "seg_004",
+      "expected_start": 28.0,
+      "expected_end": 45.5
+    },
+    {
+      "id": "phrase_mallya_011",
+      "type": "phrase",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where host Rajesh Kumar welcomes everyone",
+      "expected_chunk_id": "seg_001",
+      "expected_start": 0.0,
+      "expected_end": 8.5
+    },
+    {
+      "id": "phrase_mallya_012",
+      "type": "phrase",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where protesters shout outside the courthouse",
+      "expected_chunk_id": "seg_024",
+      "expected_start": 302.0,
+      "expected_end": 315.0
+    },
+    {
+      "id": "phrase_default_001",
+      "type": "phrase",
+      "video_id": "default_hinglish",
+      "fixture_path": "data/default/transcript_enriched.json",
+      "query": "Find the part mentioning Royal Challengers Bangalore",
+      "expected_chunk_id": "25",
+      "expected_start": 37.06,
+      "expected_end": 38.94
+    },
+    {
+      "id": "phrase_default_002",
+      "type": "phrase",
+      "video_id": "default_hinglish",
+      "fixture_path": "data/default/transcript_enriched.json",
+      "query": "Find where four thousand crore vaapis kaar chokhao",
+      "expected_chunk_id": "45",
+      "expected_start": 77.46,
+      "expected_end": 85.48
+    },
+    {
+      "id": "phrase_default_003",
+      "type": "phrase",
+      "video_id": "default_hinglish",
+      "fixture_path": "data/default/transcript_enriched.json",
+      "query": "Find where he explains choosing Bangalore for the IPL team",
+      "expected_chunk_id": "26",
+      "expected_start": 38.94,
+      "expected_end": 41.82
+    },
+    {
+      "id": "phrase_tech_001",
+      "type": "phrase",
+      "video_id": "tech_interview",
+      "fixture_path": "python/evaluation/fixtures/generalization_tech_interview.json",
+      "query": "Find where Sequoia led the twelve million dollar seed round",
+      "expected_chunk_id": "g_004",
+      "expected_start": 36.0,
+      "expected_end": 54.0
+    },
+    {
+      "id": "phrase_tech_002",
+      "type": "phrase",
+      "video_id": "tech_interview",
+      "fixture_path": "python/evaluation/fixtures/generalization_tech_interview.json",
+      "query": "Find where they restructured debt with lenders",
+      "expected_chunk_id": "g_013",
+      "expected_start": 164.0,
+      "expected_end": 180.0
+    },
+    {
+      "id": "topic_mallya_001",
+      "type": "topic",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where he talks about redefining aviation in India",
+      "expected_chunk_id": "seg_004",
+      "expected_start": 28.0,
+      "expected_end": 45.5
+    },
+    {
+      "id": "topic_mallya_002",
+      "type": "topic",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find the darkest emotional period where he cried alone",
+      "expected_chunk_id": "seg_013",
+      "expected_start": 142.0,
+      "expected_end": 158.5
+    },
+    {
+      "id": "topic_mallya_003",
+      "type": "topic",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where he walks along the Thames every morning",
+      "expected_chunk_id": "seg_023",
+      "expected_start": 285.0,
+      "expected_end": 302.0
+    },
+    {
+      "id": "topic_mallya_004",
+      "type": "topic",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where Kingfisher First class luxury service is described",
+      "expected_chunk_id": "seg_040",
+      "expected_start": 535.0,
+      "expected_end": 552.0
+    },
+    {
+      "id": "topic_mallya_005",
+      "type": "topic",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where his father built United Breweries legacy",
+      "expected_chunk_id": "seg_036",
+      "expected_start": 475.0,
+      "expected_end": 492.0
+    },
+    {
+      "id": "topic_mallya_006",
+      "type": "topic",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where social media amplifies viral moments",
+      "expected_chunk_id": "seg_060",
+      "expected_start": 782.0,
+      "expected_end": 795.0
+    },
+    {
+      "id": "topic_mallya_007",
+      "type": "topic",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where he misses Mumbai and says London is exile",
+      "expected_chunk_id": "seg_056",
+      "expected_start": 725.0,
+      "expected_end": 740.0
+    },
+    {
+      "id": "topic_mallya_008",
+      "type": "topic",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where critics say funds were diverted to Formula One",
+      "expected_chunk_id": "seg_018",
+      "expected_start": 215.5,
+      "expected_end": 228.0
+    },
+    {
+      "id": "topic_mallya_009",
+      "type": "topic",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where bankruptcy proceedings in London are discussed",
+      "expected_chunk_id": "seg_012",
+      "expected_start": 130.0,
+      "expected_end": 142.0
+    },
+    {
+      "id": "topic_mallya_010",
+      "type": "topic",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find the launch party with champagne celebrating until dawn",
+      "expected_chunk_id": "seg_006",
+      "expected_start": 55.0,
+      "expected_end": 68.3
+    },
+    {
+      "id": "topic_mallya_011",
+      "type": "topic",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where he apologizes to pilots and cabin crew who lost jobs",
+      "expected_chunk_id": "seg_029",
+      "expected_start": 372.0,
+      "expected_end": 388.0
+    },
+    {
+      "id": "topic_mallya_012",
+      "type": "topic",
+      "video_id": "mallya_interview",
+      "fixture_path": "python/evaluation/fixtures/interview_segments.json",
+      "query": "Find where he describes pure fear when the crowd turns on him",
+      "expected_chunk_id": "seg_025",
+      "expected_start": 315.0,
+      "expected_end": 328.0
+    },
+    {
+      "id": "topic_tech_001",
+      "type": "topic",
+      "video_id": "tech_interview",
+      "fixture_path": "python/evaluation/fixtures/generalization_tech_interview.json",
+      "query": "Find where she pitched forty investors before startup funding",
+      "expected_chunk_id": "g_004",
+      "expected_start": 36.0,
+      "expected_end": 54.0
+    },
+    {
+      "id": "topic_tech_002",
+      "type": "topic",
+      "video_id": "tech_interview",
+      "fixture_path": "python/evaluation/fixtures/generalization_tech_interview.json",
+      "query": "Find where litigation and company debt nearly broke her",
+      "expected_chunk_id": "g_011",
+      "expected_start": 134.0,
+      "expected_end": 150.0
+    },
+    {
+      "id": "topic_tech_003",
+      "type": "topic",
+      "video_id": "tech_interview",
+      "fixture_path": "python/evaluation/fixtures/generalization_tech_interview.json",
+      "query": "Find the viral keynote where the chip clip got twenty million views",
+      "expected_chunk_id": "g_015",
+      "expected_start": 196.0,
+      "expected_end": 210.0
+    },
+    {
+      "id": "topic_tech_004",
+      "type": "topic",
+      "video_id": "tech_interview",
+      "fixture_path": "python/evaluation/fixtures/generalization_tech_interview.json",
+      "query": "Find the humble garage office with a broken air conditioner",
+      "expected_chunk_id": "g_006",
+      "expected_start": 64.0,
+      "expected_end": 78.0
+    },
+    {
+      "id": "topic_default_001",
+      "type": "topic",
+      "video_id": "default_hinglish",
+      "fixture_path": "data/default/transcript_enriched.json",
+      "query": "Find where youth marketing through IPL team branding is discussed",
+      "expected_chunk_id": "30",
+      "expected_start": 46.76,
+      "expected_end": 49.64
+    }
+  ]
+}

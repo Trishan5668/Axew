@@ -16,6 +16,10 @@ const api = {
     getVersion: () => ipcRenderer.invoke('app:getVersion'),
     getPaths: () => ipcRenderer.invoke('app:getPaths'),
   },
+  auth: {
+    getOAuthRedirectUrl: () =>
+      ipcRenderer.invoke('auth:getOAuthRedirectUrl') as Promise<string>,
+  },
   fs: {
     readFile: (filePath: string) => ipcRenderer.invoke('fs:readFile', filePath),
     writeFile: (filePath: string, content: string) =>
@@ -34,6 +38,12 @@ const api = {
     getStatus: () => ipcRenderer.invoke('services:getStatus'),
     restartAI: () => ipcRenderer.invoke('services:restartAI'),
     restartRust: () => ipcRenderer.invoke('services:restartRust'),
+  },
+  models: {
+    list: () => ipcRenderer.invoke('models:list'),
+    hasAny: () => ipcRenderer.invoke('models:has-any') as Promise<boolean>,
+    download: (modelId: string) =>
+      ipcRenderer.invoke('models:download', modelId) as Promise<{ ok: boolean; path?: string; error?: string }>,
   },
   menu: {
     on: (event: string, listener: IpcListener) => {

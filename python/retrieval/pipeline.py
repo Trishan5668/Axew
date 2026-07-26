@@ -17,6 +17,7 @@ from python.retrieval.context_expander import ContextExpander
 from python.retrieval.hybrid_retriever import HybridRetriever, StrategyRetrievalContext
 from python.retrieval.query_decomposer import QueryDecomposer
 from python.retrieval.reranker import ConversationalReranker
+from python.retrieval.routing import strategy_routing_decisions
 from python.retrieval.timestamp_contract import (
     RetrievalLowConfidenceError,
     StrategyExecutionError,
@@ -118,6 +119,10 @@ class RetrievalPipeline:
             t = time.monotonic()
             query = self.decomposer.decompose(raw_query)
             trace.decomposed = query
+            trace.routing_decisions = {
+                strategy: decision.to_dict()
+                for strategy, decision in strategy_routing_decisions(raw_query, query).items()
+            }
             trace.stage_latencies["decompose_ms"] = (time.monotonic() - t) * 1000
 
             t = time.monotonic()
@@ -233,20 +238,20 @@ class RetrievalPipeline:
             self._raise_strategy_context_error(query.original, "strategy_context", exc)
 
     def _strategy_modes(self, query: DecomposedQuery) -> list[str]:
-        text = " ".join([query.original] + query.actions + query.semantic_concepts + query.monetary_refs).lower()
+        decisions = strategy_routing_decisions(query.original, query)
         concepts = {c.lower() for c in query.semantic_concepts}
+        event_types = set(query.event_types)
         modes: list[str] = []
-        if "emotional" in concepts or self._contains_any(text, self._EMOTION_TERMS):
+
+        if decisions["emotion"].invoked:
             modes.append("emotion")
-        if "joke/humor" in concepts or self._contains_any(text, self._HUMOR_TERMS):
+        if "joke/humor" in concepts:
             modes.append("humor")
-        has_transfer = self._contains_any(text, self._TRANSFER_TERMS)
-        has_money = bool(query.monetary_refs) or self._contains_any(text, self._MONEY_TERMS)
-        if has_transfer:
+        if decisions["action"].invoked:
             modes.append("action")
-        if has_transfer and has_money:
+        if decisions["action"].invoked and bool(query.monetary_refs):
             modes.append("money_transfer")
-        if self._contains_any(text, self._APPLAUSE_TERMS):
+        if "audience_reaction" in event_types:
             modes.append("applause")
         return list(dict.fromkeys(modes))
 
@@ -267,6 +272,10 @@ class RetrievalPipeline:
             first = action.split()[0].lower()
             if first:
                 actions.append(first)
+        for action in query.event_verbs:
+            first = action.split()[0].lower()
+            if first:
+                actions.append(first)
 
         emotions: list[str] = []
         if "humor" in mode_set:
@@ -275,6 +284,7 @@ class RetrievalPipeline:
             emotions.extend(["emotional", "sadness", "joy"])
         if "applause" in mode_set:
             emotions.append("audience_reaction")
+        emotions.extend(signal.split(":", 1)[-1] for signal in query.affect_signals)
 
         monetary = list(query.monetary_refs)
         if "money_transfer" in mode_set and not monetary:

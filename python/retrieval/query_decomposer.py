@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 from typing import List, Optional
 
+from python.intelligence.event_extractor import EVENT_SCHEMA, EventIndex
 from python.enrichment.monetary_parser import MonetaryParser
 from python.retrieval.event_matcher import ParsedQuery
 from python.retrieval.types import DecomposedQuery
@@ -60,6 +61,7 @@ class QueryDecomposer:
                 entities.append(name)
 
         actions = self._extract_actions(lower)
+        event_verbs, event_types = self._extract_event_signals(query)
         concepts = [
             label for label, terms in self.CONCEPT_TERMS.items()
             if any(re.search(rf"\b{re.escape(t)}", lower) for t in terms)
@@ -67,10 +69,19 @@ class QueryDecomposer:
         monetary_refs = self._extract_money(query)
         paraphrases = self._generate_paraphrases(query, entities, monetary_refs)
         lang_hint = self._lang_hint(query)
+        intent_signals, affect_signals, routing_confidence = self._routing_evidence(
+            lower=lower,
+            actions=actions,
+            concepts=concepts,
+            monetary_refs=monetary_refs,
+            event_verbs=event_verbs,
+            event_types=event_types,
+        )
 
         terms: list[str] = [query]
         terms.extend(entities)
         terms.extend(actions)
+        terms.extend(event_verbs)
         terms.extend(concepts)
         terms.extend(monetary_refs)
         terms.extend(paraphrases)
@@ -81,7 +92,13 @@ class QueryDecomposer:
         return DecomposedQuery(
             original=query,
             entities=entities,
+            entity_types=["named_entity"] if entities else [],
             actions=actions,
+            event_verbs=event_verbs,
+            event_types=event_types,
+            affect_signals=affect_signals,
+            intent_signals=intent_signals,
+            routing_confidence=routing_confidence,
             semantic_concepts=concepts,
             monetary_refs=monetary_refs,
             paraphrases=paraphrases,
@@ -110,6 +127,85 @@ class QueryDecomposer:
             if any(re.search(rf"\b{re.escape(v)}", lower) for v in variants):
                 actions.extend(variants[:4])
         return self._dedupe(actions)
+
+    def _extract_event_signals(self, query: str) -> tuple[list[str], list[str]]:
+        nlp = self._get_nlp()
+        verbs: list[str] = []
+        event_types: list[str] = []
+        lemma_to_type = {
+            lemma: event_type
+            for event_type, lemmas in EVENT_SCHEMA.items()
+            for lemma in lemmas
+        }
+        if nlp is not None:
+            try:
+                for token in nlp(query):
+                    if token.pos_ not in {"VERB", "AUX"}:
+                        continue
+                    lemma = token.lemma_.lower()
+                    if lemma:
+                        verbs.append(lemma)
+                    if lemma in lemma_to_type:
+                        event_types.append(lemma_to_type[lemma])
+            except Exception:
+                pass
+
+        lower = query.lower()
+        for lemma, event_type in lemma_to_type.items():
+            if re.search(rf"\b{re.escape(lemma)}(?:s|ed|ing)?\b", lower):
+                verbs.append(lemma)
+                event_types.append(event_type)
+
+        return self._dedupe(verbs), self._dedupe(event_types)
+
+    def _routing_evidence(
+        self,
+        *,
+        lower: str,
+        actions: list[str],
+        concepts: list[str],
+        monetary_refs: list[str],
+        event_verbs: list[str],
+        event_types: list[str],
+    ) -> tuple[list[str], list[str], float]:
+        event_type_set = set(event_types)
+        intent_signals: list[str] = []
+        affect_signals: list[str] = []
+
+        if actions or monetary_refs:
+            intent_signals.append("action")
+        if event_verbs:
+            intent_signals.append("verb_event")
+        if event_type_set & EventIndex.action_event_types():
+            intent_signals.append("action")
+        if event_type_set & {"physical_action"}:
+            intent_signals.append("motion")
+        if event_type_set & EventIndex.affect_event_types():
+            intent_signals.append("affect")
+            affect_signals.extend(sorted(event_type_set & EventIndex.affect_event_types()))
+
+        concept_set = {c.lower() for c in concepts}
+        if "emotional" in concept_set:
+            intent_signals.append("emotion")
+            affect_signals.append("semantic:emotional")
+        if "joke/humor" in concept_set:
+            intent_signals.append("affect")
+            affect_signals.append("semantic:joke/humor")
+
+        if self._is_moment_request(lower):
+            intent_signals.append("clip_moment")
+
+        has_specific_signal = bool(
+            set(intent_signals) & {"action", "motion", "verb_event", "emotion", "affect"}
+        )
+        confidence = 0.85 if has_specific_signal else 0.45 if "clip_moment" in intent_signals else 0.65
+        return self._dedupe(intent_signals), self._dedupe(affect_signals), confidence
+
+    def _is_moment_request(self, lower: str) -> bool:
+        return bool(
+            re.search(r"\b(?:when|where)\b", lower)
+            or re.search(r"\b(?:the\s+)?(?:part|moment|scene|clip)\b", lower)
+        )
 
     def _extract_money(self, query: str) -> list[str]:
         refs = [m.group(0).strip() for m in self.MONEY_RE.finditer(query)]

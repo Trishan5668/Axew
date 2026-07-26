@@ -4,6 +4,10 @@ import { usePlaybackStore } from '../../stores/playbackStore'
 import { useAIStore } from '../../stores/aiStore'
 import { useTimelineStore } from '../../stores/timelineStore'
 import { useTimelineOpusClipMenu } from '../../hooks/useTimelineOpusClipMenu'
+<<<<<<< HEAD
+=======
+import { useOpusclipStore } from '../../stores/opusclipSlice'
+>>>>>>> 1267c0e (v1.1)
 import { TimelineRuler } from './TimelineRuler'
 import { TimelineToolbar } from './TimelineToolbar'
 import { TrackHeader } from './TrackHeader'
@@ -84,6 +88,34 @@ export function Timeline() {
     [setScrollX],
   )
 
+  // OpusClip context-menu hooks. These MUST run on every render in a
+  // stable order, so they live ABOVE the early `!currentProject` return
+  // below. `useTimelineOpusClipMenu` is itself a no-op (returns null) when
+  // cloud mode is off, but it always calls the same hooks internally.
+  const opusMenu = useTimelineOpusClipMenu()
+  const pendingClipsCount = useOpusclipStore((s) => s.pendingClips.length)
+  const [contextMenu, setContextMenu] = useState<{ x: number; y: number } | null>(null)
+
+  const handleContextMenu = useCallback(
+    (e: React.MouseEvent) => {
+      if (!opusMenu) return
+      e.preventDefault()
+      setContextMenu({ x: e.clientX, y: e.clientY })
+    },
+    [opusMenu],
+  )
+
+  useEffect(() => {
+    if (!contextMenu) return
+    const close = () => setContextMenu(null)
+    window.addEventListener('click', close)
+    window.addEventListener('blur', close)
+    return () => {
+      window.removeEventListener('click', close)
+      window.removeEventListener('blur', close)
+    }
+  }, [contextMenu])
+
   if (!currentProject) {
     return (
       <div className="flex h-full w-full items-center justify-center bg-axew-timeline text-2xs text-axew-textDim">
@@ -100,6 +132,7 @@ export function Timeline() {
       ref={timelineRef}
       className="flex h-full w-full flex-col overflow-hidden bg-axew-timeline"
       onWheel={handleWheel}
+      onContextMenu={handleContextMenu}
     >
       <TimelineToolbar />
       <div className="flex flex-1 overflow-hidden">
@@ -175,6 +208,7 @@ export function Timeline() {
         </div>
       </div>
 
+<<<<<<< HEAD
       {opusClipMenu.state.open && opusClipMenu.items.length > 0 && (
         <div
           data-testid="opusclip-context-menu"
@@ -193,6 +227,43 @@ export function Timeline() {
               {item.label}
             </button>
           ))}
+=======
+      {pendingClipsCount > 0 && (
+        <div
+          aria-label="Queued for OpusClip"
+          className="pointer-events-none absolute bottom-2 left-[200px] z-30 rounded border border-axew-ai/40 bg-axew-ai/15 px-2 py-0.5 text-2xs text-axew-ai"
+        >
+          {pendingClipsCount} clip{pendingClipsCount === 1 ? '' : 's'} queued for OpusClip
+        </div>
+      )}
+
+      {contextMenu && opusMenu && (
+        <div
+          role="menu"
+          className="fixed z-50 min-w-[180px] rounded border border-axew-border bg-axew-surface p-1 text-2xs shadow-lg"
+          style={{ left: contextMenu.x, top: contextMenu.y }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            type="button"
+            role="menuitem"
+            disabled={!opusMenu.enabled}
+            onClick={() => {
+              opusMenu.onClick()
+              setContextMenu(null)
+            }}
+            className="flex w-full items-center justify-between gap-2 rounded px-2 py-1.5 text-axew-text hover:bg-axew-panel disabled:opacity-40"
+          >
+            {opusMenu.label}
+            {!opusMenu.enabled && (
+              <span className="text-2xs text-axew-textDim">
+                {useTimelineStore.getState().selectedClipIds.length === 0
+                  ? 'Select a clip first'
+                  : 'Sign in required'}
+              </span>
+            )}
+          </button>
+>>>>>>> 1267c0e (v1.1)
         </div>
       )}
     </div>

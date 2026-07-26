@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { isCloudEnabled } from '../lib/cloudConfig'
 import { useOpusclipHealth, type OpusClipHealthState } from './useOpusclipHealth'
@@ -126,5 +127,58 @@ export function useTimelineOpusClipMenu(
     items,
     openMenu,
     closeMenu,
+=======
+/**
+ * useTimelineOpusClipMenu — exposes the "Send to OpusClip" action used by
+ * Timeline.tsx's right-click context menu.
+ *
+ * Returns null when cloud mode is disabled, so the consumer simply doesn't
+ * render the menu item in that case.
+ */
+
+import { useCallback } from 'react'
+import { isCloudAvailable } from '../lib/supabase'
+import { useAuthStore } from '../stores/authSlice'
+import { useOpusclipStore } from '../stores/opusclipSlice'
+import { useTimelineStore } from '../stores/timelineStore'
+import { useProjectStore } from '../stores/projectStore'
+import type { Clip } from '@shared/timeline'
+
+export interface OpusClipMenuItem {
+  label: string
+  enabled: boolean
+  onClick: () => void
+}
+
+export function useTimelineOpusClipMenu(): OpusClipMenuItem | null {
+  const addClipRange = useOpusclipStore((s) => s.addClipRange)
+  const selectedClipIds = useTimelineStore((s) => s.selectedClipIds)
+  const authStatus = useAuthStore((s) => s.authStatus)
+
+  const handler = useCallback(() => {
+    const project = useProjectStore.getState().currentProject
+    if (!project) return
+    const selectedClips: Clip[] = []
+    for (const track of project.timeline.tracks) {
+      for (const clip of track.clips) {
+        if (selectedClipIds.includes(clip.id)) selectedClips.push(clip)
+      }
+    }
+    for (const clip of selectedClips) {
+      addClipRange({
+        start_seconds: clip.startTime,
+        end_seconds: clip.startTime + clip.duration,
+        label: clip.name ?? null,
+      })
+    }
+  }, [addClipRange, selectedClipIds])
+
+  if (!isCloudAvailable()) return null
+
+  return {
+    label: 'Send to OpusClip',
+    enabled: authStatus === 'authenticated' && selectedClipIds.length > 0,
+    onClick: handler,
+>>>>>>> 1267c0e (v1.1)
   }
 }

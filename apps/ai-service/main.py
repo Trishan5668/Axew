@@ -7,6 +7,18 @@ import time
 from contextlib import asynccontextmanager
 from pathlib import Path
 
+# Load apps/ai-service/.env into os.environ BEFORE anything imports
+# middleware.cloud_config, so non-AXEW_-prefixed secrets like
+# OPUSCLIP_API_KEY, RAZORPAY_KEY_SECRET, SUPABASE_SERVICE_ROLE_KEY are
+# visible. Pydantic Settings only populates fields on the Settings
+# class — it does not populate os.environ.
+try:
+    from dotenv import load_dotenv as _load_dotenv
+    _SERVICE_DIR = Path(__file__).resolve().parent
+    _load_dotenv(_SERVICE_DIR / ".env", override=False)
+except Exception:  # pragma: no cover — dotenv is a transitive dep, very rare
+    pass
+
 from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -23,6 +35,12 @@ if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
 from routers import analysis, chat, debug, execution, models, opusclip, retrieval, semantic
+
+# Cloud-mode routers depend on optional packages (razorpay, supabase,
+# python-jose). To keep local-only deployments working without those deps
+# installed, the cloud routers are imported lazily inside the `if cloud
+# enabled` branch below.
+from middleware.cloud_config import cloud_settings as _cloud_settings
 
 _START_TIME = time.time()
 
@@ -320,6 +338,48 @@ app.include_router(retrieval.router, prefix="/api/retrieval", tags=["retrieval"]
 app.include_router(debug.router, prefix="/debug", tags=["debug"])
 app.include_router(models.router, prefix="/api/models", tags=["models"])
 app.include_router(opusclip.router, prefix="/opusclip", tags=["opusclip"])
+
+# ---------------------------------------------------------------------------
+# Cloud-mode routers (opt-in). Imports are deferred so local-only installs
+# do not require razorpay / supabase / python-jose to start the service.
+# ---------------------------------------------------------------------------
+_cloud = _cloud_settings()
+if _cloud.enabled:
+    try:
+        from routers import opusclip as _opusclip_router  # noqa: WPS433
+        from routers import payments as _payments_router  # noqa: WPS433
+
+        app.include_router(_opusclip_router.router)
+        app.include_router(_payments_router.router)
+        logger.info("Cloud features ENABLED — mounted /opusclip and /payments routers")
+    except RuntimeError as exc:
+        # Raised by the routers when an optional dep is missing. Surface the
+        # exact dep that's missing; do NOT fall through silently.
+        logger.error("Cloud features enabled but a dependency is missing: %s", exc)
+        raise
+else:
+    logger.info(
+        "Cloud features DISABLED (AXEW_CLOUD_ENABLED unset) — "
+        "auth/payments/OpusClip routes are not mounted"
+    )
+
+
+@app.get("/cloud/status", tags=["cloud"])
+def cloud_status() -> dict:
+    """Public endpoint the desktop app uses to discover whether cloud
+    features are available on this AI service instance.
+
+    Returns flags ONLY — never the secret values themselves.
+    """
+    s = _cloud_settings()
+    return {
+        "enabled": s.enabled,
+        "supabase_configured": bool(s.supabase_url and s.supabase_service_role_key),
+        "razorpay_configured": bool(
+            s.razorpay_key_id and s.razorpay_key_secret and s.razorpay_webhook_secret
+        ),
+        "opusclip_configured": bool(s.opusclip_api_key),
+    }
 
 
 # ---------------------------------------------------------------------------

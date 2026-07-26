@@ -1,0 +1,190 @@
+# electron-builder configuration for AXEW.
+#
+# Output:
+#   release/AxewSetup-${version}.exe   — NSIS installer (~150-300 MB)
+#   release/Axew-${version}.exe        — portable build (no installer)
+#   release/latest.yml                 — autoUpdate manifest
+#
+# Lightweight installer strategy (mandatory per spec):
+#   - DO NOT bundle Whisper models. They are downloaded on first launch
+#     and cached in %APPDATA%/Axew/models/. See electron/services/modelManager.ts.
+#   - Bundle: Rust media binary, Python runtime (extraResources), ffmpeg
+#     (extraResources), React frontend, Electron app.
+#
+# Verification-pending: build on a clean Windows VM with no Node / Python /
+# Rust / FFmpeg installed and confirm the resulting .exe launches AXEW.
+# Run via:  pnpm --filter @axew/desktop make-installer
+
+appId: com.axew.editor
+productName: Axew
+copyright: Copyright (c) 2026 AXEW
+
+directories:
+  output: release
+  buildResources: build
+
+# File inclusion is intentionally tight. The renderer (dist/) and the
+# Electron main/preload (dist-electron/) are fully bundled by Vite/Rollup,
+# so the ONLY runtime dependency electron-builder must pull from
+# node_modules is `electron-updater` (the sole "dependencies" entry in
+# package.json) plus its transitive deps. Everything else lives in
+# devDependencies and is never packaged.
+#
+# IMPORTANT: do NOT add workspace packages (e.g. @axew/shared-types) to
+# "dependencies". They are pnpm symlinks into ../../packages/** and
+# electron-builder will try to copy junk like
+# packages/shared-types/.turbo/turbo-type-check.log, which lives outside
+# apps/desktop and aborts packaging with "must be under apps/desktop".
+# shared-types is consumed at build time only (via the @shared Vite/TS
+# alias to its source) and is bundled into dist/ — keep it a devDependency.
+files:
+  # --- explicit runtime allow-list (app code) ---
+  - dist/**/*
+  - dist-electron/**/*
+  - package.json
+
+  # --- global hygiene excludes (apply to app + bundled node_modules) ---
+  # Turborepo caches/logs — the original cause of the failed build.
+  - "!**/.turbo/**"
+  - "!**/.turbo"
+  - "!**/*.tsbuildinfo"
+  - "!**/turbo-*.log"
+  - "!**/*.log"
+  # Source maps + TypeScript sources (runtime needs neither).
+  - "!**/*.map"
+  - "!**/*.ts"
+  - "!**/*.tsx"
+  - "!**/tsconfig*.json"
+  # Tests, fixtures, stories.
+  - "!**/*.test.*"
+  - "!**/*.spec.*"
+  - "!**/__tests__/**"
+  - "!**/tests/**"
+  - "!**/test/**"
+  - "!**/*.stories.*"
+  # Docs / metadata noise inside dependencies.
+  - "!**/docs/**"
+  - "!**/doc/**"
+  - "!**/example/**"
+  - "!**/examples/**"
+  - "!**/*.md"
+  - "!**/*.markdown"
+  - "!**/.editorconfig"
+  - "!**/.eslintrc*"
+  - "!**/.prettierrc*"
+  - "!**/.npmignore"
+  - "!**/.gitignore"
+  - "!**/.github/**"
+  # Python + OS cruft.
+  - "!**/__pycache__"
+  - "!**/__pycache__/**"
+  - "!**/*.pyc"
+  - "!**/.DS_Store"
+  # Defensive: never let a workspace symlink's real dir get walked.
+  - "!**/packages/shared-types/**"
+
+asar: true
+
+# Per-platform unpack — these are touched as files at runtime, not require()d.
+asarUnpack:
+  - "resources/runtime/**/*"
+  - "resources/axew-core*"
+
+# Native binaries / runtimes bundled outside the asar.
+extraResources:
+  - from: "../../crates/axew-core/target/release/axew-core.exe"
+    to: "axew-core.exe"
+    filter: ["**/*"]
+  - from: "../../apps/ai-service"
+    to: "ai-service"
+    filter:
+      - "**/*"
+      # Python bytecode + caches
+      - "!**/__pycache__/**"
+      - "!**/*.pyc"
+      - "!**/.pytest_cache/**"
+      - "!**/.mypy_cache/**"
+      - "!**/.ruff_cache/**"
+      # Tests + dev artifacts
+      - "!tests/**"
+      - "!**/*.log"
+      # Secrets / local env — NEVER ship these
+      - "!.env"
+      - "!.env.*"
+      - "!**/.env"
+      - "!**/.env.*"
+      # Local virtualenvs if a dev created one in-tree
+      - "!.venv/**"
+      - "!venv/**"
+  - from: "build/runtime/python"
+    to: "runtime/python"
+    filter: ["**/*"]
+    # NOTE: Populated by scripts/bundle-runtime.mjs prior to packaging.
+  - from: "build/runtime/ffmpeg"
+    to: "runtime/ffmpeg"
+    filter: ["**/*"]
+    # NOTE: Populated by scripts/bundle-runtime.mjs prior to packaging.
+
+# ---------------------------------------------------------------------------
+# Windows
+# ---------------------------------------------------------------------------
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+  icon: build/icon.ico
+  publisherName: AXEW
+  artifactName: "${productName}Setup-${version}.${ext}"
+  signingHashAlgorithms: ["sha256"]
+  # Verification-pending: code signing requires a cert.
+  # signtoolOptions: { certificateFile: ..., certificatePassword: ... }
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  artifactName: "${productName}Setup-${version}.${ext}"
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  shortcutName: "Axew"
+  include: build/installer.nsh
+  deleteAppDataOnUninstall: false
+  warningsAsErrors: false
+
+portable:
+  artifactName: "${productName}-${version}.${ext}"
+
+# ---------------------------------------------------------------------------
+# Auto-update (electron-updater)
+# Verification-pending: configure a real publish target. Examples:
+#   publish:
+#     - provider: github
+#       owner: axew-app
+#       repo: axew
+#     - provider: s3
+#       bucket: axew-releases
+#       region: us-east-1
+# Without `publish`, electron-updater will refuse to check; this is intentional
+# so that a misconfigured release channel surfaces immediately instead of
+# silently shipping unsigned updates.
+# ---------------------------------------------------------------------------
+publish: null
+
+# ---------------------------------------------------------------------------
+# macOS / Linux placeholders so future support is one PR away
+# ---------------------------------------------------------------------------
+mac:
+  target:
+    - target: dmg
+      arch: [arm64, x64]
+  category: public.app-category.video
+  icon: build/icon.icns
+  hardenedRuntime: true
+linux:
+  target:
+    - target: AppImage
+      arch: [x64]
+  icon: build/icon.png
+  category: AudioVideo

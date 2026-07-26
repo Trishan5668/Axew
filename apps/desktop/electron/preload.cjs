@@ -12,6 +12,14 @@ const api = {
     getVersion: () => ipcRenderer.invoke('app:getVersion'),
     getPaths: () => ipcRenderer.invoke('app:getPaths'),
   },
+  auth: {
+    getOAuthRedirectUrl: () => ipcRenderer.invoke('auth:getOAuthRedirectUrl'),
+  },
+  models: {
+    list: () => ipcRenderer.invoke('models:list'),
+    hasAny: () => ipcRenderer.invoke('models:has-any'),
+    download: (modelId) => ipcRenderer.invoke('models:download', modelId),
+  },
   fs: {
     readFile: (filePath) => ipcRenderer.invoke('fs:readFile', filePath),
     writeFile: (filePath, content) => ipcRenderer.invoke('fs:writeFile', filePath, content),

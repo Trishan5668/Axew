@@ -55,6 +55,14 @@ class EventIndex(BaseModel):
     mentions_by_type: Dict[str, List[EventMention]] = Field(default_factory=dict)
     all_mentions: List[EventMention] = Field(default_factory=list)
 
+    @staticmethod
+    def action_event_types() -> set[str]:
+        return {"transaction", "speech_act", "audience_reaction", "physical_action", "interview_event"}
+
+    @staticmethod
+    def affect_event_types() -> set[str]:
+        return {"emotional", "audience_reaction"}
+
     def lookup(self, event_type: str) -> List[EventMention]:
         return self.mentions_by_type.get(event_type, [])
 
