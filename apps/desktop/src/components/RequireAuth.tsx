@@ -51,7 +51,7 @@ export function RequireAuth({ children }: RequireAuthProps): JSX.Element {
     return () => {
       cancelled = true
     }
-  }, [authStatus, session?.expires_at, ensureFreshSession, session])
+  }, [authStatus, session, ensureFreshSession])
 
   if (authStatus === 'loading') {
     return (
@@ -65,7 +65,17 @@ export function RequireAuth({ children }: RequireAuthProps): JSX.Element {
   }
 
   if (authStatus === 'disabled') {
-    return <>{children}</>
+    return (
+      <div className="flex h-full w-full items-center justify-center bg-axew-bg px-6">
+        <div className="w-full max-w-md rounded-2xl border border-red-500/40 bg-axew-surface p-8 shadow-2xl">
+          <h1 className="text-xl font-semibold text-axew-text">Authentication unavailable</h1>
+          <p className="mt-3 text-sm text-axew-textMuted">
+            Firebase Authentication is not configured for this build. Add the required
+            VITE_FIREBASE_* environment variables and restart Axew.
+          </p>
+        </div>
+      </div>
+    )
   }
 
   if (authStatus === 'unauthenticated' || phase === 'refresh-failed') {

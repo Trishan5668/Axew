@@ -160,7 +160,7 @@ export function OpusClipPanel(): JSX.Element | null {
     try {
       const accepted = await submitClipJob({
         video_url: sourceVideoUrl,
-        user_id: session.user.id,
+        user_id: session.uid,
         clips: pendingClips,
       })
       setActiveJob(accepted.job_id)

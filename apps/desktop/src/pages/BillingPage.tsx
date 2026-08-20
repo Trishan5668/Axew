@@ -113,17 +113,17 @@ export function BillingPage(): JSX.Element {
   }, [])
 
   useEffect(() => {
-    if (!isCloudAvailable() || !session?.user.id) return
+    if (!isCloudAvailable() || !session?.uid) return
     supabase()
       .from('payments')
       .select('*')
-      .eq('user_id', session.user.id)
+      .eq('user_id', session.uid)
       .order('created_at', { ascending: false })
       .limit(20)
       .then(({ data, error }) => {
         if (!error && data) setHistory(data as Payment[])
       })
-  }, [session?.user.id, successMessage])
+  }, [session?.uid, successMessage])
 
   const handleBuy = async (plan: PlanInfo) => {
     setPlanError((prev) => ({ ...prev, [plan.id]: null }))
@@ -144,7 +144,7 @@ export function BillingPage(): JSX.Element {
         keyId: order.key_id,
         prefill: {
           name: profile?.display_name ?? '',
-          email: profile?.email ?? session?.user.email ?? '',
+          email: profile?.email ?? session?.email ?? '',
         },
         notes: { axew_plan_id: plan.id, axew_payment_id: order.payment_id },
       })

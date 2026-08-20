@@ -1,7 +1,6 @@
 import type { SemanticMatch, Transcript, TranscriptSegment } from '@shared/ai'
 import type { MediaFile } from '@shared/media'
 import { fetchTranscriptionDiagnostics, transcribeMedia } from './aiClient'
-import { getAxew } from './axewBridge'
 import { useProjectStore } from '../stores/projectStore'
 
 const AI_SERVICE_URL = 'http://localhost:7002'
@@ -94,10 +93,9 @@ export async function ensureTranscript(media: MediaFile): Promise<Transcript> {
   const existing = project.transcripts?.[media.id]
   if (existing?.segments?.length) return existing
 
-  let mediaPath = media.path
-  const fileExists = await getAxew().fs.exists(mediaPath)
-  if (!fileExists) {
-    throw new Error(`Media file not found on disk: ${mediaPath}`)
+  const mediaPath = media.path
+  if (!mediaPath) {
+    throw new Error(`Media file not available: ${media.name}`)
   }
 
   const diagnostics = await fetchTranscriptionDiagnostics()

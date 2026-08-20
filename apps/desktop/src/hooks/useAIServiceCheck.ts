@@ -6,18 +6,6 @@ import {
 } from '../lib/aiClient'
 import { useAIStore } from '../stores/aiStore'
 
-const STARTING_PHASES = new Set([
-  'spawning',
-  'initializing',
-  'model_loading',
-  'starting',
-  'waiting_for_liveness',
-  'waiting_for_ready',
-  'SPAWNING',
-  'INITIALIZING',
-  'MODEL_LOADING',
-])
-
 export function useAIServiceCheck() {
   const {
     setOllamaStatus,
@@ -26,46 +14,9 @@ export function useAIServiceCheck() {
     appendExecutionLog,
   } = useAIStore()
   const diagChecked = useRef(false)
-  const lastIpcTime = useRef(0)
 
   useEffect(() => {
-    const axew = (window as unknown as { axew?: { ipc?: { on?: (ch: string, fn: (...a: unknown[]) => void) => () => void } } }).axew
-    let unsubStatus: (() => void) | undefined
-
-    if (axew?.ipc?.on) {
-      unsubStatus = axew.ipc.on('ai:status', (_event: unknown, payload: unknown) => {
-        const data = payload as {
-          online?: boolean
-          phase?: string
-          reason?: string
-        }
-        lastIpcTime.current = Date.now()
-
-        if (data.phase) {
-          setAIServicePhase(data.phase)
-        }
-
-        if (data.online) {
-          setAIServiceStatus('connected')
-        } else if (data.phase && STARTING_PHASES.has(data.phase)) {
-          setAIServiceStatus('starting')
-        } else if (data.phase === 'crashed' || data.phase === 'offline') {
-          setAIServiceStatus('disconnected')
-        } else {
-          // For unknown phases during non-online state, preserve starting
-          // status briefly to prevent flicker
-          const current = useAIStore.getState().aiServiceStatus
-          if (current !== 'starting') {
-            setAIServiceStatus('disconnected')
-          }
-        }
-      })
-    }
-
     const check = async () => {
-      // Skip polling if we received a fresh IPC event within last 10s
-      if (Date.now() - lastIpcTime.current < 10_000) return
-
       setOllamaStatus('checking')
 
       const [ollama, aiReady] = await Promise.all([
@@ -106,7 +57,6 @@ export function useAIServiceCheck() {
 
     return () => {
       clearInterval(interval)
-      unsubStatus?.()
     }
   }, [setOllamaStatus, setAIServiceStatus, setAIServicePhase, appendExecutionLog])
 }

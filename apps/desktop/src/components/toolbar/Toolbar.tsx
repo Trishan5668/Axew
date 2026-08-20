@@ -17,8 +17,7 @@ import {
   ZoomOut,
 } from 'lucide-react'
 import { cn } from '../../lib/cn'
-import { getAxew } from '../../lib/axewBridge'
-import { importMediaFiles } from '../../lib/mediaImport'
+import { pickMediaFiles } from '../../lib/browserFilePicker'
 import { usePlaybackStore } from '../../stores/playbackStore'
 import { useProjectStore } from '../../stores/projectStore'
 import { useTimelineStore } from '../../stores/timelineStore'
@@ -40,19 +39,9 @@ export function Toolbar() {
   const { addMediaFile } = useProjectStore()
 
   const handleImport = async () => {
-    const result = await getAxew().dialog.openFile({
-      filters: [
-        {
-          name: 'Media',
-          extensions: ['mp4', 'mov', 'mkv', 'avi', 'webm', 'mp3', 'wav', 'aac', 'jpg', 'png'],
-        },
-      ],
-      properties: ['openFile', 'multiSelections'],
-    })
-    if (result.canceled || !result.filePaths.length) return
     setIsMediaImporting(true)
     try {
-      const files = await importMediaFiles(result.filePaths)
+      const files = await pickMediaFiles(useProjectStore.getState().currentProject?.mediaFiles ?? {})
       for (const f of files) addMediaFile(f)
       addNotification({ type: 'success', message: `Imported ${files.length} file(s)` })
     } finally {

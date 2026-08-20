@@ -2,10 +2,9 @@ import { useCallback } from 'react'
 import { Clapperboard, Film, Music, Plus } from 'lucide-react'
 import type { MediaFile } from '@shared/media'
 import { cn } from '../../lib/cn'
-import { getAxew } from '../../lib/axewBridge'
+import { pickMediaFiles } from '../../lib/browserFilePicker'
 import { toMediaUrl } from '../../lib/mediaPath'
 import { getClipTypeIndicator } from '../../lib/mediaValidation'
-import { importMediaFiles } from '../../lib/mediaImport'
 import { useProjectStore } from '../../stores/projectStore'
 import { useUIStore } from '../../stores/uiStore'
 
@@ -48,21 +47,10 @@ export function MediaBin() {
   const mediaList = currentProject ? Object.values(currentProject.mediaFiles) : []
 
   const handleImport = useCallback(async () => {
-    const result = await getAxew().dialog.openFile({
-      filters: [
-        {
-          name: 'Media',
-          extensions: ['mp4', 'mov', 'mkv', 'avi', 'webm', 'mp3', 'wav', 'aac', 'jpg', 'png'],
-        },
-      ],
-      properties: ['openFile', 'multiSelections'],
-    })
-    if (result.canceled || !result.filePaths.length) return
-
     setIsMediaImporting(true)
     try {
       const existing = currentProject?.mediaFiles ?? {}
-      const files = await importMediaFiles(result.filePaths, existing)
+      const files = await pickMediaFiles(existing)
       for (const file of files) addMediaFile(file)
       addNotification({
         type: files.length > 0 ? 'success' : 'info',
@@ -76,7 +64,7 @@ export function MediaBin() {
     } finally {
       setIsMediaImporting(false)
     }
-  }, [addMediaFile, addNotification, setIsMediaImporting])
+  }, [addMediaFile, addNotification, currentProject, setIsMediaImporting])
 
   const handleDragStart = (media: MediaFile) => (e: React.DragEvent) => {
     e.dataTransfer.setData('application/axew-media', JSON.stringify({ mediaId: media.id }))

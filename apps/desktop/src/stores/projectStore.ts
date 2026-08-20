@@ -4,7 +4,7 @@ import { subscribeWithSelector } from 'zustand/middleware'
 import type { Transcript } from '@shared/ai'
 import type { MediaFile } from '@shared/media'
 import type { Project, ProjectSettings } from '@shared/project'
-import { getAxew } from '../lib/axewBridge'
+import { loadLastProjectFromBrowser, saveProjectToBrowser } from '../lib/browserProjectStorage'
 import { createDefaultProject } from '../lib/projectFactory'
 
 interface ProjectState {
@@ -16,6 +16,7 @@ interface ProjectState {
 
 interface ProjectActions {
   createProject: (name: string, settings?: Partial<ProjectSettings>) => void
+  openProject: (project: Project) => void
   loadProject: (projectPath: string) => Promise<void>
   saveProject: () => Promise<void>
   closeProject: () => void
@@ -37,6 +38,7 @@ export const useProjectStore = create<ProjectState & ProjectActions>()(
 
       createProject: (name, settings) => {
         const project = createDefaultProject(name, settings)
+        saveProjectToBrowser(project)
         set((state) => {
           state.currentProject = project
           state.isDirty = false
@@ -50,11 +52,10 @@ export const useProjectStore = create<ProjectState & ProjectActions>()(
           state.error = null
         })
         try {
-          const result = await getAxew().fs.readFile(projectPath)
-          if (!result.success || !result.data) throw new Error(result.error ?? 'Read failed')
-          const data = atob(result.data)
-          const project: Project = JSON.parse(data)
-          if (!project.transcripts) project.transcripts = {}
+          const project = loadLastProjectFromBrowser()
+          if (!project || (projectPath && project.path !== projectPath && project.id !== projectPath)) {
+            throw new Error('Project is not available in browser storage')
+          }
           set((state) => {
             state.currentProject = project
             state.isLoading = false
@@ -72,9 +73,7 @@ export const useProjectStore = create<ProjectState & ProjectActions>()(
         const { currentProject } = get()
         if (!currentProject) return
         try {
-          const data = JSON.stringify(currentProject, null, 2)
-          const result = await getAxew().fs.writeFile(currentProject.path, data)
-          if (!result.success) throw new Error(result.error)
+          saveProjectToBrowser(currentProject)
           set((state) => {
             state.isDirty = false
           })
@@ -99,7 +98,18 @@ export const useProjectStore = create<ProjectState & ProjectActions>()(
             state.currentProject.mediaFiles[file.id] = file
             state.currentProject.mediaBin.rootFolder.mediaIds.push(file.id)
             state.isDirty = true
+            saveProjectToBrowser(state.currentProject)
           }
+        })
+      },
+
+      openProject: (project) => {
+        if (!project.transcripts) project.transcripts = {}
+        saveProjectToBrowser(project)
+        set((state) => {
+          state.currentProject = project
+          state.isDirty = false
+          state.error = null
         })
       },
 
@@ -110,6 +120,7 @@ export const useProjectStore = create<ProjectState & ProjectActions>()(
             const folder = state.currentProject.mediaBin.rootFolder
             folder.mediaIds = folder.mediaIds.filter((id) => id !== fileId)
             state.isDirty = true
+            saveProjectToBrowser(state.currentProject)
           }
         })
       },
@@ -119,6 +130,7 @@ export const useProjectStore = create<ProjectState & ProjectActions>()(
           if (state.currentProject?.mediaFiles[fileId]) {
             Object.assign(state.currentProject.mediaFiles[fileId], updates)
             state.isDirty = true
+            saveProjectToBrowser(state.currentProject)
           }
         })
       },
@@ -131,6 +143,7 @@ export const useProjectStore = create<ProjectState & ProjectActions>()(
             }
             state.currentProject.transcripts[mediaId] = transcript
             state.isDirty = true
+            saveProjectToBrowser(state.currentProject)
           }
         })
       },

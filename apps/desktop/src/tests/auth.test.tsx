@@ -102,8 +102,8 @@ afterEach(() => {
   vi.clearAllMocks()
 })
 
-describe('LoginPage OTP flow', () => {
-  test('email step renders and advances to OTP after submit', async () => {
+describe('LoginPage Firebase flow', () => {
+  test('renders a Firebase email/password login form', async () => {
     const user = userEvent.setup()
     render(
       <MemoryRouter initialEntries={['/login']}>
@@ -113,15 +113,16 @@ describe('LoginPage OTP flow', () => {
       </MemoryRouter>,
     )
 
+    expect(screen.getByRole('heading', { name: /Welcome back/i })).toBeInTheDocument()
     await user.type(screen.getByLabelText(/Email address/i), 'jane@example.com')
-    await user.click(screen.getByRole('button', { name: /Send code/i }))
-
-    expect(await screen.findByLabelText(/Verification code/i)).toBeInTheDocument()
-    expect(screen.getByText(/jane@example.com/i)).toBeInTheDocument()
+    await user.type(screen.getByLabelText(/Password/i), 'password123')
+    expect(screen.getByRole('button', { name: /Sign in/i })).toBeInTheDocument()
   })
 
-  test('valid OTP redirects to dashboard', async () => {
+  test('valid email/password redirect to dashboard', async () => {
     const user = userEvent.setup()
+    const authMod = await import('../lib/auth')
+    vi.spyOn(authMod, 'signInWithEmail').mockResolvedValue({ uid: 'u-1' } as never)
 
     function LocationProbe() {
       const loc = useLocation()
@@ -132,20 +133,18 @@ describe('LoginPage OTP flow', () => {
       <MemoryRouter initialEntries={['/login']}>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<LocationProbe />} />
           <Route path="/dashboard" element={<LocationProbe />} />
         </Routes>
       </MemoryRouter>,
     )
 
     await user.type(screen.getByLabelText(/Email address/i), 'jane@example.com')
-    await user.click(screen.getByRole('button', { name: /Send code/i }))
-
-    const otpInput = await screen.findByLabelText(/Verification code/i)
-    await user.type(otpInput, '123456')
-    await user.click(screen.getByRole('button', { name: /Verify and continue/i }))
+    await user.type(screen.getByLabelText(/Password/i), 'password123')
+    await user.click(screen.getByRole('button', { name: /Sign in/i }))
 
     await waitFor(() => {
-      expect(screen.getByTestId('loc')).toHaveTextContent('/dashboard')
+      expect(screen.getByTestId('loc')).toHaveTextContent('/')
     })
   })
 })
@@ -212,7 +211,11 @@ describe('RequireAuth', () => {
       authStatus: 'authenticated',
       initialized: true,
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      session: makeSession() as any,
+      session: {
+        uid: 'u-1',
+        email: 'jane@example.com',
+        getIdToken: vi.fn().mockResolvedValue('t'),
+      } as any,
     })
     render(
       <MemoryRouter initialEntries={['/dashboard']}>
@@ -272,71 +275,21 @@ describe('RequireAuth', () => {
 })
 
 describe('OAuthCallbackPage', () => {
-  test('exchanges the code from window.location and redirects to /dashboard', async () => {
-    // Import lazily so the auth.ts mock can settle first.
+  test('redirects callback visitors into the Firebase login flow', async () => {
     const { OAuthCallbackPage } = await import('../pages/OAuthCallbackPage')
-    const authMod = await import('../lib/auth')
-    const spy = vi.spyOn(authMod, 'exchangeOAuthCode').mockResolvedValue({
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      access_token: 't', refresh_token: 'r', token_type: 'bearer', user: {} as any,
-      expires_in: 3600,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } as any)
-
-    const originalHref = window.location.href
-    Object.defineProperty(window, 'location', {
-      writable: true,
-      value: { ...window.location, href: 'http://localhost:5173/auth/callback?code=abc' },
-    })
-
-    function Probe() {
-      const loc = useLocation()
-      return <span data-testid="loc">{loc.pathname}</span>
-    }
 
     render(
       <MemoryRouter initialEntries={['/auth/callback']}>
         <Routes>
           <Route path="/auth/callback" element={<OAuthCallbackPage />} />
-          <Route path="/dashboard" element={<Probe />} />
+          <Route path="/login" element={<span data-testid="login">login</span>} />
         </Routes>
       </MemoryRouter>,
     )
 
     await waitFor(() => {
-      expect(spy).toHaveBeenCalled()
-      expect(screen.getByTestId('loc')).toHaveTextContent('/dashboard')
+      expect(screen.getByTestId('login')).toBeInTheDocument()
     })
-
-    Object.defineProperty(window, 'location', {
-      writable: true,
-      value: { ...window.location, href: originalHref },
-    })
-  })
-
-  test('surfaces an inline error when the exchange fails', async () => {
-    const { OAuthCallbackPage } = await import('../pages/OAuthCallbackPage')
-    const authMod = await import('../lib/auth')
-    vi.spyOn(authMod, 'exchangeOAuthCode').mockRejectedValueOnce(
-      new Error('Sign-in did not complete: Invalid code'),
-    )
-
-    Object.defineProperty(window, 'location', {
-      writable: true,
-      value: { ...window.location, href: 'http://localhost:5173/auth/callback?code=bad' },
-    })
-
-    render(
-      <MemoryRouter initialEntries={['/auth/callback']}>
-        <Routes>
-          <Route path="/auth/callback" element={<OAuthCallbackPage />} />
-        </Routes>
-      </MemoryRouter>,
-    )
-
-    expect(await screen.findByText(/Sign-in failed/i)).toBeInTheDocument()
-    expect(screen.getByText(/Invalid code/i)).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: /Back to sign in/i })).toBeInTheDocument()
   })
 })
 

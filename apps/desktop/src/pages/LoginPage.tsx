@@ -1,116 +1,59 @@
-/**
- * LoginPage — two-step email OTP flow + Google OAuth.
- *
- * Visual style:
- *   - dark AXEW theme
- *   - monospace OTP input with subtle glow on focus
- *   - inline error messages adjacent to the triggering input (NEVER toasts)
- */
-
 import { ArrowRight, Loader2, Mail } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
-import { useLocation, useNavigate, useSearchParams } from 'react-router-dom'
-import { signInWithEmailOtp, signInWithGoogle, verifyEmailOtp } from '../lib/auth'
-import { cloudUnavailableReason } from '../lib/cloudFlag'
-
-type Step = 'email' | 'otp'
+import { type FormEvent, useMemo, useState } from 'react'
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
+import { signInWithEmail, signInWithGoogle } from '../lib/auth'
+import { isFirebaseEnabled } from '../firebase/firebase'
 
 interface LocationState {
   from?: string
 }
 
-const RESEND_COOLDOWN_SECONDS = 30
-
 const SIGN_IN_ERROR_MESSAGES: Record<string, string> = {
   session_expired: 'Your session expired. Please sign in again.',
-  oauth_failed: 'Google sign-in did not complete. Please try again.',
 }
 
 export function LoginPage(): JSX.Element {
-  const [step, setStep] = useState<Step>('email')
   const [email, setEmail] = useState('')
-  const [otp, setOtp] = useState('')
-  const [emailError, setEmailError] = useState<string | null>(null)
-  const [otpError, setOtpError] = useState<string | null>(null)
-  const [googleError, setGoogleError] = useState<string | null>(null)
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
-  const [resendCooldown, setResendCooldown] = useState(0)
 
   const navigate = useNavigate()
   const location = useLocation()
   const [searchParams] = useSearchParams()
-  const redirectTo = (location.state as LocationState | null)?.from ?? '/dashboard'
+  const redirectTo = (location.state as LocationState | null)?.from ?? '/'
 
-  const cloudReason = cloudUnavailableReason()
   const queryError = useMemo(() => {
     const code = searchParams.get('error')
     if (!code) return null
     return SIGN_IN_ERROR_MESSAGES[code] ?? code
   }, [searchParams])
 
-  // Resend cooldown countdown
-  useEffect(() => {
-    if (resendCooldown <= 0) return
-    const id = window.setInterval(() => {
-      setResendCooldown((s) => Math.max(0, s - 1))
-    }, 1000)
-    return () => window.clearInterval(id)
-  }, [resendCooldown])
-
-  const handleSendCode = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setEmailError(null)
-    if (busy || resendCooldown > 0) return
-    setBusy(true)
-    try {
-      await signInWithEmailOtp(email)
-      setStep('otp')
-      setResendCooldown(RESEND_COOLDOWN_SECONDS)
-    } catch (err) {
-      setEmailError(err instanceof Error ? err.message : String(err))
-    } finally {
-      setBusy(false)
-    }
-  }
-
-  const handleResendCode = async () => {
-    if (busy || resendCooldown > 0 || !email) return
-    setOtpError(null)
-    setBusy(true)
-    try {
-      await signInWithEmailOtp(email)
-      setResendCooldown(RESEND_COOLDOWN_SECONDS)
-    } catch (err) {
-      setOtpError(err instanceof Error ? err.message : String(err))
-    } finally {
-      setBusy(false)
-    }
-  }
-
-  const handleVerify = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setOtpError(null)
+  const handleEmailLogin = async (event: FormEvent) => {
+    event.preventDefault()
     if (busy) return
+
+    setError(null)
     setBusy(true)
     try {
-      await verifyEmailOtp(email, otp)
+      await signInWithEmail(email.trim(), password)
       navigate(redirectTo, { replace: true })
     } catch (err) {
-      setOtpError(err instanceof Error ? err.message : String(err))
+      setError(err instanceof Error ? err.message : String(err))
     } finally {
       setBusy(false)
     }
   }
 
   const handleGoogle = async () => {
-    setGoogleError(null)
     if (busy) return
+    setError(null)
     setBusy(true)
     try {
       await signInWithGoogle()
-      // The redirect happens out-of-band; we won't reach this line.
+      navigate(redirectTo, { replace: true })
     } catch (err) {
-      setGoogleError(err instanceof Error ? err.message : String(err))
+      setError(err instanceof Error ? err.message : String(err))
     } finally {
       setBusy(false)
     }
@@ -118,161 +61,114 @@ export function LoginPage(): JSX.Element {
 
   return (
     <div className="flex h-full w-full items-center justify-center bg-axew-bg px-6">
-      <div className="w-full max-w-sm rounded-lg border border-axew-border bg-axew-surface p-6 shadow-xl">
-        <header className="mb-5">
-          <h1 className="text-lg font-semibold text-axew-text">Welcome to AXEW</h1>
-          <p className="mt-1 text-xs text-axew-textMuted">
-            Sign in to enable cloud features. AXEW also works fully offline if you skip this step.
-          </p>
-        </header>
-
-        {cloudReason && (
-          <div
-            role="alert"
-            className="mb-4 rounded border border-amber-500/40 bg-amber-500/10 p-3 text-2xs text-amber-200"
-          >
-            {cloudReason}
+      <div className="w-full max-w-md rounded-2xl border border-axew-border bg-axew-surface p-8 shadow-2xl">
+        <div className="mb-8 flex items-center gap-4">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-axew-ai/40 bg-axew-ai/10 text-xl font-black text-axew-ai">
+            AX
           </div>
-        )}
+          <div>
+            <h1 className="text-2xl font-semibold tracking-tight text-axew-text">Axew</h1>
+            <p className="mt-1 text-xs text-axew-textMuted">Workspace portal</p>
+          </div>
+        </div>
 
         {queryError && (
-          <div
-            role="alert"
-            className="mb-4 rounded border border-red-500/40 bg-red-500/10 p-3 text-2xs text-red-200"
-          >
+          <div className="mb-4 rounded border border-red-500/40 bg-red-500/10 p-3 text-2xs text-red-200">
             {queryError}
           </div>
         )}
 
-        {step === 'email' && (
-          <form onSubmit={handleSendCode} noValidate>
-            <label className="block text-2xs font-medium text-axew-textDim" htmlFor="email">
-              Email address
-            </label>
-            <div className="mt-1 flex gap-2">
-              <div className="relative flex-1">
-                <Mail
-                  size={12}
-                  className="pointer-events-none absolute left-2 top-2 text-axew-textDim"
-                />
-                <input
-                  id="email"
-                  type="email"
-                  inputMode="email"
-                  autoComplete="email"
-                  required
-                  className="w-full rounded border border-axew-border bg-axew-panel py-1.5 pl-6 pr-2 text-xs text-axew-text outline-none focus:border-axew-accent"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@example.com"
-                  disabled={busy}
-                  aria-invalid={emailError ? 'true' : 'false'}
-                  aria-describedby={emailError ? 'email-error' : undefined}
-                />
-              </div>
-              <button
-                type="submit"
-                className="flex items-center gap-1 rounded bg-axew-accent px-3 py-1.5 text-xs font-medium text-white hover:bg-axew-accentHover disabled:opacity-40"
-                disabled={busy || !email}
-              >
-                {busy ? <Loader2 size={12} className="animate-spin" /> : <ArrowRight size={12} />}
-                Send code
-              </button>
-            </div>
-            {emailError && (
-              <p id="email-error" role="alert" className="mt-2 text-2xs text-red-300">
-                {emailError}
-              </p>
-            )}
-          </form>
+        {!isFirebaseEnabled && (
+          <div role="alert" className="mb-4 rounded border border-red-500/40 bg-red-500/10 p-3 text-2xs text-red-200">
+            Firebase Authentication is not configured. Set all required VITE_FIREBASE_* variables and restart Axew.
+          </div>
         )}
 
-        {step === 'otp' && (
-          <form onSubmit={handleVerify} noValidate>
-            <p className="text-2xs text-axew-textMuted">
-              We sent a 6-digit code to <span className="text-axew-text">{email}</span>.
-              <button
-                type="button"
-                className="ml-1 text-axew-accent hover:underline"
-                onClick={() => {
-                  setStep('email')
-                  setOtp('')
-                  setOtpError(null)
-                  setResendCooldown(0)
-                }}
-              >
-                Use a different email
-              </button>
-            </p>
-            <button
-              type="button"
-              onClick={handleResendCode}
-              disabled={busy || resendCooldown > 0}
-              className="mt-1 text-2xs text-axew-textDim hover:text-axew-text disabled:opacity-60"
-            >
-              {resendCooldown > 0
-                ? `Resend code in ${resendCooldown}s`
-                : 'Resend code'}
-            </button>
-            <label className="mt-3 block text-2xs font-medium text-axew-textDim" htmlFor="otp">
-              Verification code
-            </label>
-            <input
-              id="otp"
-              inputMode="numeric"
-              autoComplete="one-time-code"
-              maxLength={6}
-              pattern="\d{6}"
-              className="mt-1 w-full rounded border border-axew-border bg-axew-panel px-3 py-2 text-center font-mono text-lg tracking-[0.4em] text-axew-text outline-none transition-shadow focus:border-axew-accent focus:shadow-[0_0_0_3px_rgba(99,179,237,0.2)]"
-              value={otp}
-              onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
-              placeholder="••••••"
-              disabled={busy}
-              aria-invalid={otpError ? 'true' : 'false'}
-              aria-describedby={otpError ? 'otp-error' : undefined}
-            />
-            {otpError && (
-              <p id="otp-error" role="alert" className="mt-2 text-2xs text-red-300">
-                {otpError}
-              </p>
-            )}
-            <button
-              type="submit"
-              className="mt-3 flex w-full items-center justify-center gap-1 rounded bg-axew-accent px-3 py-2 text-xs font-medium text-white hover:bg-axew-accentHover disabled:opacity-40"
-              disabled={busy || otp.length !== 6}
-            >
-              {busy ? <Loader2 size={12} className="animate-spin" /> : null}
-              Verify and continue
-            </button>
-          </form>
-        )}
-
-        <div className="my-5 flex items-center gap-2 text-2xs text-axew-textDim">
-          <span className="h-px flex-1 bg-axew-border" />
-          <span>or</span>
-          <span className="h-px flex-1 bg-axew-border" />
+        <div className="mb-6">
+          <h2 className="text-2xl font-semibold text-axew-text">Welcome back</h2>
+          <p className="mt-2 text-sm text-axew-textMuted">Sign in to continue to Axew.</p>
         </div>
 
         <button
           type="button"
           onClick={handleGoogle}
           disabled={busy}
-          className="flex w-full items-center justify-center gap-2 rounded border border-axew-border bg-axew-panel px-3 py-2 text-xs text-axew-text hover:border-axew-ai/40 disabled:opacity-40"
-          aria-describedby={googleError ? 'google-error' : undefined}
+          className="flex w-full items-center justify-center gap-3 rounded-xl border border-axew-border bg-axew-panel px-4 py-3 text-sm font-medium text-axew-text transition hover:border-axew-ai/60 hover:bg-axew-panel/80 disabled:opacity-50"
         >
-          <span className="flex h-4 w-4 items-center justify-center rounded-full bg-white text-[10px] font-bold text-[#4285F4]">
+          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white text-[10px] font-black text-[#4285F4]">
             G
           </span>
           Continue with Google
         </button>
-        {googleError && (
-          <p id="google-error" role="alert" className="mt-2 text-2xs text-red-300">
-            {googleError}
-          </p>
-        )}
 
-        <p className="mt-5 text-center text-2xs text-axew-textDim">
-          Cloud sign-in is optional — AXEW runs fully offline without it.
+        <div className="my-6 flex items-center gap-3">
+          <span className="h-px flex-1 bg-axew-border" />
+          <span className="text-2xs uppercase tracking-[0.2em] text-axew-textDim">or</span>
+          <span className="h-px flex-1 bg-axew-border" />
+        </div>
+
+        <form className="space-y-4" onSubmit={handleEmailLogin} noValidate>
+          <div>
+            <label htmlFor="login-email" className="mb-1 block text-2xs font-semibold uppercase tracking-wide text-axew-textDim">
+              Email address
+            </label>
+            <div className="relative">
+              <Mail size={14} className="pointer-events-none absolute left-3 top-3 text-axew-textDim" />
+              <input
+                id="login-email"
+                type="email"
+                autoComplete="email"
+                className="w-full rounded-xl border border-axew-border bg-axew-panel py-2 pl-10 pr-3 text-sm text-axew-text outline-none transition focus:border-axew-accent focus:ring-2 focus:ring-axew-accent/30"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div>
+            <div className="mb-1 flex items-center justify-between">
+              <label htmlFor="login-password" className="text-2xs font-semibold uppercase tracking-wide text-axew-textDim">
+                Password
+              </label>
+              <Link to="/forgot-password" className="text-2xs text-axew-ai hover:underline">
+                Forgot password?
+              </Link>
+            </div>
+            <input
+              id="login-password"
+              type="password"
+              autoComplete="current-password"
+              className="w-full rounded-xl border border-axew-border bg-axew-panel px-3 py-2 text-sm text-axew-text outline-none transition focus:border-axew-accent focus:ring-2 focus:ring-axew-accent/30"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              placeholder="��������"
+              required
+            />
+          </div>
+
+          {error && (
+            <div role="alert" className="rounded border border-red-500/40 bg-red-500/10 px-3 py-2 text-2xs text-red-200">
+              {error}
+            </div>
+          )}
+
+          <button
+            type="submit"
+            disabled={busy}
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-axew-accent px-4 py-3 text-sm font-semibold text-white transition hover:bg-axew-accentHover disabled:opacity-50"
+          >
+            {busy ? <Loader2 size={14} className="animate-spin" /> : <ArrowRight size={14} />}
+            Sign in
+          </button>
+        </form>
+
+        <p className="mt-5 text-center text-sm text-axew-textMuted">
+          New to Axew?{' '}
+          <Link className="font-semibold text-axew-ai hover:underline" to="/signup">
+            Create account
+          </Link>
         </p>
       </div>
     </div>

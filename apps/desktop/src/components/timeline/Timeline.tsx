@@ -3,11 +3,8 @@ import { useProjectStore } from '../../stores/projectStore'
 import { usePlaybackStore } from '../../stores/playbackStore'
 import { useAIStore } from '../../stores/aiStore'
 import { useTimelineStore } from '../../stores/timelineStore'
-import { useTimelineOpusClipMenu } from '../../hooks/useTimelineOpusClipMenu'
-<<<<<<< HEAD
-=======
 import { useOpusclipStore } from '../../stores/opusclipSlice'
->>>>>>> 1267c0e (v1.1)
+import { useTimelineOpusClipMenu } from '../../hooks/useTimelineOpusClipMenu'
 import { TimelineRuler } from './TimelineRuler'
 import { TimelineToolbar } from './TimelineToolbar'
 import { TrackHeader } from './TrackHeader'
@@ -21,13 +18,11 @@ export function Timeline() {
     useTimelineStore()
   const { highlightRanges } = useAIStore()
   const { currentTime, duration, setCurrentTime, frameRate } = usePlaybackStore()
+  const pendingClipsCount = useOpusclipStore((s) => s.pendingClips.length)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const timelineRef = useRef<HTMLDivElement>(null)
   const [timelineWidth, setTimelineWidth] = useState(0)
 
-  // IMPORTANT: this hook is called unconditionally, before any early return,
-  // so it runs in identical order in dev and in the packaged production EXE.
-  // It internally no-ops when cloud features are disabled.
   const opusClipMenu = useTimelineOpusClipMenu()
 
   const timeline = currentProject?.timeline
@@ -46,6 +41,11 @@ export function Timeline() {
   )
 
   useEffect(() => {
+    if (typeof ResizeObserver === 'undefined') {
+      setTimelineWidth((timelineRef.current?.clientWidth ?? TRACK_HEADER_WIDTH) - TRACK_HEADER_WIDTH)
+      return
+    }
+
     const observer = new ResizeObserver((entries) => {
       for (const entry of entries) {
         setTimelineWidth(entry.contentRect.width - TRACK_HEADER_WIDTH)
@@ -88,38 +88,10 @@ export function Timeline() {
     [setScrollX],
   )
 
-  // OpusClip context-menu hooks. These MUST run on every render in a
-  // stable order, so they live ABOVE the early `!currentProject` return
-  // below. `useTimelineOpusClipMenu` is itself a no-op (returns null) when
-  // cloud mode is off, but it always calls the same hooks internally.
-  const opusMenu = useTimelineOpusClipMenu()
-  const pendingClipsCount = useOpusclipStore((s) => s.pendingClips.length)
-  const [contextMenu, setContextMenu] = useState<{ x: number; y: number } | null>(null)
-
-  const handleContextMenu = useCallback(
-    (e: React.MouseEvent) => {
-      if (!opusMenu) return
-      e.preventDefault()
-      setContextMenu({ x: e.clientX, y: e.clientY })
-    },
-    [opusMenu],
-  )
-
-  useEffect(() => {
-    if (!contextMenu) return
-    const close = () => setContextMenu(null)
-    window.addEventListener('click', close)
-    window.addEventListener('blur', close)
-    return () => {
-      window.removeEventListener('click', close)
-      window.removeEventListener('blur', close)
-    }
-  }, [contextMenu])
-
   if (!currentProject) {
     return (
       <div className="flex h-full w-full items-center justify-center bg-axew-timeline text-2xs text-axew-textDim">
-        No project open — create a project to begin editing
+        No project open - create a project to begin editing
       </div>
     )
   }
@@ -132,7 +104,6 @@ export function Timeline() {
       ref={timelineRef}
       className="flex h-full w-full flex-col overflow-hidden bg-axew-timeline"
       onWheel={handleWheel}
-      onContextMenu={handleContextMenu}
     >
       <TimelineToolbar />
       <div className="flex flex-1 overflow-hidden">
@@ -208,26 +179,6 @@ export function Timeline() {
         </div>
       </div>
 
-<<<<<<< HEAD
-      {opusClipMenu.state.open && opusClipMenu.items.length > 0 && (
-        <div
-          data-testid="opusclip-context-menu"
-          className="fixed z-50 min-w-44 rounded border border-axew-border bg-axew-surface py-1 shadow-lg"
-          style={{ left: opusClipMenu.state.x, top: opusClipMenu.state.y }}
-          onContextMenu={(e) => e.preventDefault()}
-        >
-          {opusClipMenu.items.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              disabled={item.disabled}
-              className="flex w-full items-center px-3 py-1.5 text-left text-2xs text-axew-textMuted hover:bg-axew-panel hover:text-axew-text disabled:opacity-40"
-              onClick={() => item.onSelect()}
-            >
-              {item.label}
-            </button>
-          ))}
-=======
       {pendingClipsCount > 0 && (
         <div
           aria-label="Queued for OpusClip"
@@ -237,33 +188,28 @@ export function Timeline() {
         </div>
       )}
 
-      {contextMenu && opusMenu && (
+      {opusClipMenu.state.open && opusClipMenu.items.length > 0 && (
         <div
+          data-testid="opusclip-context-menu"
           role="menu"
-          className="fixed z-50 min-w-[180px] rounded border border-axew-border bg-axew-surface p-1 text-2xs shadow-lg"
-          style={{ left: contextMenu.x, top: contextMenu.y }}
+          className="fixed z-50 min-w-44 rounded border border-axew-border bg-axew-surface py-1 shadow-lg"
+          style={{ left: opusClipMenu.state.x, top: opusClipMenu.state.y }}
           onClick={(e) => e.stopPropagation()}
+          onContextMenu={(e) => e.preventDefault()}
         >
-          <button
-            type="button"
-            role="menuitem"
-            disabled={!opusMenu.enabled}
-            onClick={() => {
-              opusMenu.onClick()
-              setContextMenu(null)
-            }}
-            className="flex w-full items-center justify-between gap-2 rounded px-2 py-1.5 text-axew-text hover:bg-axew-panel disabled:opacity-40"
-          >
-            {opusMenu.label}
-            {!opusMenu.enabled && (
-              <span className="text-2xs text-axew-textDim">
-                {useTimelineStore.getState().selectedClipIds.length === 0
-                  ? 'Select a clip first'
-                  : 'Sign in required'}
-              </span>
-            )}
-          </button>
->>>>>>> 1267c0e (v1.1)
+          {opusClipMenu.items.map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              role="menuitem"
+              disabled={item.disabled}
+              className="flex w-full items-center justify-between gap-2 px-3 py-1.5 text-left text-2xs text-axew-textMuted hover:bg-axew-panel hover:text-axew-text disabled:opacity-40"
+              onClick={() => item.onSelect()}
+            >
+              <span>{item.label}</span>
+              {item.hint && <span className="text-2xs text-axew-textDim">{item.hint}</span>}
+            </button>
+          ))}
         </div>
       )}
     </div>

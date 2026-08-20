@@ -49,9 +49,9 @@ export function UserMenu(): JSX.Element | null {
     }
   }
 
-  const email = profile?.email ?? session.user.email ?? ''
+  const email = profile?.email ?? session.email ?? ''
   const balance = profile?.credit_balance ?? 0
-  const avatar = profile?.avatar_url
+  const avatar = profile?.avatar_url ?? session.photoURL ?? undefined
 
   return (
     <div className="relative">

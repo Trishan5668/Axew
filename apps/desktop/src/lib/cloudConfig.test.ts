@@ -1,14 +1,9 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import {
-  getCloudEnvironment,
-  hasElectronApi,
-  isCloudEnabled,
-} from './cloudConfig'
+import { getCloudEnvironment, isCloudEnabled } from './cloudConfig'
 
 describe('cloudConfig', () => {
   afterEach(() => {
     vi.unstubAllEnvs()
-    delete (window as unknown as { axew?: unknown }).axew
   })
 
   describe('isCloudEnabled', () => {
@@ -27,26 +22,13 @@ describe('cloudConfig', () => {
     })
   })
 
-  describe('hasElectronApi', () => {
-    it('is false without window.axew', () => {
-      expect(hasElectronApi()).toBe(false)
-    })
-
-    it('is true when the preload bridge is present', () => {
-      ;(window as unknown as { axew: unknown }).axew = { ipc: {} }
-      expect(hasElectronApi()).toBe(true)
-    })
-  })
-
-  it('getCloudEnvironment returns a complete snapshot', () => {
+  it('getCloudEnvironment returns a browser runtime snapshot', () => {
     const env = getCloudEnvironment()
     expect(env).toEqual(
       expect.objectContaining({
         cloudEnabled: expect.any(Boolean),
         production: expect.any(Boolean),
         development: expect.any(Boolean),
-        electron: expect.any(Boolean),
-        packaged: expect.any(Boolean),
       }),
     )
   })

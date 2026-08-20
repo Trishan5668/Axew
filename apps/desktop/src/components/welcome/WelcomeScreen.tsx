@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
 import { FolderOpen, Plus, Sparkles } from 'lucide-react'
-import { getAxew } from '../../lib/axewBridge'
+import { pickProjectFile } from '../../lib/browserProjectStorage'
 import { useProjectStore } from '../../stores/projectStore'
 import { useUIStore } from '../../stores/uiStore'
 
 export function WelcomeScreen() {
-  const { createProject } = useProjectStore()
+  const { createProject, openProject } = useProjectStore()
   const { setShowWelcome } = useUIStore()
 
   const handleNew = () => {
@@ -14,12 +14,9 @@ export function WelcomeScreen() {
   }
 
   const handleOpen = async () => {
-    const result = await getAxew().dialog.openFile({
-      filters: [{ name: 'AXEW Project', extensions: ['axew', 'json'] }],
-      properties: ['openFile'],
-    })
-    if (!result.canceled && result.filePaths[0]) {
-      await useProjectStore.getState().loadProject(result.filePaths[0])
+    const project = await pickProjectFile()
+    if (project) {
+      openProject(project)
       setShowWelcome(false)
     }
   }

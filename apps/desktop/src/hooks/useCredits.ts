@@ -49,7 +49,7 @@ export function useCredits(): UseCreditsResult {
   }, [profile])
 
   useEffect(() => {
-    if (!isCloudAvailable() || !session?.user.id) {
+    if (!isCloudAvailable() || !session?.uid) {
       setLoading(false)
       return
     }
@@ -57,7 +57,7 @@ export function useCredits(): UseCreditsResult {
     let cancelled = false
     setLoading(true)
 
-    getUserProfile(session.user.id)
+    getUserProfile(session.uid)
       .then((p) => {
         if (cancelled) return
         setCreditBalance(p.credit_balance)
@@ -75,14 +75,14 @@ export function useCredits(): UseCreditsResult {
     let unsubscribe: (() => void) | null = null
     try {
       const channel = supabase()
-        .channel(`profile:${session.user.id}`)
+        .channel(`profile:${session.uid}`)
         .on(
           'postgres_changes',
           {
             event: 'UPDATE',
             schema: 'public',
             table: 'profiles',
-            filter: `id=eq.${session.user.id}`,
+            filter: `id=eq.${session.uid}`,
           },
           (payload) => {
             const next = payload.new as
@@ -119,7 +119,7 @@ export function useCredits(): UseCreditsResult {
       cancelled = true
       unsubscribe?.()
     }
-  }, [session?.user.id, refreshProfile])
+  }, [session?.uid, refreshProfile])
 
   if (!isCloudAvailable()) {
     return LOCAL_RESULT
